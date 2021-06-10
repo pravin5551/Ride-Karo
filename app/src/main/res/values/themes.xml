@@ -13,4 +13,11 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.HomeActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">@color/purple_500</item>
+        <item name="android:windowNoTitle">@color/purple_700</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+    </style>
 </resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Home"/>
+
+        <item android:id="@+id/nav_covid_19"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="COVID 19"/>
+
+        <item android:id="@+id/nav_payment"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Payment"/>
+
+        <item android:id="@+id/nav_myRides"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="My Rides"/>
+
+        <item android:id="@+id/nav_inviteFriends"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Invite Friends"/>
+
+        <item android:id="@+id/nav_powerPass"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Power Pass"/>
+
+        <item android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Notifications"/>
+
+        <item android:id="@+id/nav_insurance"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Insurance"/>
+
+        <item android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Settings"/>
+
+        <item android:id="@+id/nav_support"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Support"/>
+
+    </group>
+
+</menu>
