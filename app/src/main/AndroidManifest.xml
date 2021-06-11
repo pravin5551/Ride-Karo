@@ -17,9 +17,8 @@
         <activity android:name=".views.MainActivity" />
         <activity
             android:name=".views.HomeActivity"
-            android:theme="@style/Theme.HomeActivity">
-
-        <activity android:name=".views.LanguageScreenActivity"></activity>
+            android:theme="@style/Theme.HomeActivity"/>
+        <activity android:name=".views.LanguageScreenActivity"/>
         <activity android:name=".views.SecondScreenActivity" />
         <activity android:name=".views.FirstScreenActivity">
             <intent-filter>
