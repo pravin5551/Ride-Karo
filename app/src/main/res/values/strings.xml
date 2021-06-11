@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Ride karo</string>
+    <string name="title_activity_home_screen">Map</string>
+    <string name="im_a_rider">Im a Rider</string>
+    <string name="im_a_customer">Im a Customer</string>
+    <string name="enter_the_email">enter the email</string>
+    <string name="enter_the_password">enter the password</string>
+    <string name="login">Login</string>
+    <string name="new_rider_register">New Rider ? Register</string>
+    <string name="logout">Logout</string>
+    <string name="call_rider">call rider</string>
+    <string name="getting_driver">Getting your driver</string>
+    <string name="looking_for_driver">Looking for rider location</string>
+    <string name="driver_found">Driver Found</string>
 </resources>
