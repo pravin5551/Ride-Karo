@@ -124,4 +124,6 @@ dependencies {
 
     //material design
     implementation 'com.google.android.material:material:1.1.0'
+
+    //motion layout animation
 }
