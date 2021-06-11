@@ -14,9 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
+        <activity android:name=".views.MainActivity" />
+        <activity
+            android:name=".views.HomeActivity"
+            android:theme="@style/Theme.HomeActivity">
+
         <activity android:name=".views.LanguageScreenActivity"></activity>
         <activity android:name=".views.SecondScreenActivity" />
-        <activity android:name=".views.MainActivity" />
         <activity android:name=".views.FirstScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

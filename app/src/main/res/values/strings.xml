@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Ride karo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navigation_drawer_open">"Open navigation drawer"</string>
+    <string name="navigation_drawer_close">"Close navigation drawer"</string>
+
     <string name="india_beloved">India\'s Beloved Bike Taxi Service </string>
     <string name="to_have_comfortable">To have a comfortable ride experience with RideKaro,</string>
     <string name="please_allow">please allow us the following permissions</string>
