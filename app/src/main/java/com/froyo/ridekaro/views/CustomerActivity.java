@@ -2,7 +2,6 @@ package com.froyo.ridekaro.views;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -14,7 +13,6 @@ import android.location.LocationListener;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
@@ -53,7 +51,8 @@ public class CustomerActivity extends FragmentActivity implements OnMapReadyCall
     Location lastLocation;
     LocationRequest locationRequest;
     private ActivityHomeScreenBinding binding;
-    private Button btnCustomerLogout, btnCallRider;
+    private Button btnRiderCall;
+    private Button btnCusLogout;
     private LatLng pickLocation;
     private Boolean request = false;
     private SupportMapFragment mapFragment;
@@ -75,15 +74,14 @@ public class CustomerActivity extends FragmentActivity implements OnMapReadyCall
 //        } else {
 //            mapFragment1.getMapAsync(this);
 //        }
+
         mapFragment.getMapAsync(this);
+        newInit();
 
     }
 
-    private void initViewsAndListeners() {
-        btnCustomerLogout = findViewById(R.id.btnCustomerLogout);
-        btnCallRider = findViewById(R.id.btnCallRider);
-
-        btnCustomerLogout.setOnClickListener(new View.OnClickListener() {
+    private void newInit() {
+        btnCusLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
@@ -92,7 +90,7 @@ public class CustomerActivity extends FragmentActivity implements OnMapReadyCall
             }
         });
 
-        btnCallRider.setOnClickListener(new View.OnClickListener() {
+        btnRiderCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (request) {
@@ -116,7 +114,7 @@ public class CustomerActivity extends FragmentActivity implements OnMapReadyCall
                     if (pickupMarker != null) {
                         pickupMarker.remove();
                     }
-                    btnCallRider.setText(R.string.call_rider);
+                    btnRiderCall.setText(R.string.call_rider);
                 } else {
                     request = true;
                     String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -125,14 +123,19 @@ public class CustomerActivity extends FragmentActivity implements OnMapReadyCall
                     geoFire.setLocation(userId, new GeoLocation(lastLocation.getLatitude(), lastLocation.getLongitude()));
                     pickLocation = new LatLng(lastLocation.getLatitude(), lastLocation.getLongitude());
                     pickupMarker = mMap.addMarker(new MarkerOptions().position(pickLocation).title("Picking here").icon(BitmapDescriptorFactory.fromResource(R.mipmap.bike)));
-                    btnCallRider.setText(R.string.getting_driver);
-
-
+                    btnRiderCall.setText(R.string.getting_driver);
                     getClosestRider();
                 }
 
             }
         });
+    }
+
+    private void initViewsAndListeners() {
+        btnCusLogout = findViewById(R.id.btnCustomerLogout);
+        btnRiderCall = findViewById(R.id.btnCallRider);
+
+
     }
 
 
@@ -160,7 +163,7 @@ public class CustomerActivity extends FragmentActivity implements OnMapReadyCall
                     reference.updateChildren(map);
 
                     getRiderLocation();
-                    btnCallRider.setText(R.string.looking_for_driver);
+                    btnRiderCall.setText(R.string.looking_for_driver);
                 }
             }
 
@@ -204,7 +207,7 @@ public class CustomerActivity extends FragmentActivity implements OnMapReadyCall
                     List<Object> map = (List<Object>) snapshot.getValue();
                     double locationLat = 0;
                     double locationLong = 0;
-                    btnCallRider.setText(R.string.driver_found);
+//                    btnCallRider.setText(R.string.driver_found);
                     if (map.get(0) != null) {
                         locationLat = Double.parseDouble(map.get(0).toString());
                     }
@@ -227,9 +230,9 @@ public class CustomerActivity extends FragmentActivity implements OnMapReadyCall
 
                     float distance = location1.distanceTo(location2);
                     if (distance < 100) {
-                        btnCallRider.setText("Rider has arrived");
+                        btnRiderCall.setText("Rider has arrived");
                     }
-                    btnCallRider.setText("Rider Found : " + String.valueOf(distance));
+                    btnRiderCall.setText("Rider Found : " + String.valueOf(distance));
                     riderMarker = mMap.addMarker(new MarkerOptions().position(riderLatLong).title("Your Rider").icon(BitmapDescriptorFactory.fromResource(R.mipmap.bike)));
                 }
             }
@@ -302,6 +305,7 @@ public class CustomerActivity extends FragmentActivity implements OnMapReadyCall
         }
         LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, locationRequest, this::onLocationChanged);
     }
+
 
     @Override
     public void onConnectionSuspended(int i) {

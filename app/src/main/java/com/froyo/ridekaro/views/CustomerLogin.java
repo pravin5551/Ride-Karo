@@ -21,6 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
 public class CustomerLogin extends AppCompatActivity {
 
     private Button btnCustomerRegister, btnCustomerLogin;
@@ -65,12 +67,10 @@ public class CustomerLogin extends AppCompatActivity {
                         if (!task.isSuccessful()) {
                             Toast.makeText(CustomerLogin.this, "sign up error", Toast.LENGTH_SHORT).show();
                         } else {
-                            String userId = firebaseAuth.getCurrentUser().getUid();
+                            String userId = Objects.requireNonNull(firebaseAuth.getCurrentUser()).getUid();
                             DatabaseReference currentUser = FirebaseDatabase.getInstance().getReference().child("Users").child("Customers").child(userId);
                             currentUser.setValue(true);
                         }
-
-
                     }
                 });
             }

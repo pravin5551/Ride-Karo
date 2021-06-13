@@ -49,6 +49,11 @@ dependencies {
     def coroutines = "1.1.1"
     def kotlinCoroutineVersion = "1.1.1"
 
+    implementation 'com.github.florent37:runtime-permission-kotlin:1.1.2'
+
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+
+
     implementation "com.google.android.gms:play-services-location:18.0.0"
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
 

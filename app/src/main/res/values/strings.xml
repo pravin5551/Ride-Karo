@@ -12,4 +12,8 @@
     <string name="getting_driver">Getting your driver</string>
     <string name="looking_for_driver">Looking for rider location</string>
     <string name="driver_found">Driver Found</string>
+    <string name="ride">Ride</string>
+    <string name="current_location">Current location</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="search_drop_location">Search drop location</string>
 </resources>

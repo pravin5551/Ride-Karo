@@ -19,6 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
+        <activity android:name=".views.LocationSearch" />
+        <activity android:name=".views.WhichUser" />
         <activity android:name=".views.CustomerLogin" />
         <activity android:name=".views.CustomerActivity" />
         <activity android:name=".views.RiderLogin" />
@@ -38,7 +40,7 @@
         <activity
             android:name=".views.MainActivity"
             android:label="@string/title_activity_home_screen" />
-        <activity android:name=".views.WhichUser">
+        <activity android:name=".views.UserHomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
