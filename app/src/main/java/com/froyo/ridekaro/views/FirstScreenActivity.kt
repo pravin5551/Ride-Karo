@@ -52,7 +52,7 @@ class FirstScreenActivity : AppCompatActivity() {
                         "$name permission granted",
                         Toast.LENGTH_SHORT
                     ).show()
-                    val intent=Intent(this,SecondScreenActivity::class.java)
+                    val intent = Intent(this, SecondScreenActivity::class.java)
                     startActivity(intent)
 
                 }
@@ -74,15 +74,16 @@ class FirstScreenActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         fun innerCheck(name: String) {
             if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(applicationContext, "$name permission refused", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "$name permission refused", Toast.LENGTH_SHORT)
+                    .show()
                 val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-              val uri= Uri.fromParts("package",packageName,null)
+                val uri = Uri.fromParts("package", packageName, null)
                 intent.setData(uri)
                 startActivity(intent)
             } else {
                 Toast.makeText(applicationContext, "$name permission granted", Toast.LENGTH_SHORT)
                     .show()
-                val intent=Intent(this,SecondScreenActivity::class.java)
+                val intent = Intent(this, SecondScreenActivity::class.java)
                 startActivity(intent)
             }
         }

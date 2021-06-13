@@ -6,43 +6,43 @@
     <group android:checkableBehavior="single">
 
         <item android:id="@+id/nav_home"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__010_home"
             android:title="Home"/>
 
         <item android:id="@+id/nav_covid_19"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__05_covid"
             android:title="COVID 19"/>
 
         <item android:id="@+id/nav_payment"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__07_payment"
             android:title="Payment"/>
 
         <item android:id="@+id/nav_myRides"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__03_my_rides"
             android:title="My Rides"/>
 
         <item android:id="@+id/nav_inviteFriends"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__06_invite_friends"
             android:title="Invite Friends"/>
 
         <item android:id="@+id/nav_powerPass"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__04_power_pass"
             android:title="Power Pass"/>
 
         <item android:id="@+id/nav_notifications"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__02_notification"
             android:title="Notifications"/>
 
         <item android:id="@+id/nav_insurance"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__08_insurance"
             android:title="Insurance"/>
 
         <item android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__01_settings"
             android:title="Settings"/>
 
         <item android:id="@+id/nav_support"
-            android:icon="@drawable/ic_launcher_background"
+            android:icon="@drawable/ic__09_support"
             android:title="Support"/>
 
     </group>

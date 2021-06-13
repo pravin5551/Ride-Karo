@@ -2,12 +2,10 @@ package com.froyo.ridekaro.views
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.froyo.ridekaro.R
+import com.froyo.ridekaro.views.navDrawerFragments.HomeFragment
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
@@ -32,7 +30,8 @@ class OTPSecondActivity : AppCompatActivity() {
             60, // Timeout duration
             java.util.concurrent.TimeUnit.SECONDS, // Unit of timeout
             this, // Activity (for callback binding)
-            callbacks) // OnVerificationStateChangedCallbacks
+            callbacks
+        ) // OnVerificationStateChangedCallbacks
 
         verifyButton.setOnClickListener {
             if (!otpTextField.text.isNullOrEmpty()) {
@@ -86,11 +85,11 @@ class OTPSecondActivity : AppCompatActivity() {
                 OnCompleteListener<AuthResult?> { task ->
                     if (task.isSuccessful) {
                         //verification successful we will start the profile activity
-                        Toast.makeText(this,"Success", Toast.LENGTH_LONG).show()
-                        val i = Intent(this, StopwatchActivity::class.java)
+                        Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
+                        val i = Intent(this, HomeActivity::class.java)
                         startActivity(i)
                     } else {
-                        Toast.makeText(this,"Failed", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Failed", Toast.LENGTH_LONG).show()
                     }
                 })
     }

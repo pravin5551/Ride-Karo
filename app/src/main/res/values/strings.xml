@@ -31,5 +31,7 @@
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
     <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido">By continuing you will agree to our terms and privacy policy of Rapido</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="with_you_and">With you and</string>
 
 </resources>
