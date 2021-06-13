@@ -1,9 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.OTPSecondActivity">
+    tools:context=".views.OTPSecondActivity"
+    android:orientation="vertical"
+    android:weightSum="5">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:background="#f9d915"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f9d915">
+
+            <Button
+                android:id="@+id/back_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="#f9d915"
+                android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+
+                android:padding="@dimen/dp_15" />
+
+            <Button
+                android:id="@+id/support_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/dp_10"
+                android:background="#f9d915"
+                android:padding="@dimen/dp_15"
+                android:text="@string/support"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_25"
+            android:text="Enter verification pin"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="Seat back and relax while we verify your phone number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.5"
+        android:orientation="vertical">
+<EditText
+    android:id="@+id/otpTextField"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/dp_50"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_60"
+    android:layout_marginEnd="@dimen/dp_60"
+    android:layout_gravity="center_horizontal"
+    />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/waiting_tv"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:gravity="center_horizontal"
+                android:text="Waiting for OTP..."
+                android:textColor="@color/Gray" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/waiting_tv"
+                android:id="@+id/time_view"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textSize="56sp"
+            />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/verifyButton"
+            android:layout_width="120dp"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="@dimen/dp_50"
+            android:layout_marginBottom="@dimen/dp_100"
+            android:background="@drawable/rect_round_mob"
+            android:text="Continue"
+            android:textColor="#f9d915" />
+    </RelativeLayout>
+</LinearLayout>
