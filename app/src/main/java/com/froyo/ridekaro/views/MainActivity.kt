@@ -11,14 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnShare.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_SEND
-            intent.putExtra(Intent.EXTRA_TEXT, "Please download Rapido from this link www.google.com")
-            intent.type = "text/plain"
 
-            startActivity(Intent.createChooser(intent, "Please select app: "))
-        }
     }
 
 }

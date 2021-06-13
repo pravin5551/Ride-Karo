@@ -14,12 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
-        <activity android:name=".views.MainInviteFriendsActivity"></activity>
-        <activity android:name=".views.OTPValidation" />
+        <activity android:name=".views.Temp"></activity>
+        <activity android:name=".views.MainActivity" />
         <activity android:name=".views.StopwatchActivity" />
         <activity android:name=".views.InvitefriendsActivity" />
         <activity android:name=".views.OTPSecondActivity" />
-        <activity android:name=".views.MainActivity">
+        <activity android:name=".views.OTPValidation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
