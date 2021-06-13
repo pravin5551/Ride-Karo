@@ -6,6 +6,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -14,7 +18,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
+
         <activity android:name=".views.MainActivity" />
+      <activity android:name=".views.Temp"></activity>
+     
+        <activity android:name=".views.StopwatchActivity" />
+        <activity android:name=".views.InvitefriendsActivity" />
+        <activity android:name=".views.OTPSecondActivity" />
+        <activity android:name=".views.OTPValidation">
         <activity
             android:name=".views.HomeActivity"
             android:theme="@style/Theme.HomeActivity"/>
