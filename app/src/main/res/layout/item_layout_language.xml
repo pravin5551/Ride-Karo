@@ -1,0 +1,9 @@
+<TextView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:text="harsh"
+    android:padding="@dimen/_14sdp"
+    android:textStyle="bold"
+    android:textSize="@dimen/_16sdp"
+    android:textColor="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+
