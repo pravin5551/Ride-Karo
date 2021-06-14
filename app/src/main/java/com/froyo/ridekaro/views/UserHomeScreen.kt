@@ -21,7 +21,10 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import kotlinx.android.synthetic.main.activity_home_screen.*
@@ -36,12 +39,17 @@ class UserHomeScreen : AppCompatActivity(), OnMapReadyCallback, LocationListener
 
     private var mMap: GoogleMap? = null
 
-    lateinit var mapView: MapView
+    private lateinit var mapView: MapView
 
-    val LOCATION_REQUEST_CODE = 1
+    private val LOCATION_REQUEST_CODE = 1
+    private var count = 0
 
-    var address: List<Address>? = null
+    private var userLocationMarker: Marker? = null
+    private var userLocationMarker2: Marker? = null
+    private var userLocationMarker3: Marker? = null
 
+
+    private var address: List<Address>? = null
 
     private val DEFAULT_ZOOM = 15f
 
@@ -60,9 +68,9 @@ class UserHomeScreen : AppCompatActivity(), OnMapReadyCallback, LocationListener
         mapView.onCreate(mapViewBundle)
         mapView.getMapAsync(this)
 
-        tvEnterDestination.setOnClickListener {
-            startActivity(Intent(this, LocationSearch::class.java))
-        }
+//        tvEnterDestination.setOnClickListener {
+//            startActivity(Intent(this, LocationSearch::class.java))
+//        }
     }
 
 
@@ -93,8 +101,6 @@ class UserHomeScreen : AppCompatActivity(), OnMapReadyCallback, LocationListener
             mMap!!.setOnCameraMoveStartedListener(this)
             mMap!!.setOnCameraIdleListener(this)
         }
-
-
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -149,12 +155,68 @@ class UserHomeScreen : AppCompatActivity(), OnMapReadyCallback, LocationListener
             location.addOnCompleteListener(object : OnCompleteListener<Location> {
                 override fun onComplete(p0: Task<Location>) {
                     if (p0.isSuccessful) {
-                        val currentLocation = p0.result as Location?
+                        val currentLocation = p0.result
                         if (currentLocation != null) {
                             moveCamera(
                                 LatLng(currentLocation.latitude, currentLocation.longitude),
                                 DEFAULT_ZOOM
                             )
+                            Toast.makeText(
+                                applicationContext,
+                                currentLocation.latitude.toString() + " " + currentLocation.longitude.toString(),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            if (userLocationMarker == null && userLocationMarker2 == null && userLocationMarker3 == null) {
+//                                userLocationMarker =  Marker(p0)
+//                                userLocationMarker2 = Marker(null)
+//                                userLocationMarker3 = Marker(null)
+                                val latitude = currentLocation.latitude
+                                val longitude = currentLocation.longitude + 0.009
+                                val latitude2 = currentLocation.latitude + 0.009
+                                val bearing = currentLocation.bearing
+                                val longitude2 = currentLocation.longitude
+                                val latitude3 = currentLocation.latitude
+                                val longitude3 = currentLocation.longitude - 0.006
+                                val latLng = LatLng(latitude, longitude)
+                                val latLng2 = LatLng(latitude2, longitude2)
+                                val latLng3 = LatLng(latitude3, longitude3)
+                                val markerOptions = MarkerOptions()
+                                val markerOptions2 = MarkerOptions()
+                                val markerOptions3 = MarkerOptions()
+//                                userLocationMarker: Marker()
+//                                val userLocationMarker2: Marker?
+//                                val userLocationMarker3: Marker?
+                                markerOptions.position(latLng)
+                                markerOptions2.position(latLng)
+                                markerOptions3.position(latLng)
+                                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+                                markerOptions2.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+                                markerOptions3.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+                                markerOptions.rotation(bearing)
+                                markerOptions2.rotation(bearing)
+                                markerOptions3.rotation(bearing)
+                                userLocationMarker = mMap!!.addMarker(markerOptions)
+                                userLocationMarker2 = mMap!!.addMarker(markerOptions2)
+                                userLocationMarker3 = mMap!!.addMarker(markerOptions3)
+                                userLocationMarker!!.position = latLng
+                                userLocationMarker2!!.position = latLng2
+                                userLocationMarker3!!.position = latLng3
+                                count++
+                            } else {
+                                val latitude = currentLocation.latitude
+                                val longitude = currentLocation.longitude + 0.009
+                                val latitude2 = currentLocation.latitude + 0.009
+//                                val bearing = currentLocation.bearing
+                                val longitude2 = currentLocation.longitude
+                                val latitude3 = currentLocation.latitude
+                                val longitude3 = currentLocation.longitude - 0.006
+                                val latLng = LatLng(latitude, longitude)
+                                val latLng2 = LatLng(latitude2, longitude2)
+                                val latLng3 = LatLng(latitude3, longitude3)
+                                userLocationMarker!!.position = latLng
+                                userLocationMarker2!!.position = latLng2
+                                userLocationMarker3!!.position = latLng3
+                            }
                         } else {
                             askForPermission()
                         }
