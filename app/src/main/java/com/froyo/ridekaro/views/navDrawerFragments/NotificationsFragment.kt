@@ -6,8 +6,10 @@ import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.froyo.ridekaro.R
+import kotlinx.android.synthetic.main.fragment_power_pass.*
 
 
 class NotificationsFragment : Fragment() {
@@ -27,7 +29,11 @@ class NotificationsFragment : Fragment() {
 
         // inflate the layout using the cloned inflater, not default inflater
         return localInflater.inflate(R.layout.fragment_notifications, container, false)
+
+
     }
+
+
 
 
 }

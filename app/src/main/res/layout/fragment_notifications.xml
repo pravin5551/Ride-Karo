@@ -15,7 +15,7 @@
             android:id="@+id/collapsing_notification_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="@color/yellow"
+            android:background="@color/yellow"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
@@ -33,12 +33,11 @@
                 android:padding="@dimen/_25sdp"
                 android:text="Notifications"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_45sdp" />
+                android:textSize="35sp" />
 
             <android.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                style="@style/notification"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin" />
 
