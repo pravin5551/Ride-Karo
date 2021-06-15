@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/mapFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.HomeFragment"
-        android:label="Home"
+        android:label="@string/home"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_mapFragment_to_covid19Fragment"
@@ -41,46 +41,46 @@
     <fragment
         android:id="@+id/paymentFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.PaymentFragment"
-        android:label="Payments"
+        android:label="@string/small_Payment"
         tools:layout="@layout/fragment_payment" />
     <fragment
         android:id="@+id/myRidesFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.MyRidesFragment"
-        android:label="My Rides"
+        android:label="@string/my_rides"
         tools:layout="@layout/fragment_my_rides" />
     <fragment
         android:id="@+id/inviteFriendsFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.InviteFriendsFragment"
-        android:label="Invite Friends"
+        android:label="@string/invite_friends"
         tools:layout="@layout/fragment_invite_friends" />
     <fragment
         android:id="@+id/powerPassFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.PowerPassFragment"
-        android:label="Power Pass"
+        android:label="@string/power_pass"
         tools:layout="@layout/fragment_power_pass" />
     <fragment
         android:id="@+id/notificationsFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.NotificationsFragment"
-        android:label="Notifications"
+        android:label="@string/notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/insuranceFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.InsuranceFragment"
-        android:label="Insurance"
+        android:label="@string/insurance"
         tools:layout="@layout/fragment_insurance" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.SettingsFragment"
-        android:label="Settings"
+        android:label="@string/setting"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/supportFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.SupportFragment"
-        android:label="Support"
+        android:label="@string/support"
         tools:layout="@layout/fragment_support" />
     <fragment
         android:id="@+id/covid19Fragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.Covid19Fragment"
-        android:label="Covid 19"
+        android:label="@string/COVID_19"
         tools:layout="@layout/fragment_covid19" />
 </navigation>

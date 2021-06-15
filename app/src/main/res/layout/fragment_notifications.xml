@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:padding="@dimen/_25sdp"
-                android:text="Notifications"
+                android:text="@string/notifications"
                 android:textColor="@color/black"
                 android:textSize="35sp" />
 

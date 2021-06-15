@@ -38,8 +38,7 @@ class PaymentFragment : Fragment() {
                 context?.getApplicationContext()!!.startActivity(appstart)
             } else {
                 Toast.makeText(
-                    context?.getApplicationContext(),
-                    "Install PayTm on your device",
+                    context?.getApplicationContext(), R.string.Install_PayTm_on_your_device,
                     Toast.LENGTH_SHORT
                 ).show()
             }
@@ -55,7 +54,7 @@ class PaymentFragment : Fragment() {
             } else {
                 Toast.makeText(
                     context?.getApplicationContext(),
-                    "Install Mobikwik on your device",
+                    R.string.Install_Mobikwik_on_your_device,
                     Toast.LENGTH_SHORT
                 ).show()
             }
@@ -71,8 +70,7 @@ class PaymentFragment : Fragment() {
                 context?.getApplicationContext()!!.startActivity(appstart)
             } else {
                 Toast.makeText(
-                    context?.getApplicationContext(),
-                    "Install GooglePay on your device",
+                    context?.getApplicationContext(), R.string.Install_GooglePay_on_your_device,
                     Toast.LENGTH_SHORT
                 ).show()
             }
@@ -93,11 +91,15 @@ class PaymentFragment : Fragment() {
 
     private fun AlertBox() {
         val builder = AlertDialog.Builder(activity)
-        builder.setMessage("Complete the Transaction")
-        builder.setTitle("Payment Alert")
+        builder.setMessage(R.string.Complete_the_Transaction)
+        builder.setTitle(R.string.Payment_Alert)
         builder.setCancelable(false)
-        builder.setPositiveButton("Yes") { dialog, which ->
-            Toast.makeText(activity, " Congratulations Payment successful Done", Toast.LENGTH_LONG).show()
+        builder.setPositiveButton(R.string.yes) { dialog, which ->
+            Toast.makeText(
+                activity,
+                R.string.Congratulations_Payment_successful_Done,
+                Toast.LENGTH_LONG
+            ).show()
             val intent = Intent(activity, NotificationService::class.java)
             requireActivity().startService(intent)
 
@@ -105,8 +107,8 @@ class PaymentFragment : Fragment() {
             requireActivity().startActivity(intent1)
             activity?.finish()
         }
-        builder.setNegativeButton("No") { dialog, which ->
-            Toast.makeText(activity, "Payment Failed", Toast.LENGTH_LONG).show()
+        builder.setNegativeButton(R.string.no) { dialog, which ->
+            Toast.makeText(activity, R.string.payment_failed, Toast.LENGTH_LONG).show()
             dialog.cancel()
         }
 

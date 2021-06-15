@@ -16,6 +16,30 @@
     <string name="welcome">Welcome to Ride Karo</string>
     <string name="choose_language">Choose a language to get started</string>
     <string name="next">NEXT</string>
+    <string name="power_pass">PowerPass</string>
+    <string name="Register_for_pass">Register for pass</string>
+    <string name="payment">PAYMENT</string>
+    <string name="Personal_Wallet">Personal Wallet</string>
+    <string name="small_Payment">Payment</string>
+    <string name="cash">Cash</string>
+    <string name="notifications">Notifications</string>
+    <string name="home">Home</string>
+    <string name="COVID_19">COVID 19</string>
+    <string name="my_rides">My Rides</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="insurance">Insurance</string>
+    <string name="setting">Settings</string>
+    <string name="support">Support</string>
+    <string name="Complete_the_Transaction">Complete the Transaction</string>
+    <string name="Payment_Alert">Payment Alert</string>
+    <string name="Congratulations_Payment_successful_Done">Congratulations Payment successful Done</string>
+    <string name="payment_failed">Payment Failed</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="Install_GooglePay_on_your_device">Install GooglePay on your device</string>
+    <string name="Install_Mobikwik_on_your_device">Install Mobikwik on your device</string>
+    <string name="Install_PayTm_on_your_device">Install PayTm on your device</string>
+
 
     <string-array name="language">
         <item>English</item>
