@@ -160,6 +160,12 @@ dependencies {
     //permission
     implementation 'com.vmadalin:easypermissions-ktx:1.0.0'
 
+    //Dynamics Sizes
+    implementation 'com.github.MrNouri:DynamicSizes:1.0'
+
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 
 
 

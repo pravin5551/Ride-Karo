@@ -55,11 +55,11 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/Theme.MaterialComponents.Light"
             android:layout_marginStart="@dimen/_32sdp"
             android:layout_marginTop="@dimen/_32sdp"
             android:layout_marginEnd="@dimen/_32sdp"
-            android:hint="Select Language">
+            android:hint="Select Language"
+            android:theme="@style/Theme.MaterialComponents.Light">
 
             <AutoCompleteTextView
                 android:id="@+id/autoCompleteTextView"

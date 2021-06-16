@@ -5,45 +5,55 @@
 
     <group android:checkableBehavior="single">
 
-        <item android:id="@+id/nav_home"
+        <item
+            android:id="@+id/nav_home"
             android:icon="@drawable/ic_launcher_background"
-            android:title="Home"/>
+            android:title="@string/home" />
 
-        <item android:id="@+id/nav_covid_19"
+        <item
+            android:id="@+id/nav_covid_19"
             android:icon="@drawable/ic_launcher_background"
-            android:title="COVID 19"/>
+            android:title="@string/COVID_19" />
 
-        <item android:id="@+id/nav_payment"
+        <item
+            android:id="@+id/nav_payment"
             android:icon="@drawable/ic_launcher_background"
-            android:title="Payment"/>
+            android:title="@string/small_Payment" />
 
-        <item android:id="@+id/nav_myRides"
+        <item
+            android:id="@+id/nav_myRides"
             android:icon="@drawable/ic_launcher_background"
-            android:title="My Rides"/>
+            android:title="@string/my_rides" />
 
-        <item android:id="@+id/nav_inviteFriends"
+        <item
+            android:id="@+id/nav_inviteFriends"
             android:icon="@drawable/ic_launcher_background"
-            android:title="Invite Friends"/>
+            android:title="@string/invite_friends" />
 
-        <item android:id="@+id/nav_powerPass"
+        <item
+            android:id="@+id/nav_powerPass"
             android:icon="@drawable/ic_launcher_background"
-            android:title="Power Pass"/>
+            android:title="@string/power_pass" />
 
-        <item android:id="@+id/nav_notifications"
+        <item
+            android:id="@+id/nav_notifications"
             android:icon="@drawable/ic_launcher_background"
-            android:title="Notifications"/>
+            android:title="@string/notifications" />
 
-        <item android:id="@+id/nav_insurance"
+        <item
+            android:id="@+id/nav_insurance"
             android:icon="@drawable/ic_launcher_background"
-            android:title="Insurance"/>
+            android:title="@string/insurance" />
 
-        <item android:id="@+id/nav_settings"
+        <item
+            android:id="@+id/nav_settings"
             android:icon="@drawable/ic_launcher_background"
-            android:title="Settings"/>
+            android:title="@string/setting" />
 
-        <item android:id="@+id/nav_support"
+        <item
+            android:id="@+id/nav_support"
             android:icon="@drawable/ic_launcher_background"
-            android:title="Support"/>
+            android:title="@string/support" />
 
     </group>
 
