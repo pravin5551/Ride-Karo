@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ride karo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navigation_drawer_open">"Open navigation drawer"</string>
+    <string name="navigation_drawer_close">"Close navigation drawer"</string>
+
+    <string name="india_beloved">இந்தியாவின் பிரியமான பைக் டாக்ஸி சேவை</string>
+    <string name="to_have_comfortable">ரைட்கரோவுடன் வசதியான சவாரி அனுபவத்தைப் பெற,</string>
+    <string name="please_allow">பின்வரும் அனுமதிகளை எங்களுக்கு அனுமதிக்கவும்</string>
+    <string name="location">இருப்பிடம்: உங்களைக் கண்டுபிடித்து சவாரிகளை எளிதில் பெற</string>
+    <string name="phone">தொலைபேசி: உங்கள் கணக்கைச் சரிபார்த்து அதைப் பாதுகாக்க</string>
+    <string name="allow_permissions">அனுமதிகளை அனுமதிக்கவும்</string>
+    <string name="Made_in_india">இந்தியாவில் தயாரிக்கப்பட்டது</string>
+    <string name="welcome">ரைடு கரோவுக்கு வருக</string>
+    <string name="choose_language">தொடங்க ஒரு மொழியைத் தேர்வுசெய்க</string>
+    <string name="next">அடுத்தது</string>
+    <string name="power_pass">பவர்பாஸ்</string>
+    <string name="Register_for_pass">தேர்ச்சிக்கு பதிவு செய்யுங்கள்</string>
+    <string name="payment">கட்டணம்</string>
+    <string name="Personal_Wallet">தனிப்பட்ட பணப்பை</string>
+    <string name="small_Payment">கட்டணம்</string>
+    <string name="cash">பணம்</string>
+    <string name="notifications">அறிவிப்புகள்</string>
+    <string name="home">வீடு</string>
+    <string name="COVID_19">கோவிட் 19</string>
+    <string name="my_rides">எனது சவாரிகள்</string>
+    <string name="invite_friends">நண்பர்களை அழைக்க</string>
+    <string name="insurance">காப்பீடு</string>
+    <string name="setting">அமைப்புகள்</string>
+    <string name="support">ஆதரவு</string>
+    <string name="Complete_the_Transaction">பரிவர்த்தனை முடிக்க</string>
+    <string name="Payment_Alert">கட்டண எச்சரிக்கை</string>
+    <string name="Congratulations_Payment_successful_Done">வாழ்த்துக்கள் கட்டணம் வெற்றிகரமாக முடிந்தது</string>
+    <string name="payment_failed">கட்டணம் தோல்வியுற்றது</string>
+    <string name="yes">ஆம்</string>
+    <string name="no">இல்லை</string>
+    <string name="Install_GooglePay_on_your_device">உங்கள் சாதனத்தில் GooglePay ஐ நிறுவவும்</string>
+    <string name="Install_Mobikwik_on_your_device">உங்கள் சாதனத்தில் மொபிக்விக் நிறுவவும்</string>
+    <string name="Install_PayTm_on_your_device">உங்கள் சாதனத்தில் PayTm ஐ நிறுவவும்</string>
+
+</resources>
