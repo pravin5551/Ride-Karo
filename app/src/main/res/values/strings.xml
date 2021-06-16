@@ -2,8 +2,34 @@
     <string name="app_name">Ride karo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+
     <string name="navigation_drawer_open">"Open navigation drawer"</string>
     <string name="navigation_drawer_close">"Close navigation drawer"</string>
+
+    <string name="india_beloved">India\'s Beloved Bike Taxi Service </string>
+    <string name="to_have_comfortable">To have a comfortable ride experience with RideKaro,</string>
+    <string name="please_allow">please allow us the following permissions</string>
+    <string name="location">Location: To locate you and get rides easily</string>
+    <string name="phone">Phone: To verify your account and secure it</string>
+    <string name="allow_permissions">Allow Permissions</string>
+    <string name="Made_in_india">Made in India</string>
+    <string name="welcome">Welcome to Ride Karo</string>
+    <string name="choose_language">Choose a language to get started</string>
+    <string name="next">NEXT</string>
+
+    <string-array name="language">
+        <item>English</item>
+        <item>हिंदी (Hindi)</item>
+        <item>ಕನ್ನಡ (Kannada)</item>
+        <item>తెలుగు (Telugu)</item>
+        <item>தமிழ் (Tamil)</item>
+    </string-array>
+
+    <string name="support">Support ?</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido">By continuing you will agree to our terms and privacy policy of Rapido</string>
 
 </resources>
