@@ -2,10 +2,10 @@ package com.froyo.ridekaro.views
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
+import android.widget.ArrayAdapter
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.froyo.ridekaro.R
 import kotlinx.android.synthetic.main.activity_language_screen.*
 import java.util.*
@@ -38,7 +38,11 @@ class LanguageScreenActivity : AppCompatActivity() {
 
         btnNext.setOnClickListener {
 
-            val intent = Intent(this, HomeActivity::class.java)
+
+           // val intent = Intent(this, HomeActivity::class.java)
+
+            val intent = Intent(this, OTPValidation::class.java)
+
             startActivity(intent)
         }
 
