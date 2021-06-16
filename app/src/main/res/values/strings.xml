@@ -31,5 +31,27 @@
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
     <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido">By continuing you will agree to our terms and privacy policy of Rapido</string>
+    <string name="policy_coverage">Policy Coverage</string>
+    <string name="personal_accident_accidental_death">Personal Accident/Accidental Death</string>
+    <string name="please_provide_">Please provide your correct email-id, date of birth and phone number to avoid cancellations of your Insurance claim.</string>
+    <string name="claim_insurance">CLAIM INSURANCE</string>
+    <string name="powered_by">Powered_by_Acko</string>
+    <string name="general">General</string>
+    <string name="others">Others</string>
+    <string name="profile">Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="app_language">App Language</string>
+    <string name="english">English</string>
+    <string name="app_shortcuts">App Shortcuts</string>
+    <string name="create_shortcuts_on_home_launcher">Create shortcuts on home launcher</string>
+    <string name="_5_5_27">5.5.27</string>
+    <string name="about">About</string>
+    <string name="subscribe_to_beta">Subscribe to Beta</string>
+    <string name="get_early_access_to_latest_features">Get early access to latest features</string>
+    <string name="logout">Logout</string>
+    <string name="search_issue">Search issue</string>
+    <string name="having_an_issue">Having an issue?</string>
+    <string name="get_help">Get Help</string>
+    <string name="view_all_tickets">View all tickets</string>
 
 </resources>

@@ -25,7 +25,7 @@
         <activity android:name=".views.StopwatchActivity" />
         <activity android:name=".views.InvitefriendsActivity" />
         <activity android:name=".views.OTPSecondActivity" />
-        <activity android:name=".views.OTPValidation">
+        <activity android:name=".views.OTPValidation"/>
         <activity
             android:name=".views.HomeActivity"
             android:theme="@style/Theme.HomeActivity"/>
