@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_16"
+    tools:context=".views.LocationSearch">
+
+    <EditText
+        android:id="@+id/etSearchLocation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:drawableStart="@drawable/back"
+        android:drawablePadding="@dimen/dp_10"
+        android:fontFamily="@font/opensansregular"
+        android:hint="@string/search_drop_location"
+        android:textColor="@color/black" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/dp_32"-->
+    <!--        android:fontFamily="@font/opensansregular"-->
+    <!--        android:padding="@dimen/dp_12"-->
+    <!--        android:textColor="@color/black" />-->
+
+    <Button
+        android:id="@+id/btnSerchLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:text="@string/let_s_go" />
+
+
+</LinearLayout>

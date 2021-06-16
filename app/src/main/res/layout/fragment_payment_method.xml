@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_10"
+    tools:context=".fragments.PaymentMethodFragment">
+
+    <TextView
+        android:id="@+id/tvAmountToBePaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/amount_to_be_paid"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tvIndianRupees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAmountToBePaid"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:fontFamily="@font/indianrupee"
+        android:text="`"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAmountToBePaid"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_toEndOf="@id/tvIndianRupees"
+        android:fontFamily="@font/indianrupee"
+        android:text="@string/total"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvPersonalAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTotalAmount"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_25"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/personal_account"
+        android:textColor="@color/Gray"
+        android:textSize="@dimen/sp_15" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvPersonalAccount"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:background="@color/Gainsboro" />
+
+    <LinearLayout
+        android:id="@+id/linearWallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view3">
+
+        <ImageView
+            android:id="@+id/imgWallet"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:layout_margin="@dimen/dp_15"
+            android:src="@drawable/wallet" />
+
+        <TextView
+            android:id="@+id/tvWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_15"
+            android:fontFamily="@font/productsansregular"
+            android:text="@string/wallet"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tvIndianRupees2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_15"
+            android:fontFamily="@font/indianrupee"
+            android:text="`"
+            android:textColor="@color/Red"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAmountPresent"
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="@string/_0_0"
+            android:textColor="@color/Red"
+            android:textSize="@dimen/sp_15" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/linearWallet"
+        android:layout_margin="@dimen/dp_10" />
+
+    <Button
+        android:id="@+id/btnRecharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@drawable/green_bg"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/recharge"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imgScan"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:layout_below="@id/view4"
+        android:layout_margin="@dimen/dp_15"
+        android:src="@drawable/scan" />
+
+    <TextView
+        android:id="@+id/tvQRPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view4"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_toEndOf="@id/imgScan"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/qr_pay"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tvGoCashless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvQRPay"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_toEndOf="@id/imgScan"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/go_cashless_after_ride_pay_by_scanning_qr_code"
+        android:textColor="@color/Gray"
+        android:textSize="@dimen/sp_12" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@id/tvGoCashless"
+        android:layout_margin="@dimen/dp_10" />
+
+    <ImageView
+        android:id="@+id/imgRupeeImage2"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:layout_below="@id/view5"
+        android:layout_margin="@dimen/dp_15"
+        android:src="@drawable/rupee" />
+
+    <TextView
+        android:id="@+id/tvCash2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view5"
+        android:layout_margin="@dimen/dp_15"
+        android:layout_toEndOf="@id/imgRupeeImage2"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/cash"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+
+    <TextView
+        android:id="@+id/tvOtherPaymentMethods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCash2"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/other_payment_methods"
+        android:textColor="@color/Gray"
+        android:textSize="@dimen/sp_15" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvOtherPaymentMethods"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:background="@color/Gainsboro" />
+
+
+    <ImageView
+        android:id="@+id/imgPaytm"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/view6"
+        android:layout_margin="@dimen/dp_15"
+        android:src="@drawable/paytm" />
+
+
+    <TextView
+        android:id="@+id/tvPaytm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view6"
+        android:layout_margin="@dimen/sp_15"
+        android:layout_toEndOf="@id/imgPaytm"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/paytm"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+    <Button
+        android:id="@+id/btnPaytmLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view6"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@drawable/blue_bg"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/link"
+        android:textAllCaps="false"
+        android:textColor="@color/Blue"
+        android:textSize="@dimen/sp_15" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/btnPaytmLink"
+        android:layout_margin="@dimen/dp_15"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_25" />
+
+    <ImageView
+        android:id="@+id/imgGooglePay"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/view7"
+        android:layout_margin="@dimen/dp_15"
+        android:src="@drawable/google_pay" />
+
+    <TextView
+        android:id="@+id/tvGooglePay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view7"
+        android:layout_margin="@dimen/sp_15"
+        android:layout_toEndOf="@id/imgPaytm"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/google_pay"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+    <Button
+        android:id="@+id/btnGooglePay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view7"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@drawable/blue_bg"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/link"
+        android:textAllCaps="false"
+        android:textColor="@color/Blue"
+        android:textSize="@dimen/sp_15" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/btnGooglePay"
+        android:layout_margin="@dimen/dp_15"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_25" />
+
+    <ImageView
+        android:id="@+id/imgPhonePay"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_below="@id/view8"
+        android:layout_margin="@dimen/dp_10"
+        android:src="@drawable/phone_pay" />
+
+    <TextView
+        android:id="@+id/tvPhonePay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view8"
+        android:layout_margin="@dimen/sp_15"
+        android:layout_toEndOf="@id/imgPaytm"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/phone_pay"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+    <Button
+        android:id="@+id/btnPhonePay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view8"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@drawable/blue_bg"
+        android:fontFamily="@font/productsansregular"
+        android:text="@string/link"
+        android:textAllCaps="false"
+        android:textColor="@color/Blue"
+        android:textSize="@dimen/sp_15" />
+
+</RelativeLayout>
+

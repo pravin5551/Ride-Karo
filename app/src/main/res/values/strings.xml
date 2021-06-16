@@ -1,8 +1,39 @@
 <resources>
     <string name="app_name">Ride karo</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_home_screen">Map</string>
+    <string name="im_a_rider">Im a Rider</string>
+    <string name="im_a_customer">Im a Customer</string>
+    <string name="enter_the_email">enter the email</string>
+    <string name="enter_the_password">enter the password</string>
+    <string name="login">Login</string>
+    <string name="new_rider_register">New Rider ? Register</string>
+    <string name="call_rider">call rider</string>
+    <string name="getting_driver">Getting your driver</string>
+    <string name="looking_for_driver">Looking for rider location</string>
+    <string name="driver_found">Driver Found</string>
+    <string name="ride">Ride</string>
+    <string name="current_location">Current location</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="search_drop_location">Search drop location</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="distance">distance</string>
+    <string name="total">total</string>
+    <string name="apply_coupon_code">Apply Coupon Code</string>
+    <string name="cash">Cash</string>
+    <string name="request_ride">Request Ride</string>
+    <string name="amount_to_be_paid">Amount to be paid</string>
+    <string name="personal_account">Personal Account</string>
+    <string name="wallet">Wallet</string>
+    <string name="_0_0">0.0</string>
+    <string name="recharge">Recharge</string>
+    <string name="qr_pay">QR Pay</string>
+    <string name="go_cashless_after_ride_pay_by_scanning_qr_code">Go cashless, after ride pay by scanning QR code</string>
+    <string name="other_payment_methods">Other Payment Methods</string>
+    <string name="paytm">Paytm</string>
+    <string name="link">Link</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="phone_pay">Phone Pay</string>
+    <string name="let_s_go">Let\'s Go</string>
     <string name="navigation_drawer_open">"Open navigation drawer"</string>
     <string name="navigation_drawer_close">"Close navigation drawer"</string>
 
