@@ -7,7 +7,6 @@
     <string name="enter_the_password">enter the password</string>
     <string name="login">Login</string>
     <string name="new_rider_register">New Rider ? Register</string>
-    <string name="logout">Logout</string>
     <string name="call_rider">call rider</string>
     <string name="getting_driver">Getting your driver</string>
     <string name="looking_for_driver">Looking for rider location</string>
