@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "464239023486",
+    "project_id": "ride-karo-auth",
+    "storage_bucket": "ride-karo-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464239023486:android:4890a16e8ca8f6afd88f2f",
+        "android_client_info": {
+          "package_name": "com.froyo.ridekaro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464239023486-v06kk1r6lutgrkq740h24u0dhs2mb7bm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs48WiDEoVYBo4eR97BDF63skyosTdATU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464239023486-v06kk1r6lutgrkq740h24u0dhs2mb7bm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

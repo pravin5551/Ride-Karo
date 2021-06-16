@@ -22,4 +22,11 @@
     <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/bottom_bg</item>
     </style>
+
+    <style name="Theme.HomeActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">@color/purple_500</item>
+        <item name="android:windowNoTitle">@color/purple_700</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+    </style>
 </resources>
