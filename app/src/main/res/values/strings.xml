@@ -42,5 +42,8 @@
     <string name="notifications">Notifications</string>
     <string name="insurance">Insurance</string>
     <string name="settings">Settings</string>
+    <string name="getvaccine">#GetVaccine</string>
+    <string name="your_safety_matters">Your Safety Matters</string>
+    <string name="book_vaccine">Book Vaccine</string>
 
 </resources>

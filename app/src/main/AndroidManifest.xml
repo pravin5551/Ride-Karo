@@ -10,7 +10,6 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,18 +17,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
-
+        <activity android:name=".views.Book_Vaccine_Activity"></activity>
         <activity android:name=".views.MainActivity" />
         <activity android:name=".views.Temp" />
-     
         <activity android:name=".views.StopwatchActivity" />
         <activity android:name=".views.InvitefriendsActivity" />
         <activity android:name=".views.OTPSecondActivity" />
-        <activity android:name=".views.OTPValidation"/>
+        <activity android:name=".views.OTPValidation" />
         <activity
             android:name=".views.HomeActivity"
-            android:theme="@style/Theme.HomeActivity"/>
-        <activity android:name=".views.LanguageScreenActivity"/>
+            android:theme="@style/Theme.HomeActivity" />
+        <activity android:name=".views.LanguageScreenActivity" />
         <activity android:name=".views.SecondScreenActivity" />
         <activity android:name=".views.FirstScreenActivity">
             <intent-filter>
