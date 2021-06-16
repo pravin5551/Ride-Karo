@@ -1,5 +1,6 @@
 package com.froyo.ridekaro.views
 
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -18,13 +19,16 @@ import kotlinx.android.synthetic.main.activity_first_screen.*
 class FirstScreenActivity : AppCompatActivity() {
 
     val FINE_LOCATION_RO = 101
+//    val sharePref=getSharedPreferences("myPre", Context.MODE_PRIVATE)
+//    val editor=sharePref.edit()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_screen)
 
         buttonTaps()
-
 
     }
 

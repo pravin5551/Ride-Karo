@@ -3,6 +3,11 @@
     android:shape="oval">
 
     <solid android:color="@color/Red" />
+
+    <corners android:radius="@dimen/dp_30" />
+
+
     <size android:width="@dimen/dp_5"
         android:height="@dimen/dp_5"/>
+
 </shape>

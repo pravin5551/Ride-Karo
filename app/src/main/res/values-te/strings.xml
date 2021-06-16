@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ride karo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navigation_drawer_open">"Open navigation drawer"</string>
+    <string name="navigation_drawer_close">"Close navigation drawer"</string>
+
+    <string name="india_beloved">భారతదేశం యొక్క ప్రియమైన బైక్ టాక్సీ సేవ</string>
+    <string name="to_have_comfortable">రైడ్‌కారోతో సౌకర్యవంతమైన రైడ్ అనుభవాన్ని పొందడానికి,</string>
+    <string name="please_allow">దయచేసి మాకు ఈ క్రింది అనుమతులను అనుమతించండి</string>
+    <string name="location">స్థానం: మిమ్మల్ని గుర్తించడం మరియు సులభంగా ప్రయాణించడం</string>
+    <string name="phone">ఫోన్: మీ ఖాతాను ధృవీకరించడానికి మరియు దాన్ని భద్రపరచడానికి</string>
+    <string name="allow_permissions">అనుమతులను అనుమతించండి</string>
+    <string name="Made_in_india">భారత్ లో తయారైనది</string>
+    <string name="welcome">రైడ్ కారోకు స్వాగతం</string>
+    <string name="choose_language">ప్రారంభించడానికి భాషను ఎంచుకోండి</string>
+    <string name="next">తరువాత</string>
+    <string name="power_pass">పవర్‌పాస్</string>
+    <string name="Register_for_pass">పాస్ కోసం నమోదు చేయండి</string>
+    <string name="payment">చెల్లింపు</string>
+    <string name="Personal_Wallet">వ్యక్తిగత వాలెట్</string>
+    <string name="small_Payment">చెల్లింపు</string>
+    <string name="cash">నగదు</string>
+    <string name="notifications">నోటిఫికేషన్‌లు</string>
+    <string name="home">హోమ్</string>
+    <string name="COVID_19">కోవిడ్ 19</string>
+    <string name="my_rides">నా సవారీలు</string>
+    <string name="invite_friends">స్నేహితులను ఆహ్వానించండి</string>
+    <string name="insurance">భీమా</string>
+    <string name="setting">సెట్టింగులు</string>
+    <string name="support">మద్దతు</string>
+    <string name="Complete_the_Transaction">లావాదేవీని పూర్తి చేయండి</string>
+    <string name="Payment_Alert">చెల్లింపు హెచ్చరిక</string>
+    <string name="Congratulations_Payment_successful_Done">అభినందనలు చెల్లింపు విజయవంతమైంది</string>
+    <string name="payment_failed">చెల్లింపు విఫలమైంది</string>
+    <string name="yes">అవును</string>
+    <string name="no">లేదు</string>
+    <string name="Install_GooglePay_on_your_device">మీ పరికరంలో GooglePay ని ఇన్‌స్టాల్ చేయండి</string>
+    <string name="Install_Mobikwik_on_your_device">మీ పరికరంలో మొబిక్విక్‌ను ఇన్‌స్టాల్ చేయండి</string>
+    <string name="Install_PayTm_on_your_device">మీ పరికరంలో PayTm ని ఇన్‌స్టాల్ చేయండి</string>
+
+</resources>

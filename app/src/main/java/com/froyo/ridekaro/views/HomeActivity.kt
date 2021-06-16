@@ -25,6 +25,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toolbar = findViewById<Toolbar>(R.id.my_toolbar)
         setSupportActionBar(toolbar)
 
+
         drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
 
         val navigationView = findViewById<NavigationView>(R.id.nav_view)

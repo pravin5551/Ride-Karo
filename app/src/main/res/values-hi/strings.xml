@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ride karo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="navigation_drawer_open">"Open navigation drawer"</string>
+    <string name="navigation_drawer_close">"Close navigation drawer"</string>
+    <string name="india_beloved">भारत की प्यारी बाइक टैक्सी सेवा </string>
+    <string name="to_have_comfortable">राइडकारो के साथ एक आरामदायक सवारी अनुभव प्राप्त करने के लिए,</string>
+    <string name="please_allow">कृपया हमें निम्नलिखित अनुमति दें</string>
+    <string name="location">स्थान: आप का पता लगाने और आसानी से सवारी पाने के लिए</string>
+    <string name="phone">फ़ोन: अपना खाता सत्यापित करने और उसे सुरक्षित करने के लिए</string>
+    <string name="allow_permissions">अनुमति दें</string>
+    <string name="Made_in_india">भारत में किए गए</string>
+    <string name="welcome">राइड करो में आपका स्वागत है</string>
+    <string name="choose_language">आरंभ करने के लिए एक भाषा चुनें</string>
+    <string name="next">अगला</string>
+    <string name="power_pass">पावरपास</string>
+    <string name="Register_for_pass">पास के लिए रजिस्टर करें</string>
+    <string name="payment">भुगतान</string>
+    <string name="Personal_Wallet">व्यक्तिगत बटुआ</string>
+    <string name="small_Payment">भुगतान</string>
+    <string name="cash">नकद</string>
+    <string name="notifications">सूचनाएं</string>
+    <string name="Complete_the_Transaction">लेन-देन पूरा करें</string>
+    <string name="Payment_Alert">भुगतान चेतावनी</string>
+    <string name="Congratulations_Payment_successful_Done">बधाई भुगतान सफल हो गया</string>
+    <string name="payment_failed">भुगतान असफल हुआ</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं न</string>
+    <string name="Install_GooglePay_on_your_device">अपने डिवाइस पर GooglePay इंस्टॉल करें</string>
+    <string name="Install_Mobikwik_on_your_device">अपने डिवाइस पर मोबिक्विक इंस्टॉल करें</string>
+    <string name="Install_PayTm_on_your_device">अपने डिवाइस पर पेटीएम इंस्टॉल करें</string>
+    <string name="home">घर</string>
+    <string name="COVID_19">कोविड 19</string>
+    <string name="my_rides">मेरी सवारी</string>
+    <string name="invite_friends">मित्रों को आमंत्रित करें</string>
+    <string name="insurance">बीमा</string>
+    <string name="setting">समायोजन</string>
+    <string name="support">सहयोग</string>
+
+
+</resources>
