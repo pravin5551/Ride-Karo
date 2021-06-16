@@ -52,7 +52,6 @@
     <string name="payment">PAYMENT</string>
     <string name="Personal_Wallet">Personal Wallet</string>
     <string name="small_Payment">Payment</string>
-    <string name="cash">Cash</string>
     <string name="notifications">Notifications</string>
     <string name="home">Home</string>
     <string name="COVID_19">COVID 19</string>
@@ -60,7 +59,6 @@
     <string name="invite_friends">Invite Friends</string>
     <string name="insurance">Insurance</string>
     <string name="setting">Settings</string>
-    <string name="support">Support</string>
     <string name="Complete_the_Transaction">Complete the Transaction</string>
     <string name="Payment_Alert">Payment Alert</string>
     <string name="Congratulations_Payment_successful_Done">Congratulations Payment successful Done</string>

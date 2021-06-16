@@ -19,8 +19,8 @@ import kotlinx.android.synthetic.main.activity_first_screen.*
 class FirstScreenActivity : AppCompatActivity() {
 
     val FINE_LOCATION_RO = 101
-    val sharePref=getSharedPreferences("myPre", Context.MODE_PRIVATE)
-    val editor=sharePref.edit()
+//    val sharePref=getSharedPreferences("myPre", Context.MODE_PRIVATE)
+//    val editor=sharePref.edit()
 
 
 
