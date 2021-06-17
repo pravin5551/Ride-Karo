@@ -23,9 +23,7 @@
             android:background="@drawable/invite_bg"
             android:drawableStart="@drawable/ic_baseline_arrow_back_24"
             android:gravity="center_vertical"
-            android:padding="5dp"
-
-            />
+            android:padding="5dp" />
 
         <TextView
             android:id="@+id/support_otp"
@@ -33,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_margin="@dimen/dp_10"
-            android:fontFamily="@font/lato_bold"
+            android:fontFamily="@font/productsansregular"
             android:padding="5dp"
             android:text="@string/your_safety_matters"
             android:textAllCaps="false"
@@ -43,112 +41,22 @@
 
     </RelativeLayout>
 
-    <!--    <TextView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="center_horizontal"-->
-    <!--        android:fontFamily="@font/lato_bold"-->
-    <!--        android:text="@string/getvaccine"-->
-    <!--        android:textColor="@color/black"-->
-    <!--        android:textSize="@dimen/sp_18" />-->
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="381dp"
         android:src="@drawable/vaccine_pic" />
 
-    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent">-->
 
-
-    <!--        <androidx.recyclerview.widget.RecyclerView-->
-    <!--            android:id="@+id/rvContactAddTemp"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/addAllUsers"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_margin="@dimen/dp_18"-->
-    <!--            android:text="Share"-->
-    <!--            android:textColor="@color/Black"-->
-    <!--            android:textSize="@dimen/sp_16"-->
-    <!--            app:layout_constraintEnd_toEndOf="@+id/rvContactAddTemp"-->
-    <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/tvWithYou"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_margin="10dp"-->
-    <!--            android:text="@string/with_you_and"-->
-    <!--            android:textColor="@color/black"-->
-    <!--            app:layout_constraintBottom_toBottomOf="@id/etNameEmailPhone"-->
-    <!--            app:layout_constraintEnd_toStartOf="@id/etNameEmailPhone"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="@id/etNameEmailPhone" />-->
-
-    <!--        <EditText-->
-    <!--            android:id="@+id/etNameEmailPhone"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:hint="@string/enter_phone_number"-->
-    <!--            android:textSize="@dimen/sp_15"-->
-    <!--            app:layout_constraintStart_toEndOf="@id/tvWithYou"-->
-    <!--            app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />-->
-
-    <!--        <ImageButton-->
-    <!--            android:id="@+id/ibClose"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:background="@android:color/transparent"-->
-    <!--            android:padding="@dimen/dp_10"-->
-    <!--            android:src="@drawable/ic_baseline_close_24"-->
-    <!--            android:visibility="gone"-->
-    <!--            app:layout_constraintBottom_toTopOf="@id/lvContacts"-->
-    <!--            app:layout_constraintStart_toEndOf="@+id/etNameEmailPhone"-->
-    <!--            app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />-->
-
-    <!--        <ListView-->
-    <!--            android:id="@+id/lvContacts"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="0dp"-->
-    <!--            android:visibility="gone"-->
-    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--            app:layout_constraintTop_toBottomOf="@id/etNameEmailPhone" />-->
-    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/verifyButton"-->
-    <!--        android:layout_width="120dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:layout_marginEnd="@dimen/dp_50"-->
-    <!--        android:layout_marginBottom="@dimen/dp_100"-->
-    <!--        android:background="@drawable/rect_round_mob"-->
-    <!--        android:text="Continue"-->
-    <!--        android:textColor="#f9d915" />-->
     <Button
         android:id="@+id/btnbook_vaccine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/rect_round_mon_vaccine"
-        android:padding="15dp"
-        android:text="   Book Vaccine    "
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:text="@string/book_vaccine"
         android:textColor="@color/Black"
         android:textStyle="normal" />
 
-<!--    <com.airbnb.lottie.LottieAnimationView-->
-<!--        android:id="@+id/animationView"-->
-<!--        android:layout_width="@dimen/dp_100"-->
-<!--        android:layout_height="@dimen/dp_100"-->
-<!--        android:layout_gravity="center"-->
-<!--        app:lottie_autoPlay="true"-->
-<!--        app:lottie_fileName="bookmarkanimation.json"-->
-<!--        app:lottie_loop="true" />-->
 </LinearLayout>

@@ -116,5 +116,28 @@
     <string name="your_safety_matters">Your Safety Matters</string>
     <string name="book_vaccine">Book Vaccine</string>
 
+    <string name="share">Share</string>
+    <string name="Claim_Procedure">Claim Procedure</string>
+    <string name="legal">Legal</string>
+    <string name="view">View</string>
+    <string name="Invite">Invite</string>
+    <string name="Share_via">Share via</string>
+    <string name="Invite_Friends">Invite Friends</string>
+    <string name="Invite_friends_and_get_rewards">Invite friends and get rewards</string>
+    <string name="Terms_and_Conditions">Terms and Conditions</string>
+    <string name="Waiting_for_OTP">Waiting for OTP...</string>
+    <string name="Continue">Continue</string>
+    <string name="Book_Vaccine">Book Vaccine</string>
+    <string name="Payment_amp_Wallets">Payment &amp; Wallets</string>
+    <string name="OPD_Treatment">OPD Treatment</string>
+    <string name="Medical_Expense_for_Hospitalization">Medical Expense for Hospitalization</string>
+    <string name="Continue_with_Google">Continue with Google</string>
+    <string name="Continue_with_Facebook">Continue with Facebook</string>
+    <string name="Continue_with_Apple">Continue with Apple</string>
+    <string name="Enter_Mobile_Number">Enter Mobile Number</string>
+    <string name="Login_or_Register">Login or Register</string>
+    <string name="enter_verification_pin">Enter verification pin</string>
+    <string name="Seat_back_and_relax_while_we_verify_your_phone_number">Seat back and relax while we verify your phone number</string>
+
 
 </resources>

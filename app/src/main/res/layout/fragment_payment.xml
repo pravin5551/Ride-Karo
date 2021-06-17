@@ -69,6 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_20sdp"
                     android:text="@string/Personal_Wallet"
+                    android:fontFamily="@font/productsansregular"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -84,8 +85,8 @@
                         android:layout_margin="@dimen/_10sdp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
-                        android:padding="4dp"
                         android:background="@android:color/transparent"
+                        android:padding="4dp"
                         android:src="@drawable/ic_paytm"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -96,6 +97,7 @@
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_weight="3"
+                        android:fontFamily="@font/productsansregular"
                         android:text="Paytm"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp" />
@@ -110,6 +112,7 @@
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="LINK"
+                        android:fontFamily="@font/productsansregular"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
 
@@ -139,6 +142,7 @@
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_weight="3"
+                        android:fontFamily="@font/productsansregular"
                         android:text="Mobikwik"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp" />
@@ -150,6 +154,7 @@
                         android:layout_gravity="center|right"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:background="@drawable/ic_blue_circle"
+                        android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="LINK"
@@ -182,6 +187,7 @@
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_weight="3"
+                        android:fontFamily="@font/productsansregular"
                         android:text="Google Pay"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp" />
@@ -196,10 +202,9 @@
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="LINK"
+                        android:fontFamily="@font/productsansregular"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
-
-
 
 
                 </LinearLayout>
@@ -228,6 +233,7 @@
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_weight="3"
+                        android:fontFamily="@font/productsansregular"
                         android:text="@string/cash"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp" />
@@ -239,13 +245,12 @@
                         android:layout_gravity="center|right"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:background="@drawable/ic_blue_circle"
+                        android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="Pay"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
-
-
 
 
                 </LinearLayout>
@@ -270,6 +275,7 @@
         android:textAllCaps="false"
         android:textColor="@color/yellow"
         android:textSize="18sp"
+        android:fontFamily="@font/productsansregular"
         android:textStyle="bold"
         app:layout_anchorGravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent" />
