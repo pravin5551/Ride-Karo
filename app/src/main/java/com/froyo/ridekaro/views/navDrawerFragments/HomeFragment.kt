@@ -1,16 +1,10 @@
 package com.froyo.ridekaro.views.navDrawerFragments
 
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.location.Address
@@ -20,17 +14,21 @@ import android.location.LocationListener
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.Observer
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.ViewModelProviders
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.fragments.BottomSheetFragment
-import com.froyo.ridekaro.viewModel.MyViewModel
-import com.froyo.ridekaro.views.AddressGetter
 import com.froyo.ridekaro.views.DataParser
-import com.froyo.ridekaro.views.LocationSearch
+import com.froyo.ridekaro.views.HomeActivity
+import com.froyo.ridekaro.views.LocationSearchFragment
+import com.froyo.ridekaro.views.LocationViewModel
 import com.github.florent37.runtimepermission.kotlin.askPermission
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -103,6 +101,13 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val locationViewModel = ViewModelProviders.of(this).get(LocationViewModel::class.java)
+
+        locationViewModel.getLocation().observe(viewLifecycleOwner, androidx.lifecycle.Observer {
+            Toast.makeText(context, it.toString(), Toast.LENGTH_SHORT).show()
+            tvEnterDestination.text = it.toString()
+        })
+
         view.apply {
             mapView = findViewById(R.id.googleMap)
         }
@@ -115,9 +120,16 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         mapView.getMapAsync(this)
 
         tvEnterDestination.setOnClickListener {
-            areaIntent = Intent(context, LocationSearch::class.java)
-            areaIntent.putExtra("area", "null")
-            startActivity(areaIntent)
+            val ft: FragmentTransaction = requireFragmentManager().beginTransaction()
+            ft.replace(
+                R.id.fragmentContainerView,
+                LocationSearchFragment(),
+                "LocationSearchFragment"
+            ).addToBackStack("LocationSearchFragment")
+            ft.commit()
+//            areaIntent = Intent(context, LocationSearch::class.java)
+//            areaIntent.putExtra("area", "null")
+//            startActivity(areaIntent)
 //            getArea("Dahisar station")
         }
 

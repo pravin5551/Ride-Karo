@@ -1,5 +1,7 @@
 package com.froyo.ridekaro.views.navDrawerFragments
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -8,6 +10,7 @@ import com.froyo.ridekaro.R
 import com.froyo.ridekaro.views.FAQsModel
 import kotlinx.android.synthetic.main.fragment_support.*
 
+
 class SupportFragment : Fragment(R.layout.fragment_support) {
 
     lateinit var faQsAdapter: FAQsAdapter
@@ -15,7 +18,6 @@ class SupportFragment : Fragment(R.layout.fragment_support) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         buildData()
         faQsAdapter = FAQsAdapter(faqsList)
         rvFaqs.layoutManager = GridLayoutManager(context, 3)
