@@ -9,8 +9,6 @@ import com.froyo.ridekaro.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_otpvalidation.*
@@ -20,7 +18,7 @@ const val RC_SIGN_IN = 123
 
 class OTPValidation : AppCompatActivity() {
 
-    lateinit var mAuth: FirebaseAuth
+    private var mAuth: FirebaseAuth? =null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otpvalidation)
@@ -40,18 +38,7 @@ class OTPValidation : AppCompatActivity() {
 
             val acct = GoogleSignIn.getLastSignedInAccount(applicationContext)
             if (acct != null) {
-//
-//                val bundle = Bundle()
-//                val name = acct.displayName
-//                val email = acct.email
-//
-//                val bundle = bundleOf("name" to acct.displayName, "email" to acct.email,"photo" to acct.photoUrl.toString())
-//
-//                val fragment = ProfileFragment()
-//                val fragmentManager: FragmentManager = supportFragmentManager
-//                val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-//                fragment.arguments = (bundle)
-//                fragmentTransaction.replace(R.id.googleContainer, fragment,"fragment").addToBackStack("fragment").commit()
+
                 val intent_two = Intent(this, HomeActivity::class.java)
                 intent_two.putExtra("UserName",acct.displayName)
                 intent_two.putExtra("UserEmail",acct.email)

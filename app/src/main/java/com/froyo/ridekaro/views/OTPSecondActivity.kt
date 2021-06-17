@@ -15,7 +15,7 @@ import java.util.*
 
 class OTPSecondActivity : AppCompatActivity() {
     private var mVerificationId: String? = null
-    private var mAuth: FirebaseAuth? = null
+    lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
