@@ -47,15 +47,16 @@
         <activity android:name=".views.OTPValidation" />
         <activity
             android:name=".views.HomeActivity"
-            android:theme="@style/Theme.HomeActivity" />
-        <activity android:name=".views.LanguageScreenActivity" />
-        <activity android:name=".views.SecondScreenActivity" />
-        <activity android:name=".views.FirstScreenActivity">
+            android:theme="@style/Theme.HomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".views.LanguageScreenActivity" />
+        <activity android:name=".views.SecondScreenActivity" />
+        <activity android:name=".views.FirstScreenActivity">
         </activity>
     </application>
 
