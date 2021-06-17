@@ -16,20 +16,20 @@ class NotificationService : Service() {
 
 
     override fun onBind(intent: Intent?): IBinder? {
-        TODO("Not yet implemented")
         return null
     }
 
-    override fun onCreate() {
-        super.onCreate()
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             createNotification()
         } else {
             startForeground(2, Notification())
         }
         stopNotification()
-
+        return START_STICKY
     }
+
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private fun createNotification() {

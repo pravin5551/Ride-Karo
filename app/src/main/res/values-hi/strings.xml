@@ -32,6 +32,7 @@
     <string name="Install_GooglePay_on_your_device">अपने डिवाइस पर GooglePay इंस्टॉल करें</string>
     <string name="Install_Mobikwik_on_your_device">अपने डिवाइस पर मोबिक्विक इंस्टॉल करें</string>
     <string name="Install_PayTm_on_your_device">अपने डिवाइस पर पेटीएम इंस्टॉल करें</string>
+
     <string name="home">घर</string>
     <string name="COVID_19">कोविड 19</string>
     <string name="my_rides">मेरी सवारी</string>
@@ -39,6 +40,79 @@
     <string name="insurance">बीमा</string>
     <string name="setting">समायोजन</string>
     <string name="support">सहयोग</string>
+
+    <string name="mobile_number">मोबाइल नंबर</string>
+    <string name="start">शुरू</string>
+    <string name="stop">रुकें</string>
+    <string name="reset">रीसेट</string>
+    <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido">जारी रखकर आप Ride Karo . की हमारी शर्तों और गोपनीयता नीति से सहमत होंगे</string>
+    <string name="policy_coverage">पॉलिसी कवरेज</string>
+    <string name="personal_accident_accidental_death">व्यक्तिगत दुर्घटना/आकस्मिक मृत्यु</string>
+    <string name="please_provide_">अपने बीमा दावे को रद्द होने से बचाने के लिए कृपया अपना सही ईमेल-आईडी, जन्म तिथि और फोन नंबर प्रदान करें।</string>
+    <string name="claim_insurance">दावा बीमा</string>
+    <string name="powered_by">Powered_by_Acko</string>
+    <string name="general">आम</string>
+    <string name="others">अन्य</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="favorites">पसंदीदा</string>
+    <string name="app_language">ऐप भाषा</string>
+    <string name="english">English</string>
+    <string name="app_shortcuts">ऐप शॉर्टकट</string>
+    <string name="create_shortcuts_on_home_launcher">होम लॉन्चर पर शॉर्टकट बनाएं</string>
+    <string name="_5_5_27">5.5.27</string>
+    <string name="about">तकरीबन</string>
+    <string name="subscribe_to_beta">बीटा की सदस्यता लें</string>
+    <string name="get_early_access_to_latest_features">नवीनतम सुविधाओं तक शीघ्र पहुंच प्राप्त करें</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="search_issue">खोज मुद्दा</string>
+    <string name="having_an_issue">कोई समस्या है?</string>
+    <string name="get_help">मदद लें</string>
+    <string name="view_all_tickets">सभी टिकट देखें</string>
+
+    <string name="title_activity_home_screen">Map</string>
+    <string name="im_a_rider">मैं एक सवार हूँ</string>
+    <string name="im_a_customer">मैं एक ग्राहक हूँ</string>
+    <string name="enter_the_email">ईमेल दर्ज करें</string>
+    <string name="enter_the_password">पासवर्ड दर्ज करे</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="new_rider_register">नया सवार? रजिस्टर करें</string>
+    <string name="call_rider">कॉल राइडर</string>
+    <string name="getting_driver">अपना ड्राइवर प्राप्त करना</string>
+    <string name="looking_for_driver">सवार स्थान की तलाश में</string>
+    <string name="driver_found">ड्राइवर मिला</string>
+    <string name="ride">सवारी</string>
+    <string name="current_location">वर्तमान स्थान</string>
+    <string name="enter_destination">गंतव्य दर्ज करें</string>
+    <string name="search_drop_location">ड्रॉप लोकेशन खोजें</string>
+    <string name="distance">दूरी</string>
+    <string name="total">संपूर्ण</string>
+    <string name="apply_coupon_code">कूपन कोड लागू करें</string>
+    <string name="request_ride">अनुरोध सवारी</string>
+    <string name="amount_to_be_paid">जितनी राशि अदा की जानी है</string>
+    <string name="personal_account">व्यक्तिगत खाता</string>
+    <string name="wallet">बटुआ</string>
+    <string name="_0_0">0.0</string>
+    <string name="recharge">फिर से दाम लगाना</string>
+    <string name="qr_pay">क्यूआर पे</string>
+    <string name="go_cashless_after_ride_pay_by_scanning_qr_code">क्यूआर कोड स्कैन करके राइड पे के बाद कैशलेस हो जाएं</string>
+    <string name="other_payment_methods">अन्य भुगतान के तरीके</string>
+    <string name="paytm">Paytm</string>
+    <string name="link">Link</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="phone_pay">Phone Pay</string>
+    <string name="let_s_go">चलो चलते हैं</string>
+
+
+    <string name="enter_phone_number">फोन नंबर दर्ज</string>
+    <string name="with_you_and">आपके साथ और</string>
+    <string name="covid_19">COVID 19</string>
+    <string name="settings">समायोजन</string>
+    <string name="getvaccine">#वैक्सीन प्राप्त करें</string>
+    <string name="your_safety_matters">आपकी सुरक्षा के मामले</string>
+    <string name="book_vaccine">बुक वैक्सीन</string>
+
+
+
 
 
 </resources>
