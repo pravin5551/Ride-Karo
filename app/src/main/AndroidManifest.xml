@@ -34,7 +34,6 @@
         <activity
             android:name=".views.MainActivity"
             android:label="@string/title_activity_home_screen" />
-        <activity android:name=".views.UserHomeScreen" />
 
         <activity android:name=".views.Temp" />
 
@@ -54,6 +53,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".NotificationService"/>
+
     </application>
 
 </manifest>
