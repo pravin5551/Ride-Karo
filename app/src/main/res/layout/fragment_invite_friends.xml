@@ -1,14 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.navDrawerFragments.InviteFriendsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="invite friends" />
+        android:orientation="vertical"
+        android:weightSum="3">
 
-</FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#3B5999"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparentColor">
+
+                <Button
+                    android:id="@+id/back_otp"
+                    android:layout_width="50dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@drawable/invite_bg"
+                    android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+                    android:padding="@dimen/dp_15" />
+
+                <Button
+                    android:id="@+id/support_otp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="#3B5999"
+                    android:padding="@dimen/dp_15"
+                    android:text="@string/support"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/dp_20"
+                android:text="Invite Friends"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/dp_20"
+                android:text="Invite friends and get rewards"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_20"
+
+                />
+
+            <Button
+                android:id="@+id/unique_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/rect_bg_code"
+                android:drawableEnd="@drawable/ic_baseline_content_copy_24"
+                android:text="  CB1C9JB   "
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/dp_20"
+                android:src="@drawable/girl_bitcoin" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="444dp"
+                android:src="@drawable/share_ss"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="@dimen/dp_12">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btn_share_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/invite_bg"
+                    android:padding="@dimen/dp_10"
+                    android:text="Invite" />
+
+
+                <Button
+                    android:id="@+id/btnShare_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/sahre_bg"
+                    android:drawableEnd="@drawable/ic__02_whatsapp"
+                    android:padding="@dimen/dp_10"
+                    android:text="Share via" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "464239023486-5vqtcojin794birob2sor0mvi0ca5d1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.froyo.ridekaro",
+            "certificate_hash": "70e0ebb0b3507e51f6b8170fbe18a2c8dc4c09c3"
+          }
+        },
+        {
           "client_id": "464239023486-v06kk1r6lutgrkq740h24u0dhs2mb7bm.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -84,6 +84,7 @@
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
     <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido">By continuing you will agree to our terms and privacy policy of Rapido</string>
+
     <string name="policy_coverage">Policy Coverage</string>
     <string name="personal_accident_accidental_death">Personal Accident/Accidental Death</string>
     <string name="please_provide_">Please provide your correct email-id, date of birth and phone number to avoid cancellations of your Insurance claim.</string>
@@ -106,5 +107,21 @@
     <string name="having_an_issue">Having an issue?</string>
     <string name="get_help">Get Help</string>
     <string name="view_all_tickets">View all tickets</string>
+
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="with_you_and">With you and</string>
+    <string name="home">Home</string>
+    <string name="covid_19">COVID 19</string>
+    <string name="payment">Payment</string>
+    <string name="my_rides">My Rides</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="power_pass">Power Pass</string>
+    <string name="notifications">Notifications</string>
+    <string name="insurance">Insurance</string>
+    <string name="settings">Settings</string>
+    <string name="getvaccine">#GetVaccine</string>
+    <string name="your_safety_matters">Your Safety Matters</string>
+    <string name="book_vaccine">Book Vaccine</string>
+
 
 </resources>

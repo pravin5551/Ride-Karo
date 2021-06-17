@@ -1,11 +1,11 @@
 package com.froyo.ridekaro.views;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.froyo.ridekaro.R;
 
@@ -29,8 +29,7 @@ public class StopwatchActivity extends AppCompatActivity {
     private boolean wasRunning;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stopwatch);
         if (savedInstanceState != null) {
@@ -68,8 +67,7 @@ public class StopwatchActivity extends AppCompatActivity {
     // If the activity is paused,
     // stop the stopwatch.
     @Override
-    protected void onPause()
-    {
+    protected void onPause() {
         super.onPause();
         wasRunning = running;
         running = false;
@@ -79,8 +77,7 @@ public class StopwatchActivity extends AppCompatActivity {
     // start the stopwatch
     // again if it was running previously.
     @Override
-    protected void onResume()
-    {
+    protected void onResume() {
         super.onResume();
         if (wasRunning) {
             running = true;
@@ -91,8 +88,7 @@ public class StopwatchActivity extends AppCompatActivity {
     // when the Start button is clicked.
     // Below method gets called
     // when the Start button is clicked.
-    public void onClickStart(View view)
-    {
+    public void onClickStart(View view) {
         running = true;
     }
 
@@ -100,8 +96,7 @@ public class StopwatchActivity extends AppCompatActivity {
     // when the Stop button is clicked.
     // Below method gets called
     // when the Stop button is clicked.
-    public void onClickStop(View view)
-    {
+    public void onClickStop(View view) {
         running = false;
     }
 
@@ -109,8 +104,7 @@ public class StopwatchActivity extends AppCompatActivity {
     // the Reset button is clicked.
     // Below method gets called
     // when the Reset button is clicked.
-    public void onClickReset(View view)
-    {
+    public void onClickReset(View view) {
         running = false;
         seconds = 0;
     }
@@ -119,12 +113,11 @@ public class StopwatchActivity extends AppCompatActivity {
     // The runTimer() method uses a Handler
     // to increment the seconds and
     // update the text view.
-    private void runTimer()
-    {
+    private void runTimer() {
 
         // Get the text view.
         final TextView timeView
-                = (TextView)findViewById(
+                = (TextView) findViewById(
                 R.id.time_view);
 
         // Creates a new Handler
@@ -140,8 +133,7 @@ public class StopwatchActivity extends AppCompatActivity {
         handler.post(new Runnable() {
             @Override
 
-            public void run()
-            {
+            public void run() {
                 int hours = seconds / 3600;
                 int minutes = (seconds % 3600) / 60;
                 int secs = seconds % 60;

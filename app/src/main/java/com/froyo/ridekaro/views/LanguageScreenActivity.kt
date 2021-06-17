@@ -41,7 +41,11 @@ class LanguageScreenActivity : AppCompatActivity() {
 
         btnNext.setOnClickListener {
 
-            val intent = Intent(this, HomeActivity::class.java)
+
+           // val intent = Intent(this, HomeActivity::class.java)
+
+            val intent = Intent(this, OTPValidation::class.java)
+
             startActivity(intent)
         }
 
