@@ -41,4 +41,76 @@
     <string name="Install_Mobikwik_on_your_device">ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಮೊಬಿಕ್ವಿಕ್ ಅನ್ನು ಸ್ಥಾಪಿಸಿ</string>
     <string name="Install_PayTm_on_your_device">ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ PayTm ಅನ್ನು ಸ್ಥಾಪಿಸಿ</string>
 
+    <string name="mobile_number">ಮೊಬೈಲ್ ನಂಬರ</string>
+    <string name="start">ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="stop">ನಿಲ್ಲಿಸು</string>
+    <string name="reset">ಮರುಹೊಂದಿಸಿ</string>
+    <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido">ಮುಂದುವರಿಸುವ ಮೂಲಕ ನಮ್ಮ ನಿಯಮಗಳು ಮತ್ತು ರೈಡ್ ಕರೋ ಗೌಪ್ಯತೆ ನೀತಿಯನ್ನು ನೀವು ಒಪ್ಪುತ್ತೀರಿ</string>
+    <string name="policy_coverage">ನೀತಿ ವ್ಯಾಪ್ತಿ</string>
+    <string name="personal_accident_accidental_death">ವೈಯಕ್ತಿಕ ಅಪಘಾತ / ಆಕಸ್ಮಿಕ ಸಾವು</string>
+    <string name="please_provide_">ನಿಮ್ಮ ವಿಮಾ ಹಕ್ಕು ರದ್ದತಿಗಳನ್ನು ತಪ್ಪಿಸಲು ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸರಿಯಾದ ಇಮೇಲ್-ಐಡಿ, ಹುಟ್ಟಿದ ದಿನಾಂಕ ಮತ್ತು ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ಒದಗಿಸಿ.</string>
+    <string name="claim_insurance">ಹಕ್ಕು ವಿಮೆ</string>
+    <string name="powered_by">Powered_by_Acko</string>
+    <string name="general">ಜನರಲ್</string>
+    <string name="others">ಇತರರು</string>
+    <string name="profile">ಪ್ರೊಫೈಲ್</string>
+    <string name="favorites">ಮೆಚ್ಚಿನವುಗಳು</string>
+    <string name="app_language">ಅಪ್ಲಿಕೇಶನ್ ಭಾಷೆ</string>
+    <string name="english">ಆಂಗ್ಲ</string>
+    <string name="app_shortcuts">ಅಪ್ಲಿಕೇಶನ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳು</string>
+    <string name="create_shortcuts_on_home_launcher">ಹೋಮ್ ಲಾಂಚರ್‌ನಲ್ಲಿ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ರಚಿಸಿ</string>
+    <string name="_5_5_27">5.5.27</string>
+    <string name="about">ಬಗ್ಗೆ</string>
+    <string name="subscribe_to_beta">ಬೀಟಾಕ್ಕೆ ಚಂದಾದಾರರಾಗಿ</string>
+    <string name="get_early_access_to_latest_features">ಇತ್ತೀಚಿನ ವೈಶಿಷ್ಟ್ಯಗಳಿಗೆ ಆರಂಭಿಕ ಪ್ರವೇಶವನ್ನು ಪಡೆಯಿರಿ</string>
+    <string name="logout">ಲಾಗ್ ಔಟ್</string>
+    <string name="search_issue">ಹುಡುಕಾಟ ಸಮಸ್ಯೆ</string>
+    <string name="having_an_issue">ಸಮಸ್ಯೆ ಇದೆಯೇ?</string>
+    <string name="get_help">ಸಹಾಯ ಪಡೆ</string>
+    <string name="view_all_tickets">ಎಲ್ಲಾ ಟಿಕೆಟ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
+
+    <string name="title_activity_home_screen">ನಕ್ಷೆ</string>
+    <string name="im_a_rider">ಇಮ್ ಎ ರೈಡರ್</string>
+    <string name="im_a_customer">ನಾನು ಗ್ರಾಹಕ</string>
+    <string name="enter_the_email">ಇಮೇಲ್ ನಮೂದಿಸಿ</string>
+    <string name="enter_the_password">ಪಾಸ್ವರ್ಡ್ ನಮೂದಿಸಿ</string>
+    <string name="login">ಲಾಗಿನ್ ಮಾಡಿ</string>
+    <string name="new_rider_register">ಹೊಸ ರೈಡರ್? ನೋಂದಣಿ</string>
+    <string name="call_rider">ಕರೆ ರೈಡರ್</string>
+    <string name="getting_driver">ನಿಮ್ಮ ಚಾಲಕವನ್ನು ಪಡೆಯುವುದು</string>
+    <string name="looking_for_driver">ರೈಡರ್ ಸ್ಥಳಕ್ಕಾಗಿ ನೋಡುತ್ತಿರುವುದು</string>
+    <string name="driver_found">ಚಾಲಕ ಸಿಕ್ಕಿದ್ದಾನೆ</string>
+    <string name="ride">ಸವಾರಿ</string>
+    <string name="current_location">ಈಗಿನ ಸ್ಥಳ</string>
+    <string name="enter_destination">ಗಮ್ಯಸ್ಥಾನವನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="search_drop_location">ಡ್ರಾಪ್ ಸ್ಥಳವನ್ನು ಹುಡುಕಿ</string>
+    <string name="distance">ದೂರ</string>
+    <string name="total">ಒಟ್ಟು</string>
+    <string name="apply_coupon_code">ಕೂಪನ್ ಕೋಡ್ ಅನ್ನು ಅನ್ವಯಿಸಿ</string>
+    <string name="request_ride">ಸವಾರಿ ವಿನಂತಿಸಿ</string>
+    <string name="amount_to_be_paid">ಪಾವತಿಸಬೇಕಾದ ಮೊತ್ತ</string>
+    <string name="personal_account">ವೈಯಕ್ತಿಕ ಖಾತೆ</string>
+    <string name="wallet">Wallet</string>
+    <string name="_0_0">0.0</string>
+    <string name="recharge">ರೀಚಾರ್ಜ್ ಮಾಡಿ</string>
+    <string name="qr_pay">ಕ್ಯೂಆರ್ ಪೇ</string>
+    <string name="go_cashless_after_ride_pay_by_scanning_qr_code">ಕ್ಯೂಆರ್ ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡುವ ಮೂಲಕ ರೈಡ್ ಪೇ ನಂತರ ನಗದುರಹಿತವಾಗಿ ಹೋಗಿ</string>
+    <string name="other_payment_methods">ಇತರ ಪಾವತಿ ವಿಧಾನಗಳು</string>
+    <string name="paytm">Paytm</string>
+    <string name="link">Link</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="phone_pay">Phone Pay</string>
+    <string name="let_s_go">ಹೋಗೋಣ</string>
+
+
+    <string name="enter_phone_number">ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="with_you_and">ನಿಮ್ಮೊಂದಿಗೆ ಮತ್ತು</string>
+
+    <string name="covid_19">COVID 19</string>
+    <string name="settings">ಸಂಯೋಜನೆಗಳು</string>
+    <string name="getvaccine"># ಗೆಟ್‌ವಾಕ್ಸಿನ್</string>
+    <string name="your_safety_matters">ನಿಮ್ಮ ಸುರಕ್ಷತೆಯ ವಿಷಯಗಳು</string>
+    <string name="book_vaccine">ಲಸಿಕೆ ಪುಸ್ತಕ</string>
+
+
 </resources>

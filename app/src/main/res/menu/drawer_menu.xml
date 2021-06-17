@@ -5,45 +5,55 @@
 
     <group android:checkableBehavior="single">
 
-        <item android:id="@+id/nav_home"
+        <item
+            android:id="@+id/nav_home"
             android:icon="@drawable/ic__010_home"
-            android:title="@string/home"/>
+            android:title="@string/home" />
 
-        <item android:id="@+id/nav_covid_19"
+        <item
+            android:id="@+id/nav_covid_19"
             android:icon="@drawable/ic__05_covid"
-            android:title="@string/covid_19"/>
+            android:title="@string/covid_19" />
 
-        <item android:id="@+id/nav_payment"
+        <item
+            android:id="@+id/nav_payment"
             android:icon="@drawable/ic__07_payment"
-            android:title="@string/payment"/>
+            android:title="@string/payment_menu" />
 
-        <item android:id="@+id/nav_myRides"
+        <item
+            android:id="@+id/nav_myRides"
             android:icon="@drawable/ic__03_my_rides"
-            android:title="@string/my_rides"/>
+            android:title="@string/my_rides" />
 
-        <item android:id="@+id/nav_inviteFriends"
+        <item
+            android:id="@+id/nav_inviteFriends"
             android:icon="@drawable/ic__06_invite_friends"
-            android:title="@string/invite_friends"/>
+            android:title="@string/invite_friends" />
 
-        <item android:id="@+id/nav_powerPass"
+        <item
+            android:id="@+id/nav_powerPass"
             android:icon="@drawable/ic__04_power_pass"
-            android:title="@string/power_pass"/>
+            android:title="@string/power_pass" />
 
-        <item android:id="@+id/nav_notifications"
+        <item
+            android:id="@+id/nav_notifications"
             android:icon="@drawable/ic__02_notification"
-            android:title="@string/notifications"/>
+            android:title="@string/notifications" />
 
-        <item android:id="@+id/nav_insurance"
+        <item
+            android:id="@+id/nav_insurance"
             android:icon="@drawable/ic__08_insurance"
-            android:title="@string/insurance"/>
+            android:title="@string/insurance" />
 
-        <item android:id="@+id/nav_settings"
+        <item
+            android:id="@+id/nav_settings"
             android:icon="@drawable/ic__01_settings"
-            android:title="@string/settings"/>
+            android:title="@string/settings" />
 
-        <item android:id="@+id/nav_support"
+        <item
+            android:id="@+id/nav_support"
             android:icon="@drawable/ic__09_support"
-            android:title="@string/support"/>
+            android:title="@string/support_menu" />
 
 
     </group>

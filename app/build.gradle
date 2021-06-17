@@ -7,6 +7,7 @@ plugins {
     id "androidx.navigation.safeargs"
 
     id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 
 }
 
@@ -45,7 +46,12 @@ android {
 
 dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.firebase:firebase-analytics:19.0.0'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation 'com.google.firebase:firebase-firestore:23.0.1'
+    implementation 'com.google.firebase:firebase-crashlytics:18.0.1'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
     def jetpack_version = "2.1.0"
     def anko_version = '0.10.0'
     def arch_version = '2.2.0-alpha01'
@@ -59,12 +65,8 @@ dependencies {
 
 
     implementation "com.google.android.gms:play-services-location:18.0.0"
-    implementation 'com.google.firebase:firebase-messaging:22.0.0'
 
     implementation 'com.firebase:geofire-android:2.1.1'
-    implementation 'com.google.firebase:firebase-core:19.0.0'
-    implementation 'com.google.firebase:firebase-auth:21.0.1'
-    implementation 'com.google.firebase:firebase-database:20.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -166,18 +168,6 @@ dependencies {
 
     //CircleImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-
-//Firebase dependancies
-    // Import the BoM for the Firebase platform
-    implementation platform('com.google.firebase:firebase-bom:28.1.0')
-
-    // Declare the dependency for the Firebase Authentication library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-auth-ktx'
-
-    // Also declare the dependency for the Google Play services library and specify its version
-    implementation 'com.google.android.gms:play-services-auth:19.0.0'
-
 
 //circular img
     implementation 'de.hdodenhof:circleimageview:3.1.0'
