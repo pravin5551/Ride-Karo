@@ -102,4 +102,15 @@
     <string name="phone_pay">Phone Pay</string>
     <string name="let_s_go">ಹೋಗೋಣ</string>
 
+
+    <string name="enter_phone_number">ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="with_you_and">ನಿಮ್ಮೊಂದಿಗೆ ಮತ್ತು</string>
+
+    <string name="covid_19">COVID 19</string>
+    <string name="settings">ಸಂಯೋಜನೆಗಳು</string>
+    <string name="getvaccine"># ಗೆಟ್‌ವಾಕ್ಸಿನ್</string>
+    <string name="your_safety_matters">ನಿಮ್ಮ ಸುರಕ್ಷತೆಯ ವಿಷಯಗಳು</string>
+    <string name="book_vaccine">ಲಸಿಕೆ ಪುಸ್ತಕ</string>
+
+
 </resources>

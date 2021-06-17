@@ -103,6 +103,16 @@
     <string name="let_s_go">चलो चलते हैं</string>
 
 
+    <string name="enter_phone_number">फोन नंबर दर्ज</string>
+    <string name="with_you_and">आपके साथ और</string>
+    <string name="covid_19">COVID 19</string>
+    <string name="settings">समायोजन</string>
+    <string name="getvaccine">#वैक्सीन प्राप्त करें</string>
+    <string name="your_safety_matters">आपकी सुरक्षा के मामले</string>
+    <string name="book_vaccine">बुक वैक्सीन</string>
+
+
+
 
 
 </resources>

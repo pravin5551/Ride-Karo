@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_otpsecond.*
 import java.util.*
 
 class OTPSecondActivity : AppCompatActivity() {
+
     private var mVerificationId: String? = null
     private var mAuth: FirebaseAuth? = null
 

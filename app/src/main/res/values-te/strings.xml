@@ -103,4 +103,14 @@
     <string name="phone_pay">Phone Pay</string>
     <string name="let_s_go">వెళ్దాం</string>
 
+
+    <string name="enter_phone_number">ఫోన్ నంబర్‌ను నమోదు చేయండి</string>
+    <string name="with_you_and">మీతో మరియు</string>
+    <string name="covid_19">COVID 19</string>
+    <string name="settings">సెట్టింగులు</string>
+    <string name="getvaccine"># గెట్‌వాక్సిన్</string>
+    <string name="your_safety_matters">మీ భద్రతా అంశాలు</string>
+    <string name="book_vaccine">టీకా బుక్ చేయండి</string>
+
+
 </resources>
