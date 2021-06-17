@@ -13,7 +13,7 @@ class LocationSearchFragment : Fragment(R.layout.fragment_location_search) {
         val locationViewModel = ViewModelProviders.of(this).get(LocationViewModel::class.java)
 
         btnSearchLocation.setOnClickListener {
-            var address = etSearchLocation.text.toString()
+            val address = etSearchLocation.text.toString()
             if (address != "") {
                 locationViewModel.addLocation(address)
                 activity?.onBackPressed()

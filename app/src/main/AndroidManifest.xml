@@ -39,7 +39,6 @@
         <activity android:name=".views.Temp" />
 
 
-
         <activity android:name=".views.Book_Vaccine_Activity"></activity>
         <activity android:name=".views.StopwatchActivity" />
         <activity android:name=".views.InvitefriendsActivity" />
@@ -47,16 +46,15 @@
         <activity android:name=".views.OTPValidation" />
         <activity
             android:name=".views.HomeActivity"
-            android:theme="@style/Theme.HomeActivity" >
+            android:theme="@style/Theme.HomeActivity"/>
+        <activity android:name=".views.LanguageScreenActivity" />
+        <activity android:name=".views.SecondScreenActivity" />
+        <activity android:name=".views.FirstScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".views.LanguageScreenActivity" />
-        <activity android:name=".views.SecondScreenActivity" />
-        <activity android:name=".views.FirstScreenActivity">
         </activity>
     </application>
 
