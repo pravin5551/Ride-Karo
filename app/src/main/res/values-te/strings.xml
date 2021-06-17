@@ -41,4 +41,76 @@
     <string name="Install_Mobikwik_on_your_device">మీ పరికరంలో మొబిక్విక్‌ను ఇన్‌స్టాల్ చేయండి</string>
     <string name="Install_PayTm_on_your_device">మీ పరికరంలో PayTm ని ఇన్‌స్టాల్ చేయండి</string>
 
+
+    <string name="mobile_number">మొబైల్ సంఖ్య</string>
+    <string name="start">ప్రారంభించండి</string>
+    <string name="stop">ఆపు</string>
+    <string name="reset">రీసెట్ చేయండి</string>
+    <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido">కొనసాగించడం ద్వారా మీరు రైడ్ కారో యొక్క మా నిబంధనలు మరియు గోప్యతా విధానాన్ని అంగీకరిస్తారు</string>
+    <string name="policy_coverage">విధాన కవరేజ్</string>
+    <string name="personal_accident_accidental_death">వ్యక్తిగత ప్రమాదం / ప్రమాద మరణం</string>
+    <string name="please_provide_">మీ భీమా దావా రద్దు చేయకుండా ఉండటానికి దయచేసి మీ సరైన ఇమెయిల్-ఐడి, పుట్టిన తేదీ మరియు ఫోన్ నంబర్‌ను అందించండి.</string>
+    <string name="claim_insurance">క్లెయిమ్ ఇన్సూరెన్స్</string>
+    <string name="powered_by">Powered_by_Acko</string>
+    <string name="general">జనరల్</string>
+    <string name="others">ఇతరులు</string>
+    <string name="profile">ప్రొఫైల్</string>
+    <string name="favorites">ఇష్టమైనవి</string>
+    <string name="app_language">అనువర్తన భాష</string>
+    <string name="english">English</string>
+    <string name="app_shortcuts">అనువర్తన సత్వరమార్గాలు</string>
+    <string name="create_shortcuts_on_home_launcher">హోమ్ లాంచర్‌లో సత్వరమార్గాలను సృష్టించండి</string>
+    <string name="_5_5_27">5.5.27</string>
+    <string name="about">గురించి</string>
+    <string name="subscribe_to_beta">బీటాకు సభ్యత్వాన్ని పొందండి</string>
+    <string name="get_early_access_to_latest_features">తాజా లక్షణాలకు ప్రారంభ ప్రాప్యతను పొందండి</string>
+    <string name="logout">లాగ్ అవుట్</string>
+    <string name="search_issue">శోధన సమస్య</string>
+    <string name="having_an_issue">సమస్య ఉందా?</string>
+    <string name="get_help">సహాయం పొందు</string>
+    <string name="view_all_tickets">అన్ని టిక్కెట్లను చూడండి</string>
+
+    <string name="title_activity_home_screen">మ్యాప్</string>
+    <string name="im_a_rider">ఇమ్ ఎ రైడర్</string>
+    <string name="im_a_customer">నేను కస్టమర్</string>
+    <string name="enter_the_email">ఇమెయిల్ నమోదు చేయండి</string>
+    <string name="enter_the_password">పాస్వర్డ్ను నమోదు చేయండి</string>
+    <string name="login">ప్రవేశించండి</string>
+    <string name="new_rider_register">కొత్త రైడర్? నమోదు చేయండి</string>
+    <string name="call_rider">కాల్ రైడర్</string>
+    <string name="getting_driver">మీ డ్రైవర్ పొందడం</string>
+    <string name="looking_for_driver">రైడర్ స్థానం కోసం వెతుకుతోంది</string>
+    <string name="driver_found">డ్రైవర్ దొరికింది</string>
+    <string name="ride">రైడ్</string>
+    <string name="current_location">ప్రస్తుత స్తలం</string>
+    <string name="enter_destination">గమ్యాన్ని నమోదు చేయండి</string>
+    <string name="search_drop_location">డ్రాప్ స్థానాన్ని శోధించండి</string>
+    <string name="distance">దూరం</string>
+    <string name="total">మొత్తం</string>
+    <string name="apply_coupon_code">కూపన్ కోడ్‌ను వర్తించండి</string>
+    <string name="request_ride">రైడ్ కోసం అభ్యర్థించండి</string>
+    <string name="amount_to_be_paid">చెల్లించాల్సిన మొత్తం</string>
+    <string name="personal_account">వ్యక్తిగత ఖాతా</string>
+    <string name="wallet">వాలెట్</string>
+    <string name="_0_0">0.0</string>
+    <string name="recharge">రీఛార్జ్</string>
+    <string name="qr_pay">QR పే</string>
+    <string name="go_cashless_after_ride_pay_by_scanning_qr_code">QR కోడ్‌ను స్కాన్ చేయడం ద్వారా రైడ్ పే తర్వాత నగదు రహితంగా వెళ్లండి</string>
+    <string name="other_payment_methods">ఇతర చెల్లింపు పద్ధతులు</string>
+    <string name="paytm">Paytm</string>
+    <string name="link">Link</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="phone_pay">Phone Pay</string>
+    <string name="let_s_go">వెళ్దాం</string>
+
+
+    <string name="enter_phone_number">ఫోన్ నంబర్‌ను నమోదు చేయండి</string>
+    <string name="with_you_and">మీతో మరియు</string>
+    <string name="covid_19">COVID 19</string>
+    <string name="settings">సెట్టింగులు</string>
+    <string name="getvaccine"># గెట్‌వాక్సిన్</string>
+    <string name="your_safety_matters">మీ భద్రతా అంశాలు</string>
+    <string name="book_vaccine">టీకా బుక్ చేయండి</string>
+
+
 </resources>

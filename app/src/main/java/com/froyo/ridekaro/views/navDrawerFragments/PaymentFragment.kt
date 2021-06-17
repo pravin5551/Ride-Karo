@@ -100,6 +100,7 @@ class PaymentFragment : Fragment() {
                 R.string.Congratulations_Payment_successful_Done,
                 Toast.LENGTH_LONG
             ).show()
+
             val intent = Intent(activity, NotificationService::class.java)
             requireActivity().startService(intent)
 
