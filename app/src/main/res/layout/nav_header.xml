@@ -2,11 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="@dimen/dp_50"
     android:orientation="vertical">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center"
+        app:civ_border_color="#FDFDFD"
+        app:civ_border_width="2dp" />
     <TextView
-        android:id="@+id/tvProfileName"
+        android:id="@+id/tv_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile Name"
@@ -14,7 +22,7 @@
         android:textSize="@dimen/sp_24" />
 
     <TextView
-        android:id="@+id/tvPhoneNumber"
+        android:id="@+id/tv_user_email_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Phone Number"

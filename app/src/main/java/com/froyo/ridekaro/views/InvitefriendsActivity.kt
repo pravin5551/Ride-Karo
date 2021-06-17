@@ -36,7 +36,9 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invitefriends)
 
+        addAllUsers.setOnClickListener {
 
+        }
 
         ActivityCompat.requestPermissions(
             this,
