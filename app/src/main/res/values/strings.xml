@@ -114,7 +114,8 @@
     <string name="getvaccine" translatable="false">#GetVaccine</string>
     <string name="your_safety_matters" translatable="false">Your Safety Matters</string>
     <string name="book_vaccine" translatable="false">Book Vaccine</string>
-    <string name="with_you_and">With you and</string>
+    <string name="with_you_and" translatable="false">With you and</string>
+    <string name="hold_tight_rider_is_on_it_s_way_to_your_location" translatable="false">Hold Tight! Rider is on it\'s way to your location</string>
 
 
 </resources>

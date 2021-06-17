@@ -55,6 +55,9 @@ dependencies {
 
     implementation 'com.github.florent37:runtime-permission-kotlin:1.1.2'
 
+    implementation 'com.airbnb.android:lottie:3.0.6'
+
+
     implementation 'com.google.android.libraries.places:places:2.4.0'
 
 
