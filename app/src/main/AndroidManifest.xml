@@ -2,14 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.froyo.ridekaro">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
 
     <application
         android:allowBackup="true"
@@ -19,7 +23,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
 
-        <activity android:name=".views.LocationSearch" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,18 +38,15 @@
         <activity
             android:name=".views.MainActivity"
             android:label="@string/title_activity_home_screen" />
-
         <activity android:name=".views.Temp" />
-
-
-        <activity android:name=".views.Book_Vaccine_Activity"></activity>
+        <activity android:name=".views.Book_Vaccine_Activity" />
         <activity android:name=".views.StopwatchActivity" />
         <activity android:name=".views.InvitefriendsActivity" />
         <activity android:name=".views.OTPSecondActivity" />
         <activity android:name=".views.OTPValidation" />
         <activity
             android:name=".views.HomeActivity"
-            android:theme="@style/Theme.HomeActivity"/>
+            android:theme="@style/Theme.HomeActivity" />
         <activity android:name=".views.LanguageScreenActivity" />
         <activity android:name=".views.SecondScreenActivity" />
         <activity android:name=".views.FirstScreenActivity">
@@ -57,8 +57,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".NotificationService"/>
-
+        <service android:name=".NotificationService" />
     </application>
 
 </manifest>
