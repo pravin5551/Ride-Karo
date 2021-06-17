@@ -41,9 +41,6 @@
 
 
         <activity android:name=".views.Book_Vaccine_Activity"></activity>
-        <activity android:name=".views.MainActivity" />
-        <activity android:name=".views.Temp" />
-
         <activity android:name=".views.StopwatchActivity" />
         <activity android:name=".views.InvitefriendsActivity" />
         <activity android:name=".views.OTPSecondActivity" />
