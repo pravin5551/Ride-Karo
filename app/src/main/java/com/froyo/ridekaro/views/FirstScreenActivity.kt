@@ -13,7 +13,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.froyo.ridekaro.R
+import com.froyo.ridekaro.helper.PreferenceHelper
 import kotlinx.android.synthetic.main.activity_first_screen.*
+import java.util.*
 
 
 class FirstScreenActivity : AppCompatActivity() {
@@ -22,6 +24,7 @@ class FirstScreenActivity : AppCompatActivity() {
 //    val sharePref=getSharedPreferences("myPre", Context.MODE_PRIVATE)
 //    val editor=sharePref.edit()
 
+    lateinit var locale: Locale
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +32,14 @@ class FirstScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first_screen)
 
         buttonTaps()
+
+        PreferenceHelper.getSharedPreferences(this)
+
+        val lang = PreferenceHelper.getStringFromPreference("languagePreferenceString")
+        val position = PreferenceHelper.getIntFromPreference("languagePreference")
+        if (lang != null) {
+            setLocal(lang,position)
+        }
 
     }
 
@@ -112,6 +123,16 @@ class FirstScreenActivity : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
 
+    }
+
+    fun setLocal(localeName: String, position: Int) {
+
+        locale = Locale(localeName)
+        val res = resources
+        val dm = res.displayMetrics
+        val conf = res.configuration
+        conf.locale = locale
+        res.updateConfiguration(conf, dm)
     }
 
 
