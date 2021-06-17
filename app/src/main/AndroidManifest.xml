@@ -38,8 +38,20 @@
         <activity
             android:name=".views.MainActivity"
             android:label="@string/title_activity_home_screen" />
+
         <activity android:name=".views.Temp" />
         <activity android:name=".views.Book_Vaccine_Activity" />
+
+<!--        <activity android:name=".views.UserHomeScreen" />-->
+
+        <activity android:name=".views.Temp" />
+
+
+        <activity android:name=".views.Book_Vaccine_Activity" />
+<!--        <activity android:name=".views.MainActivity" />-->
+
+
+
         <activity android:name=".views.StopwatchActivity" />
         <activity android:name=".views.InvitefriendsActivity" />
         <activity android:name=".views.OTPSecondActivity" />
