@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".views.OTPValidation"
     android:orientation="vertical"
-    android:weightSum="5">
+    android:weightSum="6">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1.5"
+        android:layout_weight="2"
         android:background="#f9d915"
         android:orientation="vertical">
 
@@ -23,34 +23,37 @@
 
             <Button
                 android:id="@+id/back_otp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_margin="@dimen/dp_10"
-                android:background="#f9d915"
+                android:padding="5dp"
+                android:gravity="center_horizontal"
                 android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+                android:background="@drawable/invite_bg"
 
-                android:padding="@dimen/dp_15" />
+                />
 
             <Button
                 android:id="@+id/support_otp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="@dimen/dp_10"
-                android:background="#f9d915"
-                android:padding="@dimen/dp_15"
+                android:background="@drawable/invite_bg"
+
                 android:text="@string/support"
                 android:textAllCaps="false" />
 
         </RelativeLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_25"
-            android:text="Enter you mobile number "
-            android:textColor="@color/black"
-            android:textSize="25dp" />
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dp_25"-->
+<!--            android:text="Enter your mobile number "-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25dp" />-->
 
         <TextView
             android:layout_width="match_parent"
@@ -64,47 +67,117 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3.5"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="4">
 
-        <EditText
-            android:id="@+id/mobileNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_20"
-            android:layout_marginTop="@dimen/dp_20"
-            android:layout_marginEnd="@dimen/dp_20"
-            android:layout_marginBottom="@dimen/dp_10"
-            android:inputType="number"
-            android:drawableStart="@drawable/ic_india"
-            android:hint="@string/mobile_number"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/black" />
+
 
         <TextView
             android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:fontFamily="@font/lato_black"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/lato_black"
+                android:text="Login or Register"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp_25"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp_20"
-            android:text="@string/by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido"
-            android:textColor="@color/Gray" />
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/btnGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@color/white"
+                android:drawableStart="@drawable/googleg_standard_color_18"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="Continue with Google"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@drawable/rect_facebook_bg"
+                android:drawableStart="@drawable/ic_facebook"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="Continue with Facebook"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@drawable/rect_apple_bg"
+                android:drawableStart="@drawable/ic_apple_logo_night"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:text="Continue with Apple"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="OR"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_10"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/mobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_below="@+id/tvor"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_18"
+                android:inputType="number"
+                android:layout_marginTop="@dimen/dp_20"
+                android:gravity="center"
+                android:hint="Enter Mobile Number" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobileNumber"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rect_round_mob"
+                android:textColor="#f9d915"
+                android:text="Continue" />
+        </RelativeLayout>
+
     </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="120dp"
-
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginEnd="@dimen/dp_50"
-            android:layout_marginBottom="@dimen/dp_100"
-            android:background="@drawable/rect_round_mob"
-            android:text="Continue"
-            android:textColor="#f9d915" />
-    </RelativeLayout>
 </LinearLayout>

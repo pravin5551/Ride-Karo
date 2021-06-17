@@ -10,9 +10,11 @@ import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.bumptech.glide.Glide
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.views.navDrawerFragments.HomeFragment
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.nav_header.*
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,10 +37,22 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
 
+//        tv_user_name
+
         NavigationUI.setupActionBarWithNavController(this, navController, drawer)
         NavigationUI.setupWithNavController(navigationView, navController)
 
         navigationView.setNavigationItemSelectedListener(this)
+
+        var User_Name:String = intent.getStringExtra("UserName").toString()
+//        tv_user_name.text = User_Name
+
+//
+        var User_Email:String = intent.getStringExtra("UserEmail").toString()
+//        tv_user_email_id.text = User_Email
+
+        var User_Photo = intent.getStringArrayExtra("UserPhoto")
+//        Glide.with(ivProfile).load(User_Photo).into(ivProfile)
 
     }
 

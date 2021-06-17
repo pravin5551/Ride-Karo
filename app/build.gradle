@@ -161,15 +161,26 @@ dependencies {
     implementation 'com.vmadalin:easypermissions-ktx:1.0.0'
 
 
+    //Dynamics Sizes
+    implementation 'com.github.MrNouri:DynamicSizes:1.0'
+
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+//Firebase dependancies
+    implementation platform('com.google.firebase:firebase-bom:28.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-core:19.0.0'
+//    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
 
 
-//    implementation fileTree(dir: "libs", include: ["*.jar"])
-//    implementation 'androidx.appcompat:appcompat:1.2.0'
-//    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-//    testImplementation 'junit:junit:4.12'
-//    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-//
-//    implementation 'com.github.amarjain07:StickyScrollView:1.0.2'
+
+    // Declare the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+//circular img
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 }
