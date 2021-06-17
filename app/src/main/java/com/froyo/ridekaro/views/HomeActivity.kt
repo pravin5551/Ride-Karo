@@ -18,7 +18,6 @@ import kotlinx.android.synthetic.main.nav_header.*
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-
     private lateinit var drawer: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +26,6 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val toolbar = findViewById<Toolbar>(R.id.my_toolbar)
         setSupportActionBar(toolbar)
-
 
         drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
 
@@ -44,11 +42,11 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         navigationView.setNavigationItemSelectedListener(this)
 
-        var User_Name:String = intent.getStringExtra("UserName").toString()
+        var User_Name: String = intent.getStringExtra("UserName").toString()
 //        tv_user_name.text = User_Name
 
 //
-        var User_Email:String = intent.getStringExtra("UserEmail").toString()
+        var User_Email: String = intent.getStringExtra("UserEmail").toString()
 //        tv_user_email_id.text = User_Email
 
         var User_Photo = intent.getStringArrayExtra("UserPhoto")

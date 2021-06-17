@@ -65,6 +65,8 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 
     private var totalDistance = ""
 
+    private var resumeCount = 0
+
 
     private val LOCATION_REQUEST_CODE = 1
     private var count = 0
@@ -125,7 +127,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
             bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
         }
     }
-
 
     override fun onMapReady(p0: GoogleMap) {
 
@@ -298,12 +299,13 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     private fun setAddress(address: Address) {
 
         if (address.getAddressLine(0) != null) {
-            tvCurrentAddress.text = address.getAddressLine(0)
+            tvEnterDestination.text = address.getAddressLine(0)
         }
         if (address.getAddressLine(1) != null) {
-            tvCurrentAddress.getText().toString() + (address.getAddressLine(1))
+            tvEnterDestination.getText().toString() + (address.getAddressLine(1))
         }
     }
+
 
     override fun onProviderDisabled(provider: String) {
         super.onProviderDisabled(provider)
