@@ -1,36 +1,38 @@
-package com.froyo.ridekaro
+package com.froyo.ridekaro.views
 
 import android.content.Intent
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import androidx.annotation.RequiresApi
+import com.froyo.ridekaro.R
 import com.froyo.ridekaro.helper.PreferenceHelper
-import com.froyo.ridekaro.views.HomeActivity
-import com.froyo.ridekaro.views.OTPValidation
-import com.froyo.ridekaro.views.navDrawerFragments.SettingsFragment
-import kotlinx.android.synthetic.main.activity_language2.*
-import kotlinx.android.synthetic.main.activity_language_screen.*
-import kotlinx.android.synthetic.main.activity_language_screen.autoCompleteTextView
-import kotlinx.android.synthetic.main.fragment_settings.*
+import kotlinx.android.synthetic.main.fragment_language.*
 import java.util.*
 
-class language2Activity : AppCompatActivity() {
+
+class LanguageFragment : Fragment(R.layout.fragment_language) {
 
     lateinit var locale: Locale
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_language2)
-
-        PreferenceHelper.getSharedPreferences(this)
+        context?.let { PreferenceHelper.getSharedPreferences(it) }
 
         val languages = resources.getStringArray(R.array.language)
-        val arrayAdapter = ArrayAdapter(this, R.layout.item_layout_language, languages)
-        autoCompleteTextView2.setText(arrayAdapter.getItem(0).toString(), false)
+
+        val arrayAdapter = context?.let {
+            ArrayAdapter(
+                it,
+                R.layout.item_layout_language,
+                languages
+            )
+        }
+
+        autoCompleteTextView2.setText(arrayAdapter?.getItem(0).toString(), false)
         autoCompleteTextView2.setAdapter(arrayAdapter)
         autoCompleteTextView2.setOnItemClickListener { parent, view, position, id ->
             when (languages[position]) {
@@ -44,15 +46,14 @@ class language2Activity : AppCompatActivity() {
         }
 
 
-
         btnContinue.setOnClickListener {
-
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(context, HomeActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
-            finish()
+            // activity?.onBackPressed()
+            //  activity?.recreate()
+
         }
-
-
 
 
     }
@@ -70,5 +71,6 @@ class language2Activity : AppCompatActivity() {
         PreferenceHelper.writeStringToPreference("languagePreferenceString", localeName)
         PreferenceHelper.writeBooleanToPreference("languageBoolean", false)
     }
+
 
 }
