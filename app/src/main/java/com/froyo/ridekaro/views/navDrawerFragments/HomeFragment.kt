@@ -24,6 +24,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProviders
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.fragments.BottomSheetFragment
+import com.froyo.ridekaro.viewModel.DistanceViewModel
 import com.froyo.ridekaro.views.DataParser
 import com.froyo.ridekaro.views.LocationSearchFragment
 import com.froyo.ridekaro.views.LocationViewModel
@@ -46,6 +47,7 @@ import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 import java.util.*
+import java.util.concurrent.Flow
 
 
 class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
@@ -61,10 +63,12 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 
     private var totalDistance = ""
 
+    private var resumeCount = 0
+
+    private lateinit var distanceViewModel: DistanceViewModel
 
     private val LOCATION_REQUEST_CODE = 1
     private var count = 0
-
 
     private var userLocationMarker: Marker? = null
     private var userLocationMarker2: Marker? = null
@@ -100,8 +104,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         val locationViewModel = ViewModelProviders.of(this).get(LocationViewModel::class.java)
 
         locationViewModel.getLocation().observe(viewLifecycleOwner, androidx.lifecycle.Observer {
-            Toast.makeText(context, it.toString(), Toast.LENGTH_SHORT).show()
-            tvEnterDestination.text = it.toString()
+            val area = it.toString()
+            tvEnterDestination.text = area
+            getArea(area)
         })
 
         view.apply {
@@ -117,7 +122,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 
         tvEnterDestination.setOnClickListener {
             val ft: FragmentTransaction = requireFragmentManager().beginTransaction()
-            ft.replace(
+            ft.add(
                 R.id.fragmentContainerView,
                 LocationSearchFragment(),
                 "LocationSearchFragment"
@@ -129,13 +134,15 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 //            getArea("Dahisar station")
         }
 
+        distanceViewModel = ViewModelProviders.of(this).get(DistanceViewModel::class.java)
 
         bottomLinearLayout.setOnClickListener {
             val bottomSheetFragment = BottomSheetFragment()
             bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
+
+//            getArea("Thane")
         }
     }
-
 
     override fun onMapReady(p0: GoogleMap) {
 
@@ -228,6 +235,13 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                                 LatLng(currentLocation.latitude, currentLocation.longitude),
                                 DEFAULT_ZOOM
                             )
+                            val geocoder3 = Geocoder(context, Locale.getDefault())
+                            val address4 = geocoder3.getFromLocation(
+                                currentLocation.latitude,
+                                currentLocation.longitude,
+                                10
+                            )
+                            setCurrentAddress(address4!![0])
                             latitude = currentLocation.latitude
                             longitude = currentLocation.longitude
                             if (userLocationMarker == null && userLocationMarker2 == null && userLocationMarker3 == null) {
@@ -274,7 +288,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                                 userLocationMarker!!.position = latLng
                                 userLocationMarker2!!.position = latLng2
                                 userLocationMarker3!!.position = latLng3
-//                                getArea("Thane")
                             }
                         } else {
                             askForPermission()
@@ -308,12 +321,23 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     private fun setAddress(address: Address) {
 
         if (address.getAddressLine(0) != null) {
+            tvEnterDestination.text = address.getAddressLine(0)
+        }
+        if (address.getAddressLine(1) != null) {
+            tvEnterDestination.getText().toString() + (address.getAddressLine(1))
+        }
+    }
+
+    private fun setCurrentAddress(address: Address) {
+
+        if (address.getAddressLine(0) != null) {
             tvCurrentAddress.text = address.getAddressLine(0)
         }
         if (address.getAddressLine(1) != null) {
             tvCurrentAddress.getText().toString() + (address.getAddressLine(1))
         }
     }
+
 
     override fun onProviderDisabled(provider: String) {
         super.onProviderDisabled(provider)
@@ -407,13 +431,25 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                         MarkerOptions().position(LatLng(end_latitude, end_longitude)).title(address)
                             .snippet("Distance= $totalDistance KM")
 
-                    mMap!!.addMarker(destination!!)
+                    mMap!!.addMarker(destination)
 
-                    Toast.makeText(context, "Distance = $totalDistance KM", Toast.LENGTH_SHORT)
-                        .show()
+                    val float1: Float? = totalDistance.toFloat()
+                    distanceViewModel.addDistance(float1!!)
+
+                    val geocoder2 = Geocoder(context, Locale.getDefault())
+                    val end_address = geocoder2.getFromLocation(
+                        end_latitude,
+                        end_longitude,
+                        10
+                    )
+                    setAddress(end_address!![0])
 
                     val origin_latlong = LatLng(latitude, longitude)
                     val destination_latlong = LatLng(end_latitude, end_longitude)
+
+
+                    val bottomSheetFragment = BottomSheetFragment()
+                    bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
 
                     val url: String? =
                         getDirectionsUrl(origin_latlong, destination_latlong)
@@ -430,7 +466,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         val mode = "mode=driving"
         val parameters = "$str_origin&$str_dest&$mode"
         val output = "json"
-        return "https://maps.googleapis.com/maps/api/directions/$output?$parameters&key=AIzaSyCtbdDgl8vD6w7KyuVIQEYAaTEeG8Vebn4"
+        return "https://maps.googleapis.com/maps/api/directions/$output?$parameters&key=AIzaSyCv_5zK9gY5rZfL36LspmVQIBXJ3wSrAzQ"
     }
 
     inner class DownloadTask :
@@ -520,5 +556,4 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                 mMap!!.addPolyline(lineOptions)
         }
     }
-
 }
