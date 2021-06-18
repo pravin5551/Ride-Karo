@@ -10,7 +10,6 @@
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
+        <activity android:name=".views.Ride_Karo_page"></activity>
         <activity android:name=".views.RiderComing" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -34,10 +34,7 @@
         <activity
             android:name=".views.MainActivity"
             android:label="@string/title_activity_home_screen" />
-
         <activity android:name=".views.Temp" />
-
-
         <activity android:name=".views.Book_Vaccine_Activity" />
         <activity android:name=".views.StopwatchActivity" />
         <activity android:name=".views.InvitefriendsActivity" />

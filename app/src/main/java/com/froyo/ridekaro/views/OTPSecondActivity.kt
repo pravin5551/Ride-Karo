@@ -10,6 +10,7 @@ import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.*
 import kotlinx.android.synthetic.main.activity_otpsecond.*
+import kotlinx.android.synthetic.main.activity_otpvalidation.*
 import java.util.*
 
 class OTPSecondActivity : AppCompatActivity() {
@@ -22,6 +23,11 @@ class OTPSecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_otpsecond)
 
         lateinit var mobileNumber: String
+
+        support_otp_val.setOnClickListener {
+            val i = Intent(this, HomeActivity::class.java)
+            startActivity(i)
+        }
 
         if (intent != null && intent.extras != null) {
             mobileNumber = intent.getStringExtra("mobileNumber").toString()
