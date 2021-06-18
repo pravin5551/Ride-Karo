@@ -41,10 +41,10 @@
         <activity android:name=".views.InvitefriendsActivity" />
         <activity android:name=".views.OTPSecondActivity" />
         <activity android:name=".views.OTPValidation" />
-        <activity android:name=".views.FirstScreenActivity" />
+        <activity android:name=".views.HomeActivity" />
         <activity android:name=".views.LanguageScreenActivity" />
         <activity android:name=".views.SecondScreenActivity" />
-        <activity android:name=".views.HomeActivity">
+        <activity android:name=".views.FirstScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
