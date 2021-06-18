@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_25"
             android:fontFamily="@font/productsansregular"
-            android:text="Enter verification pin"
+            android:text="@string/enter_verification_pin"
             android:textColor="@color/black"
             android:textSize="25dp" />
 
@@ -62,7 +62,7 @@
             android:layout_marginTop="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_25"
             android:fontFamily="@font/productsansregular"
-            android:text="Seat back and relax while we verify your phone number" />
+            android:text="@string/Seat_back_and_relax_while_we_verify_your_phone_number" />
 
     </LinearLayout>
 
@@ -94,7 +94,7 @@
                 android:layout_margin="@dimen/dp_20"
                 android:fontFamily="@font/productsansregular"
                 android:gravity="center_horizontal"
-                android:text="Waiting for OTP..."
+                android:text="@string/Waiting_for_OTP"
                 android:textColor="@color/Gray" />
 
             <TextView
@@ -127,7 +127,7 @@
             android:layout_marginBottom="@dimen/dp_100"
             android:background="@drawable/rect_round_mob"
             android:fontFamily="@font/productsansregular"
-            android:text="Continue"
+            android:text="@string/Continue"
             android:textColor="#f9d915" />
     </RelativeLayout>
 </LinearLayout>
