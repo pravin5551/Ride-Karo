@@ -39,7 +39,7 @@
         android:layout_marginTop="@dimen/dp_15"
         android:layout_toEndOf="@id/tvIndianRupees"
         android:fontFamily="@font/indianrupee"
-        android:text="@string/total"
+        android:text="406"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20"
         android:textStyle="bold" />
@@ -104,9 +104,10 @@
         <TextView
             android:id="@+id/tvAmountPresent"
             android:layout_width="wrap_content"
-            android:layout_height="11dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_15"
-            android:text="@string/_0_0"
+            android:fontFamily="@font/productsansregular"
+            android:text="130"
             android:textColor="@color/Red"
             android:textSize="@dimen/sp_15" />
 

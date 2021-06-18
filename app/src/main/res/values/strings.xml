@@ -147,6 +147,11 @@
     <string name="Login_or_Register">Login or Register</string>
     <string name="enter_verification_pin">Enter verification pin</string>
     <string name="Seat_back_and_relax_while_we_verify_your_phone_number">Seat back and relax while we verify your phone number</string>
+    <string name="bike_taxi">Bike Taxi . </string>
+    <string name="_9_days_ago">9 days ago</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="bandra_station">Bandra Station</string>
+
     <string name="or">OR</string>
     <string name="Ride_Karo">Ride Karo</string>
 

@@ -87,7 +87,6 @@
                 android:fontFamily="@font/productsansregular"
                 android:text="@string/enter_destination"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
                 android:textSize="@dimen/sp_20" />
         </androidx.cardview.widget.CardView>
 
