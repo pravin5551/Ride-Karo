@@ -38,24 +38,24 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
 
+        navigationView.itemIconTintList = null
+
+//        tv_user_name
 
         NavigationUI.setupActionBarWithNavController(this, navController, drawer)
         NavigationUI.setupWithNavController(navigationView, navController)
 
         navigationView.setNavigationItemSelectedListener(this)
-        if (intent != null && intent.extras != null) {
-            val User_Name: String = intent.getStringExtra("UserName").toString()
-            tv_user_name?.text = User_Name
-
-
-            val User_Email: String = intent.getStringExtra("UserEmail").toString()
-            tv_user_email_id?.text = User_Email
-
-            val User_Photo = intent.getStringArrayExtra("UserPhoto")
-            Glide.with(ivProfile).load(User_Photo).into(ivProfile)
-
-
-        }
+//        if (intent != null && intent.extras != null) {
+//            val User_Name: String = intent.getStringExtra("UserName").toString()
+//            tv_user_name?.text = "User_Name"
+//
+//            val User_Email: String = intent.getStringExtra("UserEmail").toString()
+//            tv_user_email_id?.text = "User_Email"
+//
+//            val User_Photo = intent.getStringArrayExtra("UserPhoto")
+//            Glide.with(ivProfile).load(User_Photo).into(ivProfile)
+//        }
 
 
     }

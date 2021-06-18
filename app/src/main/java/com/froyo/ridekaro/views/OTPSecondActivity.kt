@@ -2,11 +2,10 @@ package com.froyo.ridekaro.views
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.froyo.ridekaro.R
-import com.froyo.ridekaro.views.navDrawerFragments.HomeFragment
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.*
@@ -16,13 +15,17 @@ import java.util.*
 class OTPSecondActivity : AppCompatActivity() {
 
     private var mVerificationId: String? = null
-    private var mAuth: FirebaseAuth? = null
+    lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otpsecond)
 
-        val mobileNumber = intent.getStringExtra("mobileNumber")
+        lateinit var mobileNumber: String
+
+        if (intent != null && intent.extras != null) {
+            mobileNumber = intent.getStringExtra("mobileNumber").toString()
+        }
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -45,10 +48,8 @@ class OTPSecondActivity : AppCompatActivity() {
         object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
             override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
-                val code = phoneAuthCredential.smsCode
-                if (code != null) {
-                    verifyVerificationCode(code)
-                }
+                Log.d("TAG", "onVerificationCompleted:$phoneAuthCredential")
+                signInWithPhoneAuthCredential(phoneAuthCredential)
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
@@ -67,32 +68,30 @@ class OTPSecondActivity : AppCompatActivity() {
             ) {
                 super.onCodeSent(s, forceResendingToken)
                 mVerificationId = s
-                //mResendToken = forceResendingToken
             }
         }
 
     private fun verifyVerificationCode(code: String) {
         //creating the credential
-        val credential = PhoneAuthProvider.getCredential(mVerificationId!!, code)
+        val credential = mVerificationId?.let { PhoneAuthProvider.getCredential(it, code) }
 
         //signing the user
-        signInWithPhoneAuthCredential(credential)
+        if (credential != null) {
+            signInWithPhoneAuthCredential(credential)
+        }
     }
 
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-        mAuth!!.signInWithCredential(credential)
-            .addOnCompleteListener(
-                this,
-                OnCompleteListener<AuthResult?> { task ->
-                    if (task.isSuccessful) {
-                        //verification successful we will start the profile activity
-                        Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
-                        val i = Intent(this, HomeActivity::class.java)
-                        startActivity(i)
-                    } else {
-                        Toast.makeText(this, "Failed", Toast.LENGTH_LONG).show()
-                    }
-                })
+        mAuth?.signInWithCredential(credential)
+            ?.addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val i = Intent(this, HomeActivity::class.java)
+                    Toast.makeText(this, "Signed in succesfully", Toast.LENGTH_LONG).show()
+                    startActivity(i)
+                } else {
+                    Toast.makeText(this, "Failed", Toast.LENGTH_LONG).show()
+                }
+            }
     }
 
 }

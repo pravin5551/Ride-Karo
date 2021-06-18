@@ -3,7 +3,6 @@ package com.froyo.ridekaro.views.navDrawerFragments
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
@@ -26,7 +25,6 @@ import androidx.lifecycle.ViewModelProviders
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.fragments.BottomSheetFragment
 import com.froyo.ridekaro.views.DataParser
-import com.froyo.ridekaro.views.HomeActivity
 import com.froyo.ridekaro.views.LocationSearchFragment
 import com.froyo.ridekaro.views.LocationViewModel
 import com.github.florent37.runtimepermission.kotlin.askPermission
