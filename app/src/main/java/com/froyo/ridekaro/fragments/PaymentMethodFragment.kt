@@ -24,10 +24,8 @@ private const val ARG_PARAM2 = "param2"
  */
 class PaymentMethodFragment : BottomSheetDialogFragment() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -37,8 +35,6 @@ class PaymentMethodFragment : BottomSheetDialogFragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_payment_method, container, false)
     }
-
-
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -92,9 +88,5 @@ class PaymentMethodFragment : BottomSheetDialogFragment() {
             }
 
         }
-
-
-
-
     }
 }

@@ -47,7 +47,7 @@
     <string name="welcome">Welcome to Ride Karo</string>
     <string name="choose_language">Choose a language to get started</string>
     <string name="next">NEXT</string>
-    <string name="power_pass">PowerPass</string>[
+    <string name="power_pass">PowerPass</string>
     <string name="Register_for_pass">Register for pass</string>
     <string name="payment">PAYMENT</string>
     <string name="Personal_Wallet">Personal Wallet</string>
@@ -121,6 +121,8 @@
     <string name="support_menu">Support</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps2">Map</string>
+    <string name="hold_tight_rider_is_on_it_s_way_to_your_location">Hold Tight! Rider is on it\'s way to your location</string>
+    <string name="hurray">Hurray</string>
 
 
 </resources>
