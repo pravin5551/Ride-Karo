@@ -141,6 +141,7 @@
     <string name="Login_or_Register">ಲಾಗಿನ್ ಅಥವಾ ನೋಂದಾಯಿಸಿ</string>
     <string name="enter_verification_pin">ಪರಿಶೀಲನೆ ಪಿನ್ ನಮೂದಿಸಿ</string>
     <string name="Seat_back_and_relax_while_we_verify_your_phone_number">ನಿಮ್ಮ ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಾವು ಪರಿಶೀಲಿಸುವಾಗ ಕುಳಿತುಕೊಳ್ಳಿ ಮತ್ತು ವಿಶ್ರಾಂತಿ ಪಡೆಯಿರಿ</string>
-
+    <string name="or">ಅಥವಾ</string>
+    <string name="Ride_Karo">ರೈಡ್ ಕರೋ</string>
 
 </resources>

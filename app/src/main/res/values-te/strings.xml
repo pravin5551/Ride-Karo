@@ -128,7 +128,7 @@
     <string name="Invite_Friends">స్నేహితులను ఆహ్వానించండి</string>
     <string name="Invite_friends_and_get_rewards">స్నేహితులను ఆహ్వానించండి మరియు బహుమతులు పొందండి</string>
     <string name="Terms_and_Conditions">నిబంధనలు మరియు షరతులు</string>
-    <string name="Waiting_for_OTP">OTP కోసం వేచి ఉంది...</string>
+    <string name="Waiting_for_OTP">OTP కోసం వేచి ఉంది..</string>
     <string name="Continue">కొనసాగించండి</string>
     <string name="Book_Vaccine">టీకా బుక్ చేయండి</string>
     <string name="Payment_amp_Wallets">చెల్లింపు  amp; పర్సులు</string>
@@ -141,7 +141,8 @@
     <string name="Login_or_Register">లాగిన్ లేదా నమోదు</string>
     <string name="enter_verification_pin">ధృవీకరణ పిన్ను నమోదు చేయండి</string>
     <string name="Seat_back_and_relax_while_we_verify_your_phone_number">మేము మీ ఫోన్ నంబర్‌ను ధృవీకరించేటప్పుడు తిరిగి కూర్చుని విశ్రాంతి తీసుకోండి</string>
-
+    <string name="or">లేదా</string>
+    <string name="Ride_Karo">రైడ్ కారో</string>
 
 
 </resources>

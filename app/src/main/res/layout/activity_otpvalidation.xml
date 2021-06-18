@@ -96,7 +96,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/productsansregular"
                 android:padding="10dp"
-                android:text="Continue with Google"
+                android:text="@string/Continue_with_Google"
                 android:textAllCaps="false" />
 
             <Button
@@ -109,7 +109,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/productsansregular"
                 android:padding="10dp"
-                android:text="Continue with Facebook"
+                android:text="@string/Continue_with_Facebook"
                 android:textAllCaps="false" />
 
             <Button
@@ -122,7 +122,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/productsansregular"
                 android:padding="10dp"
-                android:text="Continue with Apple"
+                android:text="@string/Continue_with_Apple"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 
@@ -137,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="OR"
+                android:text="@string/or"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp_10"

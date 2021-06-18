@@ -141,7 +141,8 @@
     <string name="Login_or_Register">உள்நுழைக அல்லது பதிவுசெய்க</string>
     <string name="enter_verification_pin">சரிபார்ப்பு முள் உள்ளிடவும்</string>
     <string name="Seat_back_and_relax_while_we_verify_your_phone_number">உங்கள் தொலைபேசி எண்ணை நாங்கள் சரிபார்க்கும்போது மீண்டும் அமர்ந்து ஓய்வெடுக்கவும்</string>
-
+    <string name="or">அல்லது</string>
+    <string name="Ride_Karo">சவாரி கரோ</string>
 
 
 </resources>
