@@ -34,15 +34,18 @@
         <activity
             android:name=".views.MainActivity"
             android:label="@string/title_activity_home_screen" />
-        <activity android:name=".views.Book_Vaccine_Activity" />
+
         <activity android:name=".views.Temp" />
+
+
+        <activity android:name=".views.Book_Vaccine_Activity"></activity>
         <activity android:name=".views.StopwatchActivity" />
         <activity android:name=".views.InvitefriendsActivity" />
         <activity android:name=".views.OTPSecondActivity" />
         <activity android:name=".views.OTPValidation" />
         <activity
             android:name=".views.HomeActivity"
-            android:theme="@style/Theme.HomeActivity" />
+            android:theme="@style/Theme.HomeActivity"/>
         <activity android:name=".views.LanguageScreenActivity" />
         <activity android:name=".views.SecondScreenActivity" />
         <activity android:name=".views.FirstScreenActivity">
@@ -54,7 +57,6 @@
         </activity>
 
         <service android:name=".NotificationService" />
-
     </application>
 
 </manifest>

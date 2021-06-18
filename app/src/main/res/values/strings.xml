@@ -1,39 +1,39 @@
 <resources>
     <string name="app_name">Ride karo</string>
-    <string name="title_activity_home_screen" translatable="false">Map</string>
-    <string name="im_a_rider" translatable="false">Im a Rider</string>
-    <string name="im_a_customer" translatable="false">Im a Customer</string>
-    <string name="enter_the_email" translatable="false">enter the email</string>
-    <string name="enter_the_password" translatable="false">enter the password</string>
-    <string name="login" translatable="false">Login</string>
-    <string name="new_rider_register" translatable="false">New Rider ? Register</string>
-    <string name="call_rider" translatable="false">call rider</string>
-    <string name="getting_driver" translatable="false">Getting your driver</string>
-    <string name="looking_for_driver" translatable="false">Looking for rider location</string>
-    <string name="driver_found" translatable="false">Driver Found</string>
-    <string name="ride" translatable="false">Ride</string>
-    <string name="current_location" translatable="false">Current location</string>
-    <string name="enter_destination" translatable="false">Enter Destination</string>
-    <string name="search_drop_location" translatable="false">Search drop location</string>
+    <string name="title_activity_home_screen">Map</string>
+    <string name="im_a_rider">Im a Rider</string>
+    <string name="im_a_customer">Im a Customer</string>
+    <string name="enter_the_email">enter the email</string>
+    <string name="enter_the_password">enter the password</string>
+    <string name="login">Login</string>
+    <string name="new_rider_register">New Rider ? Register</string>
+    <string name="call_rider">call rider</string>
+    <string name="getting_driver">Getting your driver</string>
+    <string name="looking_for_driver">Looking for rider location</string>
+    <string name="driver_found">Driver Found</string>
+    <string name="ride">Ride</string>
+    <string name="current_location">Current location</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="search_drop_location">Search drop location</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="distance" translatable="false">distance</string>
-    <string name="total" translatable="false">total</string>
-    <string name="apply_coupon_code" translatable="false">Apply Coupon Code</string>
+    <string name="distance">distance</string>
+    <string name="total">total</string>
+    <string name="apply_coupon_code">Apply Coupon Code</string>
     <string name="cash">Cash</string>
-    <string name="request_ride" translatable="false">Request Ride</string>
-    <string name="amount_to_be_paid" translatable="false">Amount to be paid</string>
-    <string name="personal_account" translatable="false">Personal Account</string>
-    <string name="wallet" translatable="false">Wallet</string>
-    <string name="_0_0" translatable="false">0.0</string>
-    <string name="recharge" translatable="false">Recharge</string>
-    <string name="qr_pay" translatable="false">QR Pay</string>
-    <string name="go_cashless_after_ride_pay_by_scanning_qr_code" translatable="false">Go cashless, after ride pay by scanning QR code</string>
-    <string name="other_payment_methods" translatable="false">Other Payment Methods</string>
-    <string name="paytm" translatable="false">Paytm</string>
-    <string name="link" translatable="false">Link</string>
-    <string name="google_pay" translatable="false">Google Pay</string>
-    <string name="phone_pay" translatable="false">Phone Pay</string>
-    <string name="let_s_go" translatable="false">Let\'s Go</string>
+    <string name="request_ride">Request Ride</string>
+    <string name="amount_to_be_paid">Amount to be paid</string>
+    <string name="personal_account">Personal Account</string>
+    <string name="wallet">Wallet</string>
+    <string name="_0_0">0.0</string>
+    <string name="recharge">Recharge</string>
+    <string name="qr_pay">QR Pay</string>
+    <string name="go_cashless_after_ride_pay_by_scanning_qr_code">Go cashless, after ride pay by scanning QR code</string>
+    <string name="other_payment_methods">Other Payment Methods</string>
+    <string name="paytm">Paytm</string>
+    <string name="link">Link</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="phone_pay">Phone Pay</string>
+    <string name="let_s_go">Let\'s Go</string>
     <string name="navigation_drawer_open">"Open navigation drawer"</string>
     <string name="navigation_drawer_close">"Close navigation drawer"</string>
 
@@ -53,7 +53,6 @@
     <string name="Personal_Wallet">Personal Wallet</string>
     <string name="small_Payment">Payment</string>
     <string name="notifications">Notifications</string>
-    <string name="home">Home</string>
     <string name="COVID_19">COVID 19</string>
     <string name="my_rides">My Rides</string>
     <string name="invite_friends">Invite Friends</string>
@@ -79,43 +78,49 @@
     </string-array>
 
     <string name="support">Support ?</string>
-    <string name="mobile_number" translatable="false">Mobile Number</string>
-    <string name="start" translatable="false">Start</string>
-    <string name="stop" translatable="false">Stop</string>
-    <string name="reset" translatable="false">Reset</string>
-    <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido" translatable="false">By continuing you will agree to our terms and privacy policy of Rapido</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido">By continuing you will agree to our terms and privacy policy of Rapido</string>
 
-    <string name="policy_coverage" translatable="false">Policy Coverage</string>
-    <string name="personal_accident_accidental_death" translatable="false">Personal Accident/Accidental Death</string>
-    <string name="please_provide_" translatable="false">Please provide your correct email-id, date of birth and phone number to avoid cancellations of your Insurance claim.</string>
-    <string name="claim_insurance" translatable="false">CLAIM INSURANCE</string>
-    <string name="powered_by" translatable="false">Powered_by_Acko</string>
-    <string name="general" translatable="false">General</string>
-    <string name="others" translatable="false">Others</string>
-    <string name="profile" translatable="false">Profile</string>
-    <string name="favorites" translatable="false">Favorites</string>
-    <string name="app_language" translatable="false">App Language</string>
-    <string name="english" translatable="false">English</string>
-    <string name="app_shortcuts" translatable="false">App Shortcuts</string>
-    <string name="create_shortcuts_on_home_launcher" translatable="false">Create shortcuts on home launcher</string>
-    <string name="_5_5_27" translatable="false">5.5.27</string>
-    <string name="about" translatable="false">About</string>
-    <string name="subscribe_to_beta" translatable="false">Subscribe to Beta</string>
-    <string name="get_early_access_to_latest_features" translatable="false">Get early access to latest features</string>
-    <string name="logout" translatable="false">Logout</string>
-    <string name="search_issue" translatable="false">Search issue</string>
-    <string name="having_an_issue" translatable="false">Having an issue?</string>
-    <string name="get_help" translatable="false">Get Help</string>
-    <string name="view_all_tickets" translatable="false">View all tickets</string>
+    <string name="policy_coverage">Policy Coverage</string>
+    <string name="personal_accident_accidental_death">Personal Accident/Accidental Death</string>
+    <string name="please_provide_">Please provide your correct email-id, date of birth and phone number to avoid cancellations of your Insurance claim.</string>
+    <string name="claim_insurance">CLAIM INSURANCE</string>
+    <string name="powered_by">Powered_by_Acko</string>
+    <string name="general">General</string>
+    <string name="others">Others</string>
+    <string name="profile">Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="app_language">App Language</string>
+    <string name="english">English</string>
+    <string name="app_shortcuts">App Shortcuts</string>
+    <string name="create_shortcuts_on_home_launcher">Create shortcuts on home launcher</string>
+    <string name="_5_5_27">5.5.27</string>
+    <string name="about">About</string>
+    <string name="subscribe_to_beta">Subscribe to Beta</string>
+    <string name="get_early_access_to_latest_features">Get early access to latest features</string>
+    <string name="logout">Logout</string>
+    <string name="search_issue">Search issue</string>
+    <string name="having_an_issue">Having an issue?</string>
+    <string name="get_help">Get Help</string>
+    <string name="view_all_tickets">View all tickets</string>
 
-    <string name="enter_phone_number" translatable="false">Enter Phone Number</string>
-    <string name="covid_19" translatable="false">COVID 19</string>
-    <string name="settings" translatable="false">Settings</string>
-    <string name="getvaccine" translatable="false">#GetVaccine</string>
-    <string name="your_safety_matters" translatable="false">Your Safety Matters</string>
-    <string name="book_vaccine" translatable="false">Book Vaccine</string>
-    <string name="with_you_and" translatable="false">With you and</string>
-    <string name="hold_tight_rider_is_on_it_s_way_to_your_location" translatable="false">Hold Tight! Rider is on it\'s way to your location</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="with_you_and">With you and</string>
+
+    <string name="home">Home</string>
+    <string name="covid_19">Covid 19</string>
+
+    <string name="settings">Settings</string>
+    <string name="getvaccine">#GetVaccine</string>
+    <string name="your_safety_matters">Your Safety Matters</string>
+    <string name="book_vaccine">Book Vaccine</string>
+    <string name="payment_menu">Payment</string>
+    <string name="support_menu">Support</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
 
 
 </resources>

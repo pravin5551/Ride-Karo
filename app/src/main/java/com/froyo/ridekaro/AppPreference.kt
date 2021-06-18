@@ -14,5 +14,4 @@ object AppPreference {
 
     private val LANGUAGE = "En"
 
-
 }
