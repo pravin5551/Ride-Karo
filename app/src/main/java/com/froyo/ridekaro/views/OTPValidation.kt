@@ -1,7 +1,6 @@
 package com.froyo.ridekaro.views
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -9,8 +8,6 @@ import com.froyo.ridekaro.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_otpvalidation.*
@@ -73,6 +70,14 @@ class OTPValidation : AppCompatActivity() {
             }
         }
     }
+
+//    override fun onStart() {
+//        super.onStart()
+//        // Check for existing Google Sign In account, if the user is already signed in
+//// the GoogleSignInAccount will be non-null.
+//        val account = GoogleSignIn.getLastSignedInAccount(this)
+//        updateUI(account)
+//    }
 
 //    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 //        super.onActivityResult(requestCode, resultCode, data)

@@ -2,10 +2,10 @@ package com.froyo.ridekaro.views
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.helper.PreferenceHelper
-import kotlinx.android.synthetic.main.activity_second_screen.*
 
 class SecondScreenActivity : AppCompatActivity() {
 
@@ -18,19 +18,17 @@ class SecondScreenActivity : AppCompatActivity() {
 
         val flag = PreferenceHelper.getBooleanFromPreference("languageBoolean")
 
-        ivSplashScreenImage.setOnClickListener {
-            if (flag){
+        Handler().postDelayed(Runnable {
+            if (flag) {
                 val intent = Intent(this, LanguageScreenActivity::class.java)
                 startActivity(intent)
-            }else {
+            } else {
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             }
-        }
-
-
-        val lang = PreferenceHelper.getStringFromPreference("languagePreferenceString")
+        }, 2000)
 
 
     }
+
 }

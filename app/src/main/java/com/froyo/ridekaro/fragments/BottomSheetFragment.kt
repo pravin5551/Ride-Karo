@@ -12,7 +12,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.froyo.ridekaro.R
@@ -59,8 +58,7 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
 
             pendingIntent =
                 PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
-            dislayNotification("Ride Booked", "The Rider is on it's way to your location")
-
+            dislayNotification("Ride Booked", "The Rider is on his way to your location")
         }
     }
 

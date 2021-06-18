@@ -45,7 +45,7 @@
         android:layout_marginBottom="@dimen/_15sdp"
         android:fontFamily="@font/productsansregular"
         android:text="@string/Made_in_india"
-        android:textSize="@dimen/_15sdp" />
+        android:textSize="12dp" />
 
 
 </RelativeLayout>
