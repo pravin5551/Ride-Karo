@@ -1,15 +1,13 @@
 package com.froyo.ridekaro.views.navDrawerFragments
 
-import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.helper.PreferenceHelper
-import com.froyo.ridekaro.language2Activity
+import com.froyo.ridekaro.views.LanguageFragment
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 
@@ -20,12 +18,26 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         setHasOptionsMenu(true)
         activity?.actionBar?.hide()
         super.onViewCreated(view, savedInstanceState)
+
         PreferenceHelper.getSharedPreferences(requireContext())
 
+
+
         ibLanguage.setOnClickListener {
-            val intent = Intent(activity, language2Activity::class.java)
-            startActivity(intent)
+
+            val ft: FragmentTransaction = requireFragmentManager().beginTransaction()
+            ft.add(
+                R.id.fragmentContainerView,
+                LanguageFragment(),
+                "LanguageFragment"
+            ).addToBackStack("LanguageFragment")
+            ft.commit()
+
+        //    val intent = Intent(context, language2Activity::class.java)
+          //  startActivity(intent)
         }
+
+
 
         val value = PreferenceHelper.getStringFromPreference("languagePreferenceString")
         when (value) {

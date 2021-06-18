@@ -22,6 +22,7 @@
     <string name="small_Payment">கட்டணம்</string>
     <string name="cash">பணம்</string>
     <string name="notifications">அறிவிப்புகள்</string>
+
     <string name="home">வீடு</string>
     <string name="COVID_19">கோவிட் 19</string>
     <string name="my_rides">எனது சவாரிகள்</string>
@@ -29,6 +30,7 @@
     <string name="insurance">காப்பீடு</string>
     <string name="setting">அமைப்புகள்</string>
     <string name="support">ஆதரவு</string>
+
     <string name="Complete_the_Transaction">பரிவர்த்தனை முடிக்க</string>
     <string name="Payment_Alert">கட்டண எச்சரிக்கை</string>
     <string name="Congratulations_Payment_successful_Done">வாழ்த்துக்கள் கட்டணம் வெற்றிகரமாக முடிந்தது</string>
