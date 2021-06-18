@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:23.0.1'
     implementation 'com.google.firebase:firebase-crashlytics:18.0.1'
     implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
     def jetpack_version = "2.1.0"
     def anko_version = '0.10.0'
     def arch_version = '2.2.0-alpha01'
@@ -60,6 +61,9 @@ dependencies {
     def kotlinCoroutineVersion = "1.1.1"
 
     implementation 'com.github.florent37:runtime-permission-kotlin:1.1.2'
+
+    implementation 'com.airbnb.android:lottie:3.0.6'
+
 
     implementation 'com.google.android.libraries.places:places:2.4.0'
 
@@ -173,5 +177,6 @@ dependencies {
 
 //circular img
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 
 }
