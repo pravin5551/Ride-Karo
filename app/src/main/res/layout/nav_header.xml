@@ -24,6 +24,7 @@
         android:layout_marginStart="10dp"
         android:fontFamily="@font/productsansregular"
         android:text="@string/rahul_yadav"
+        android:layout_marginTop="12.5dp"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"

@@ -303,7 +303,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     }
 
     private fun moveCamera(latLng: LatLng, zoom: Float) {
-        mMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom))
+        mMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom))
     }
 
     override fun onLocationChanged(location: Location) {

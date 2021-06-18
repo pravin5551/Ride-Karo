@@ -13,7 +13,6 @@
         android:id="@+id/etSearchLocation"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
-        android:drawableStart="@drawable/back"
         android:drawablePadding="@dimen/dp_10"
         android:fontFamily="@font/productsansregular"
         android:hint="@string/search_drop_location"
@@ -25,8 +24,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_40"
-        android:background="@color/yellow"
+        android:background="@drawable/requst_bg"
         android:fontFamily="@font/productsansregular"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:text="@string/let_s_go" />
 
 

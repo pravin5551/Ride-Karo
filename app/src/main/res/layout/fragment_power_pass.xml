@@ -13,47 +13,47 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_180sdp"
-            android:background="@color/yellow"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_180sdp"-->
+<!--            android:background="@color/yellow"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
 
-            <com.google.android.material.appbar.CollapsingToolbarLayout
-                android:id="@+id/collapsing_notification_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:contentScrim="@color/yellow"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+<!--            <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--                android:id="@+id/collapsing_notification_toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                app:contentScrim="@color/yellow"-->
+<!--                app:layout_scrollFlags="scroll|exitUntilCollapsed">-->
 
-                <ImageView
-                    android:id="@+id/powerPass"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_actionbar_payment"
-                    app:layout_collapseMode="parallax" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/powerPass"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:scaleType="centerInside"-->
+<!--                    android:src="@drawable/ic_actionbar_payment"-->
+<!--                    app:layout_collapseMode="parallax" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:padding="@dimen/_25sdp"
-                    android:text="@string/power_pass"
-                    android:fontFamily="@font/productsansregular"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_35sdp" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="bottom"-->
+<!--                    android:padding="@dimen/_25sdp"-->
+<!--                    android:text="@string/power_pass"-->
+<!--                    android:fontFamily="@font/productsansregular"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/_35sdp" />-->
 
-                <android.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:layout_collapseMode="pin" />
+<!--                <android.widget.Toolbar-->
+<!--                    android:id="@+id/toolbar"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="?attr/actionBarSize"-->
+<!--                    app:layout_collapseMode="pin" />-->
 
 
-            </com.google.android.material.appbar.CollapsingToolbarLayout>
+<!--            </com.google.android.material.appbar.CollapsingToolbarLayout>-->
 
-        </com.google.android.material.appbar.AppBarLayout>
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"

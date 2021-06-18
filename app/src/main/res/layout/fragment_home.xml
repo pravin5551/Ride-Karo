@@ -29,65 +29,60 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp_10"
         android:background="@drawable/edittext_bg"
-        app:layout_constraintBottom_toTopOf="@id/searchLocationEdit">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottomLinearLayout">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_40"
-            android:layout_margin="@dimen/dp_15">
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/dp_15"
+            app:cardCornerRadius="20dp">
 
             <ImageView
                 android:layout_width="@dimen/dp_15"
                 android:layout_height="@dimen/dp_15"
+                android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/dp_12"
                 android:src="@drawable/green_circle" />
 
             <TextView
                 android:id="@+id/tvCurrentAddress"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_5"
                 android:layout_marginEnd="@dimen/dp_10"
                 android:fontFamily="@font/productsansregular"
-                android:text="@string/current_location"
+                android:hint="@string/current_location"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp_20" />
         </androidx.cardview.widget.CardView>
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/searchLocationEdit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp_10"
-        android:background="@drawable/edittext_bg"
-        app:layout_constraintBottom_toTopOf="@id/bottomLinearLayout">
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_40"
-            android:layout_margin="@dimen/dp_15">
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/dp_15"
+            app:cardCornerRadius="20dp">
 
             <ImageView
                 android:layout_width="@dimen/dp_15"
                 android:layout_height="@dimen/dp_15"
+                android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/dp_12"
                 android:src="@drawable/red_circle" />
 
             <TextView
                 android:id="@+id/tvEnterDestination"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_5"
                 android:layout_marginEnd="@dimen/dp_10"
                 android:fontFamily="@font/productsansregular"
-                android:text="@string/enter_destination"
+                android:hint="@string/enter_destination"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
                 android:textSize="@dimen/sp_20" />
         </androidx.cardview.widget.CardView>
 
@@ -101,7 +96,9 @@
         android:background="@color/BgDarkGray"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@id/parent">
+        app:layout_constraintBottom_toBottomOf="@id/parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:layout_width="wrap_content"
