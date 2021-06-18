@@ -49,10 +49,10 @@
                 android:layout_marginStart="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_5"
                 android:layout_marginEnd="@dimen/dp_10"
-                android:fontFamily="@font/opensansregular"
+                android:fontFamily="@font/productsansregular"
                 android:text="@string/current_location"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_17" />
+                android:textSize="@dimen/sp_20" />
         </androidx.cardview.widget.CardView>
 
 
@@ -84,11 +84,11 @@
                 android:layout_marginStart="@dimen/dp_40"
                 android:layout_marginTop="@dimen/dp_5"
                 android:layout_marginEnd="@dimen/dp_10"
-                android:fontFamily="@font/opensansregular"
+                android:fontFamily="@font/productsansregular"
                 android:text="@string/enter_destination"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-                android:textSize="@dimen/sp_17" />
+                android:textSize="@dimen/sp_20" />
         </androidx.cardview.widget.CardView>
 
 
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp_5"
-            android:fontFamily="@font/opensansregular"
+            android:fontFamily="@font/productsansregular"
             android:text="@string/ride"
             android:textColor="@color/yellow"
             android:textSize="@dimen/sp_13" />

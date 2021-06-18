@@ -323,9 +323,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         if (address.getAddressLine(0) != null) {
             tvEnterDestination.text = address.getAddressLine(0)
         }
-        if (address.getAddressLine(1) != null) {
-            tvEnterDestination.getText().toString() + (address.getAddressLine(1))
-        }
+//        if (address.getAddressLine(1) != null) {
+//            tvEnterDestination.getText().toString() + (address.getAddressLine(1))
+//        }
     }
 
     private fun setCurrentAddress(address: Address) {
@@ -333,9 +333,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         if (address.getAddressLine(0) != null) {
             tvCurrentAddress.text = address.getAddressLine(0)
         }
-        if (address.getAddressLine(1) != null) {
-            tvCurrentAddress.getText().toString() + (address.getAddressLine(1))
-        }
+//        if (address.getAddressLine(1) != null) {
+//            tvCurrentAddress.getText().toString() + (address.getAddressLine(1))
+//        }
     }
 
 

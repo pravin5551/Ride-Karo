@@ -20,6 +20,7 @@
         android:layout_below="@+id/ivSplashScreenImage"
         android:layout_centerInParent="true"
         android:text="Ride Karo"
+        android:fontFamily="@font/productsansregular"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="@dimen/_15sdp"
@@ -42,6 +43,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginBottom="@dimen/_15sdp"
+        android:fontFamily="@font/productsansregular"
         android:text="@string/Made_in_india"
         android:textSize="@dimen/_15sdp" />
 
