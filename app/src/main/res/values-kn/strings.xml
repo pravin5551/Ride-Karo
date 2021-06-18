@@ -112,5 +112,36 @@
     <string name="your_safety_matters">ನಿಮ್ಮ ಸುರಕ್ಷತೆಯ ವಿಷಯಗಳು</string>
     <string name="book_vaccine">ಲಸಿಕೆ ಪುಸ್ತಕ</string>
 
+    <string name="payment_menu">ಪಾವತಿ</string>
+    <string name="support_menu">ಬೆಂಬಲ</string>
+    <string name="title_activity_maps">ನಕ್ಷೆ</string>
+    <string name="title_activity_maps2">ನಕ್ಷೆ</string>
+    <string name="hold_tight_rider_is_on_it_s_way_to_your_location">ಗಟ್ಟಿಯಾಗಿ ಹಿಡಿದುಕೋ! ರೈಡರ್ ನಿಮ್ಮ ಸ್ಥಳಕ್ಕೆ ಹೋಗುವ ಮಾರ್ಗದಲ್ಲಿದೆ</string>
+    <string name="hurray">ಹರ್ರೆ</string>
+
+    <string name="share">ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="Claim_Procedure">ಹಕ್ಕು ಪಡೆಯುವ ವಿಧಾನ</string>
+    <string name="legal">ಕಾನೂನು</string>
+    <string name="view">ನೋಟ</string>
+    <string name="Invite">ಆಹ್ವಾನಿಸಿ</string>
+    <string name="Share_via">ಮೂಲಕ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="Invite_Friends">ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿ</string>
+    <string name="Invite_friends_and_get_rewards">ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿ ಮತ್ತು ಪ್ರತಿಫಲವನ್ನು ಪಡೆಯಿರಿ</string>
+    <string name="Terms_and_Conditions">ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು</string>
+    <string name="Waiting_for_OTP">ಒಟಿಪಿಗಾಗಿ ಕಾಯಲಾಗುತ್ತಿದೆ..</string>
+    <string name="Continue">ಮುಂದುವರಿಸಿ</string>
+    <string name="Book_Vaccine">ಲಸಿಕೆ ಪುಸ್ತಕ</string>
+    <string name="Payment_amp_Wallets">ಪಾವತಿ amp; ತೊಗಲಿನ ಚೀಲಗಳು</string>
+    <string name="OPD_Treatment">ಒಪಿಡಿ ಚಿಕಿತ್ಸೆ</string>
+    <string name="Medical_Expense_for_Hospitalization">ಆಸ್ಪತ್ರೆಗೆ ವೈದ್ಯಕೀಯ ವೆಚ್ಚ</string>
+    <string name="Continue_with_Google">Google ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ</string>
+    <string name="Continue_with_Facebook">ಫೇಸ್‌ಬುಕ್‌ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ</string>
+    <string name="Continue_with_Apple">ಆಪಲ್ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ</string>
+    <string name="Enter_Mobile_Number">ಮೊಬೈಲ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="Login_or_Register">ಲಾಗಿನ್ ಅಥವಾ ನೋಂದಾಯಿಸಿ</string>
+    <string name="enter_verification_pin">ಪರಿಶೀಲನೆ ಪಿನ್ ನಮೂದಿಸಿ</string>
+    <string name="Seat_back_and_relax_while_we_verify_your_phone_number">ನಿಮ್ಮ ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಾವು ಪರಿಶೀಲಿಸುವಾಗ ಕುಳಿತುಕೊಳ್ಳಿ ಮತ್ತು ವಿಶ್ರಾಂತಿ ಪಡೆಯಿರಿ</string>
+    <string name="or">ಅಥವಾ</string>
+    <string name="Ride_Karo">ರೈಡ್ ಕರೋ</string>
 
 </resources>

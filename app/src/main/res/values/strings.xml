@@ -152,5 +152,7 @@
     <string name="cancelled">Cancelled</string>
     <string name="bandra_station">Bandra Station</string>
 
+    <string name="or">OR</string>
+    <string name="Ride_Karo">Ride Karo</string>
 
 </resources>
