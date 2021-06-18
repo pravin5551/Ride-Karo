@@ -121,6 +121,8 @@
     <string name="support_menu">Support</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps2">Map</string>
+    <string name="hold_tight_rider_is_on_it_s_way_to_your_location">Hold Tight! Rider is on it\'s way to your location</string>
+    <string name="hurray">Hurray</string>
 
 
 </resources>

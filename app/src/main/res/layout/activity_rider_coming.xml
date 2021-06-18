@@ -39,7 +39,7 @@
         android:layout_marginBottom="30dp"
         android:background="@drawable/green_bg"
         android:fontFamily="@font/productsansregular"
-        android:text="Hurray"
+        android:text="@string/hurray"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

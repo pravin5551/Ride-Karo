@@ -38,11 +38,11 @@ class OTPSecondActivity : AppCompatActivity() {
         ) // OnVerificationStateChangedCallbacks
 
         verifyButton.setOnClickListener {
-//            if (!otpTextField.text.isNullOrEmpty()) {
-//                verifyVerificationCode(otpTextField.text.toString())
-//            }
-            startActivity(Intent(this, HomeActivity::class.java))
-            finish()
+            if (!otpTextField.text.isNullOrEmpty()) {
+                verifyVerificationCode(otpTextField.text.toString())
+            }
+//            startActivity(Intent(this, HomeActivity::class.java))
+//            finish()
         }
     }
 

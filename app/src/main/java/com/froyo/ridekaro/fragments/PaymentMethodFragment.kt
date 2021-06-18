@@ -88,7 +88,5 @@ class PaymentMethodFragment : BottomSheetDialogFragment() {
             }
 
         }
-
-
     }
 }
