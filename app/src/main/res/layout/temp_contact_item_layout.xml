@@ -45,6 +45,7 @@
         android:gravity="center"
         android:maxLines="1"
         android:text="abc"
+        android:fontFamily="@font/productsansregular"
         android:textColor="@color/black"
         android:textSize="14sp" />
 

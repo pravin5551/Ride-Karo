@@ -4,6 +4,7 @@
     android:padding="@dimen/_14sdp"
     android:textStyle="bold"
     android:textSize="@dimen/_16sdp"
+    android:fontFamily="@font/productsansregular"
     android:textColor="@color/black"
     xmlns:android="http://schemas.android.com/apk/res/android" />
 

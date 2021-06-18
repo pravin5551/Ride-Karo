@@ -31,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_baseline_payment_24"
+                    android:src="@drawable/ic_actionbar_payment"
                     app:layout_collapseMode="parallax" />
 
                 <TextView
@@ -41,6 +41,7 @@
                     android:fontFamily="@font/productsansregular"
                     android:padding="@dimen/_25sdp"
                     android:text="@string/power_pass"
+                    android:fontFamily="@font/productsansregular"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_35sdp" />
 
@@ -71,8 +72,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/_10sdp">
-
-
                 </androidx.recyclerview.widget.RecyclerView>
 
             </LinearLayout>
@@ -94,6 +93,7 @@
         android:textAllCaps="false"
         android:textColor="@color/yellow"
         android:textSize="18sp"
+        android:fontFamily="@font/productsansregular"
         android:textStyle="bold"
         app:layout_anchorGravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent" />

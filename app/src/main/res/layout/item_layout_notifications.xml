@@ -15,9 +15,9 @@
         <TextView
             android:layout_width="match_parent"
             android:text="New Notification"
+            android:fontFamily="@font/productsansregular"
             android:textSize="@dimen/_20sdp"
             android:layout_height="wrap_content"/>
-
 
     </LinearLayout>
 
