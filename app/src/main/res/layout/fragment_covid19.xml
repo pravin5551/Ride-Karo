@@ -127,8 +127,8 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/rect_round_mon_vaccine"
         android:fontFamily="@font/productsansregular"
-        android:padding="15dp"
-        android:text="   Book Vaccine    "
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:text="@string/book_vaccine"
         android:textColor="@color/Black"
         android:textStyle="normal" />
 

@@ -74,7 +74,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/productsansregular"
                 android:padding="10dp"
-                android:text="Continue with Google"
+                android:text="@string/Continue_with_Google"
                 android:textAllCaps="false" />
 
             <Button
@@ -87,7 +87,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/productsansregular"
                 android:padding="10dp"
-                android:text="Continue with Facebook"
+                android:text="@string/Continue_with_Facebook"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 
@@ -101,7 +101,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="@font/productsansregular"
                 android:padding="10dp"
-                android:text="Continue with Apple"
+                android:text="@string/Continue_with_Apple"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/productsansregular"
-                android:text="OR"
+                android:text="@string/or"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp_10"
@@ -133,7 +133,7 @@
                 android:layout_marginTop="@dimen/dp_20"
                 android:fontFamily="@font/productsansregular"
                 android:gravity="center"
-                android:hint="Enter your Mobile Number"
+                android:hint="@string/enter_phone_number"
                 android:inputType="number" />
 
             <Button
@@ -144,7 +144,7 @@
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/rect_round_mob"
                 android:fontFamily="@font/productsansregular"
-                android:text="Continue"
+                android:text="@string/Continue"
                 android:textColor="#f9d915" />
         </RelativeLayout>
 
