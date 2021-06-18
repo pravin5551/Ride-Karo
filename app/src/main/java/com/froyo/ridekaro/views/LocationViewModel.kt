@@ -8,14 +8,18 @@ class LocationViewModel : ViewModel() {
 
     companion object {
         var address: MutableLiveData<String> = MutableLiveData()
+
     }
 
     fun addLocation(location: String) {
         address.value = location
     }
 
-
     fun getLocation(): LiveData<String> {
         return address
     }
+
+
+
+
 }
