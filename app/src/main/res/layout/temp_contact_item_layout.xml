@@ -41,10 +41,10 @@
         android:layout_below="@+id/xx"
         android:layout_marginTop="5dp"
         android:background="@color/white"
+        android:fontFamily="@font/productsansregular"
         android:gravity="center"
         android:maxLines="1"
         android:text="abc"
-        android:fontFamily="@font/productsansregular"
         android:textColor="@color/black"
         android:textSize="14sp" />
 

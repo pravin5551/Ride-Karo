@@ -22,6 +22,7 @@
             android:layout_margin="@dimen/dp_10"
             android:background="@drawable/invite_bg"
             android:drawableStart="@drawable/ic_baseline_arrow_back_24"
+            android:fontFamily="@font/productsansregular"
             android:gravity="center_vertical"
             android:padding="5dp" />
 
@@ -136,17 +137,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/rect_round_mon_vaccine"
-        android:paddingHorizontal="@dimen/_20sdp"
-        android:text="@string/book_vaccine"
+        android:fontFamily="@font/productsansregular"
+        android:padding="15dp"
+        android:text="   Book Vaccine    "
         android:textColor="@color/Black"
         android:textStyle="normal" />
 
-<!--    <com.airbnb.lottie.LottieAnimationView-->
-<!--        android:id="@+id/animationView"-->
-<!--        android:layout_width="@dimen/dp_100"-->
-<!--        android:layout_height="@dimen/dp_100"-->
-<!--        android:layout_gravity="center"-->
-<!--        app:lottie_autoPlay="true"-->
-<!--        app:lottie_fileName="bookmarkanimation.json"-->
-<!--        app:lottie_loop="true" />-->
+    <!--    <com.airbnb.lottie.LottieAnimationView-->
+    <!--        android:id="@+id/animationView"-->
+    <!--        android:layout_width="@dimen/dp_100"-->
+    <!--        android:layout_height="@dimen/dp_100"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        app:lottie_autoPlay="true"-->
+    <!--        app:lottie_fileName="bookmarkanimation.json"-->
+    <!--        app:lottie_loop="true" />-->
 </LinearLayout>

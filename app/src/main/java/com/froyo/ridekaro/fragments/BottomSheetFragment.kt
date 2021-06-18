@@ -1,19 +1,25 @@
 package com.froyo.ridekaro.fragments
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.viewModel.DistanceViewModel
-import com.froyo.ridekaro.views.LocationViewModel
 import com.froyo.ridekaro.views.RiderComing
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_bottom_sheet.*
+
 
 class BottomSheetFragment : BottomSheetDialogFragment() {
 
@@ -44,13 +50,33 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         })
 
         btnRequestRide.setOnClickListener {
-            startActivity(Intent(context, RiderComing::class.java))
+//            startActivity(Intent(context, RiderComing::class.java))
+            dislayNotification("Ride Booked", "The Rider is on it's way to your location")
         }
     }
 
     private fun setAmount(distance: Float) {
         val totalAmount: Int = (distance * 10).toInt()
         tvTotalRupee.text = totalAmount.toString()
+    }
+
+    private fun dislayNotification(task: String, desc: String) {
+        val notificationManager =
+            requireActivity().applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val notificationChannel = NotificationChannel(
+                "workExample",
+                "workExample",
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
+            notificationManager.createNotificationChannel(notificationChannel)
+        }
+        val builder =
+            NotificationCompat.Builder(requireActivity().applicationContext, "workExample")
+                .setContentTitle(task)
+                .setContentText(desc)
+                .setSmallIcon(R.mipmap.motorbike)
+        notificationManager.notify(1, builder.build())
     }
 
 }

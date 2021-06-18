@@ -42,8 +42,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:fontFamily="@font/productsansregular"
         android:layout_marginBottom="@dimen/_15sdp"
+        android:fontFamily="@font/productsansregular"
         android:text="@string/Made_in_india"
         android:textSize="@dimen/_15sdp" />
 

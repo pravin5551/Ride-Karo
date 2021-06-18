@@ -22,9 +22,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:fontFamily="@font/productsansregular"
             android:layout_marginLeft="@dimen/_20sdp"
             android:layout_marginBottom="@dimen/_25sdp"
+            android:fontFamily="@font/productsansregular"
             android:text="@string/choose_language"
             android:textColor="@color/black" />
 
@@ -33,8 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/tvWelcomeChoose"
-            android:fontFamily="@font/productsansregular"
             android:layout_marginLeft="@dimen/_20sdp"
+            android:fontFamily="@font/productsansregular"
             android:paddingBottom="@dimen/_5sdp"
             android:text="@string/welcome"
             android:textColor="@color/black"
