@@ -112,5 +112,36 @@
     <string name="your_safety_matters">உங்கள் பாதுகாப்பு விஷயங்கள்</string>
     <string name="book_vaccine">புத்தக தடுப்பூசி</string>
 
+    <string name="payment_menu">கட்டணம்</string>
+    <string name="support_menu">ஆதரவு</string>
+    <string name="title_activity_maps">வரைபடம்</string>
+    <string name="title_activity_maps2">வரைபடம்</string>
+    <string name="hold_tight_rider_is_on_it_s_way_to_your_location">இறுக்கமாகப் பிடித்துக் கொள்ளுங்கள்! உங்கள் இருப்பிடத்திற்கு செல்லும் வழியில் ரைடர் உள்ளது</string>
+    <string name="hurray">ஹர்ரே</string>
+
+    <string name="share">பகிர்</string>
+    <string name="Claim_Procedure">உரிமைகோரல் நடைமுறை</string>
+    <string name="legal">சட்ட</string>
+    <string name="view">காண்க</string>
+    <string name="Invite">அழைக்கவும்</string>
+    <string name="Share_via">வழியாக பகிரவும்</string>
+    <string name="Invite_Friends">நண்பர்களை அழைக்க</string>
+    <string name="Invite_friends_and_get_rewards">நண்பர்களை அழைத்து வெகுமதிகளைப் பெறுங்கள்</string>
+    <string name="Terms_and_Conditions">விதிமுறைகள் மற்றும் நிபந்தனைகள்</string>
+    <string name="Waiting_for_OTP">OTP க்காக காத்திருக்கிறது ..</string>
+    <string name="Continue">தொடரவும்</string>
+    <string name="Book_Vaccine">புத்தக தடுப்பூசி</string>
+    <string name="Payment_amp_Wallets">கட்டணம் ஆம்ப்; பணப்பைகள்</string>
+    <string name="OPD_Treatment">OPD சிகிச்சை</string>
+    <string name="Medical_Expense_for_Hospitalization">மருத்துவமனையில் சேர்க்க மருத்துவ செலவு</string>
+    <string name="Continue_with_Google">Google உடன் தொடரவும்</string>
+    <string name="Continue_with_Facebook">பேஸ்புக் உடன் தொடரவும்</string>
+    <string name="Continue_with_Apple">ஆப்பிள் உடன் தொடரவும்</string>
+    <string name="Enter_Mobile_Number">மொபைல் எண்ணை உள்ளிடவும்</string>
+    <string name="Login_or_Register">உள்நுழைக அல்லது பதிவுசெய்க</string>
+    <string name="enter_verification_pin">சரிபார்ப்பு முள் உள்ளிடவும்</string>
+    <string name="Seat_back_and_relax_while_we_verify_your_phone_number">உங்கள் தொலைபேசி எண்ணை நாங்கள் சரிபார்க்கும்போது மீண்டும் அமர்ந்து ஓய்வெடுக்கவும்</string>
+
+
 
 </resources>

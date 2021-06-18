@@ -111,6 +111,37 @@
     <string name="your_safety_matters">आपकी सुरक्षा के मामले</string>
     <string name="book_vaccine">बुक वैक्सीन</string>
 
+    <string name="payment_menu">भुगतान</string>
+    <string name="support_menu">सहयोग</string>
+    <string name="title_activity_maps">नक्शा</string>
+    <string name="title_activity_maps2">नक्शा</string>
+    <string name="hold_tight_rider_is_on_it_s_way_to_your_location">कसी पकड़! राइडर आपके स्थान के रास्ते में है</string>
+    <string name="hurray">हुर्रे</string>
+
+    <string name="share">शेयर</string>
+    <string name="Claim_Procedure">दावा प्रक्रिया</string>
+    <string name="legal">कानूनी</string>
+    <string name="view">राय</string>
+    <string name="Invite">आमंत्रण</string>
+    <string name="Share_via">के माध्यम से बाँटे</string>
+    <string name="Invite_Friends">मित्रों को आमंत्रित करें</string>
+    <string name="Invite_friends_and_get_rewards">मित्रों को आमंत्रित करें और पुरस्कार प्राप्त करें</string>
+    <string name="Terms_and_Conditions">नियम और शर्तें</string>
+    <string name="Waiting_for_OTP">ओटीपी की प्रतीक्षा की जा रही है...</string>
+    <string name="Continue">जारी रखें</string>
+    <string name="Book_Vaccine">बुक वैक्सीन</string>
+    <string name="Payment_amp_Wallets">भुगतान &amp; पर्स</string>
+    <string name="OPD_Treatment">ओपीडी उपचार</string>
+    <string name="Medical_Expense_for_Hospitalization">अस्पताल में भर्ती होने के लिए चिकित्सा व्यय</string>
+    <string name="Continue_with_Google">Google के साथ जारी रखें</string>
+    <string name="Continue_with_Facebook">फेसबुक के साथ जारी रखें</string>
+    <string name="Continue_with_Apple">Apple के साथ जारी रखें</string>
+    <string name="Enter_Mobile_Number">मोबाइल नंबर दर्ज करें</string>
+    <string name="Login_or_Register">भाग लें या पंजीकरण करें</string>
+    <string name="enter_verification_pin">सत्यापन पिन दर्ज करें</string>
+    <string name="Seat_back_and_relax_while_we_verify_your_phone_number">जब तक हम आपका फ़ोन नंबर सत्यापित करते हैं, तब तक बैठें और आराम करें</string>
+
+
 
 
 
