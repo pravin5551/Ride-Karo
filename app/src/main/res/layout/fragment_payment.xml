@@ -114,7 +114,7 @@
                         android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
-                        android:text="LINK"
+                        android:text="@string/link"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
 
@@ -159,7 +159,7 @@
                         android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
-                        android:text="LINK"
+                        android:text="@string/link"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
 
@@ -204,7 +204,7 @@
                         android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
-                        android:text="LINK"
+                        android:text="@string/link"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
 
@@ -250,7 +250,7 @@
                         android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
-                        android:text="Pay"
+                        android:text="@string/pay"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
 

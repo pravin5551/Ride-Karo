@@ -30,7 +30,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/rider" />
+        app:lottie_rawRes="@raw/rider"
+        tools:ignore="MissingClass" />
 
     <Button
         android:id="@+id/btnHurray"

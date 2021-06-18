@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.LanguageScreenActivity">
+    tools:context=".language2Activity">
 
     <RelativeLayout
         android:id="@+id/rlWelcomeScreen"
@@ -60,12 +60,12 @@
             android:layout_marginStart="@dimen/_32sdp"
             android:layout_marginTop="@dimen/_32sdp"
             android:layout_marginEnd="@dimen/_32sdp"
-            android:hint="@string/Select_Language"
             android:fontFamily="@font/productsansregular"
+            android:hint="@string/Select_Language"
             android:theme="@style/Theme.MaterialComponents.Light">
 
             <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
+                android:id="@+id/autoCompleteTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -75,20 +75,20 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnNext"
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/btnContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_margin="@dimen/_20sdp"
             android:background="@drawable/ic_rectangle_next"
-            android:text="@string/next"
             android:fontFamily="@font/productsansregular"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:text="@string/Continue"
             android:textAllCaps="false"
             android:textColor="@color/yellow"
             android:textSize="18sp"
             android:textStyle="bold" />
-
 
     </RelativeLayout>
 
