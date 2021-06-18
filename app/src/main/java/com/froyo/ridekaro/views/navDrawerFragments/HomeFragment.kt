@@ -69,10 +69,8 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 
     private lateinit var distanceViewModel: DistanceViewModel
 
-
     private val LOCATION_REQUEST_CODE = 1
     private var count = 0
-
 
     private var userLocationMarker: Marker? = null
     private var userLocationMarker2: Marker? = null
@@ -470,7 +468,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         val mode = "mode=driving"
         val parameters = "$str_origin&$str_dest&$mode"
         val output = "json"
-        return "https://maps.googleapis.com/maps/api/directions/$output?$parameters&key=AIzaSyCtbdDgl8vD6w7KyuVIQEYAaTEeG8Vebn4"
+        return "https://maps.googleapis.com/maps/api/directions/$output?$parameters&key=AIzaSyCv_5zK9gY5rZfL36LspmVQIBXJ3wSrAzQ"
     }
 
     inner class DownloadTask :

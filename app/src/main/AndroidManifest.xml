@@ -18,8 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
-        <activity android:name=".views.RiderComing"></activity>
-        <activity android:name=".views.LocationSearch" />
+        <activity android:name=".views.RiderComing" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -54,7 +53,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".NotificationService"/>
+        <service android:name=".NotificationService" />
 
     </application>
 
