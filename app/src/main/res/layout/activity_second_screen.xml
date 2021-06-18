@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ivSplashScreenImage"
         android:layout_centerInParent="true"
-        android:text="Ride Karo"
+        android:text="@string/Ride_Karo"
         android:fontFamily="@font/productsansregular"
         android:textAlignment="center"
         android:textColor="@color/black"

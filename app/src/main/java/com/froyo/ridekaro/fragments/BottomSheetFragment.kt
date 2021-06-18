@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -18,6 +19,8 @@ import kotlinx.android.synthetic.main.fragment_bottom_sheet.*
 
 
 class BottomSheetFragment : BottomSheetDialogFragment() {
+
+    private lateinit var pendingIntent: PendingIntent
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,6 +51,13 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         btnRequestRide.setOnClickListener {
 //            startActivity(Intent(context, RiderComing::class.java))
             dislayNotification("Ride Booked", "The Rider is on his way to your location")
+
+            val intent = Intent(context, RiderComing::class.java)
+
+            pendingIntent =
+                PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+            dislayNotification("Ride Booked", "The Rider is on it's way to your location")
+
         }
     }
 
@@ -63,8 +73,9 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
             val notificationChannel = NotificationChannel(
                 "workExample",
                 "workExample",
-                NotificationManager.IMPORTANCE_DEFAULT
+                NotificationManager.IMPORTANCE_HIGH
             )
+            notificationChannel.enableLights(true)
             notificationManager.createNotificationChannel(notificationChannel)
         }
         val builder =
@@ -72,6 +83,7 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
                 .setContentTitle(task)
                 .setContentText(desc)
                 .setSmallIcon(R.mipmap.motorbike)
+                .setContentIntent(pendingIntent)
         notificationManager.notify(1, builder.build())
     }
 
