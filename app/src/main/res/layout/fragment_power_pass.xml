@@ -38,6 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
+                    android:fontFamily="@font/productsansregular"
                     android:padding="@dimen/_25sdp"
                     android:text="@string/power_pass"
                     android:textColor="@color/black"

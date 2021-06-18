@@ -37,7 +37,7 @@ class FirstScreenActivity : AppCompatActivity() {
         val lang = PreferenceHelper.getStringFromPreference("languagePreferenceString")
         val position = PreferenceHelper.getIntFromPreference("languagePreference")
         if (lang != null) {
-            setLocal(lang,position)
+            setLocal(lang, position)
         }
 
     }
@@ -61,11 +61,11 @@ class FirstScreenActivity : AppCompatActivity() {
                     applicationContext,
                     permission
                 ) == PackageManager.PERMISSION_GRANTED -> {
-                    Toast.makeText(
-                        applicationContext,
-                        "$name permission granted",
-                        Toast.LENGTH_SHORT
-                    ).show()
+//                    Toast.makeText(
+//                        applicationContext,
+//                        "$name permission granted",
+//                        Toast.LENGTH_SHORT
+//                    ).show()
                     val intent = Intent(this, SecondScreenActivity::class.java)
                     startActivity(intent)
 

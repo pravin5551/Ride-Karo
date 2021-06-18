@@ -20,16 +20,17 @@
             android:layout_height="wrap_content"
             android:background="#f9d915">
 
-            <Button
-                android:id="@+id/back_otp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="@dimen/dp_10"
-                android:background="@drawable/invite_bg"
-                android:drawableStart="@drawable/ic_baseline_arrow_back_24"
-                android:padding="5dp"
+            <!--            <Button-->
+            <!--                android:id="@+id/back_otp"-->
+            <!--                android:layout_width="50dp"-->
+            <!--                android:layout_height="50dp"-->
+            <!--                android:fontFamily="@font/productsansregular"-->
+            <!--                android:layout_margin="@dimen/dp_10"-->
+            <!--                android:background="@drawable/invite_bg"-->
+            <!--                android:drawableStart="@drawable/ic_baseline_arrow_back_24"-->
+            <!--                android:padding="5dp"-->
 
-                />
+            <!--                />-->
 
             <Button
                 android:id="@+id/support_otp"
@@ -38,8 +39,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_margin="@dimen/dp_10"
                 android:background="@drawable/invite_bg"
+                android:fontFamily="@font/productsansregular"
                 android:padding="5dp"
-
                 android:text="@string/support"
                 android:textAllCaps="false" />
 
@@ -49,6 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_25"
+            android:fontFamily="@font/productsansregular"
             android:text="Enter verification pin"
             android:textColor="@color/black"
             android:textSize="25dp" />
@@ -59,6 +61,7 @@
             android:layout_marginStart="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_25"
+            android:fontFamily="@font/productsansregular"
             android:text="Seat back and relax while we verify your phone number" />
 
     </LinearLayout>
@@ -77,6 +80,7 @@
             android:layout_marginStart="@dimen/dp_60"
             android:layout_marginTop="@dimen/dp_50"
             android:layout_marginEnd="@dimen/dp_60"
+            android:fontFamily="@font/productsansregular"
             android:inputType="number" />
 
         <RelativeLayout
@@ -88,6 +92,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp_20"
+                android:fontFamily="@font/productsansregular"
                 android:gravity="center_horizontal"
                 android:text="Waiting for OTP..."
                 android:textColor="@color/Gray" />
@@ -98,6 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_toEndOf="@+id/waiting_tv"
+                android:fontFamily="@font/productsansregular"
                 android:textAppearance="@android:style/TextAppearance.Large"
                 android:textSize="56sp" />
 
@@ -120,6 +126,7 @@
             android:layout_marginEnd="@dimen/dp_50"
             android:layout_marginBottom="@dimen/dp_100"
             android:background="@drawable/rect_round_mob"
+            android:fontFamily="@font/productsansregular"
             android:text="Continue"
             android:textColor="#f9d915" />
     </RelativeLayout>
