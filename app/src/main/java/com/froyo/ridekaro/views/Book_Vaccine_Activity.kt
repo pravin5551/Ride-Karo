@@ -15,14 +15,13 @@ class Book_Vaccine_Activity : AppCompatActivity() {
         setContentView(R.layout.activity_book_vaccine)
 
 
-
         if (WebViewwallstreetjournal != null) {
             val webSettings = WebViewwallstreetjournal!!.settings
             webSettings.javaScriptEnabled = true
             WebViewwallstreetjournal!!.webViewClient = WebViewClient()
             WebViewwallstreetjournal!!.loadUrl("https://selfregistration.cowin.gov.in/")
 
-    //https://www.wsj.com/
+            //https://www.wsj.com/
             WebViewwallstreetjournal!!.webViewClient = object : WebViewClient() {
 
                 override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {

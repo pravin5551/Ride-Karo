@@ -3,12 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.navDrawerFragments.MyRidesFragment">
+    tools:context=".fragments.GetVaccinatedFragment">
 
-    <TextView
+    <WebView
+        android:id="@+id/covidWeb"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fontFamily="@font/productsansregular"
-        android:text="my rides" />
-
+        android:layout_height="match_parent" />
 </FrameLayout>
