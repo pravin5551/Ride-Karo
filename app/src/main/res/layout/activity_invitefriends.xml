@@ -23,9 +23,7 @@
             android:layout_margin="@dimen/dp_10"
             android:padding="5dp"
             android:drawableStart="@drawable/ic_baseline_arrow_back_24"
-            android:background="@drawable/invite_bg"
-
-            />
+            android:background="@drawable/invite_bg" />
 
         <Button
             android:id="@+id/support_otp"
@@ -35,7 +33,7 @@
             android:layout_alignParentEnd="true"
             android:layout_margin="@dimen/dp_10"
             android:background="@drawable/invite_bg"
-
+            android:fontFamily="@font/productsansregular"
             android:text="@string/support"
             android:textAllCaps="false" />
 
@@ -58,6 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_18"
             android:text="Share"
+            android:fontFamily="@font/productsansregular"
             android:textColor="@color/Black"
             android:textSize="@dimen/sp_16"
             app:layout_constraintEnd_toEndOf="@+id/rvContactAddTemp"
@@ -70,6 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="@string/with_you_and"
+            android:fontFamily="@font/productsansregular"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/etNameEmailPhone"
             app:layout_constraintEnd_toStartOf="@id/etNameEmailPhone"
@@ -82,6 +82,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_phone_number"
             android:textSize="@dimen/sp_15"
+            android:fontFamily="@font/productsansregular"
             app:layout_constraintStart_toEndOf="@id/tvWithYou"
             app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />
 
@@ -102,6 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:visibility="gone"
+            android:fontFamily="@font/productsansregular"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etNameEmailPhone" />
     </androidx.constraintlayout.widget.ConstraintLayout>

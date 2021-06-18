@@ -10,8 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/orange"
-
-        android:text="Share"
-        />
+        android:fontFamily="@font/productsansregular"
+        android:text="Share" />
 
 </LinearLayout>

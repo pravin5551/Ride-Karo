@@ -17,6 +17,7 @@
         android:drawablePadding="@dimen/dp_15"
         android:hint="@string/search_issue"
         android:padding="@dimen/dp_10"
+        android:fontFamily="@font/productsansregular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,6 +53,7 @@
                 android:text="@string/having_an_issue"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sp_14"
+                android:fontFamily="@font/productsansregular"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivChat"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -63,6 +65,7 @@
                 android:background="@drawable/get_help_bg"
                 android:gravity="center"
                 android:text="@string/get_help"
+                android:fontFamily="@font/productsansregular"
                 android:textColor="@color/DodgerBlue"
                 android:textSize="@dimen/sp_14"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -91,6 +94,7 @@
             android:gravity="center"
             android:padding="@dimen/dp_10"
             android:text="@string/view_all_tickets"
+            android:fontFamily="@font/productsansregular"
             android:textColor="@color/DodgerBlue"
             android:textSize="@dimen/sp_18"
             android:textStyle="bold" />
@@ -104,6 +108,7 @@
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_25"
         android:text="FAQs"
+        android:fontFamily="@font/productsansregular"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_18"
         app:layout_constraintStart_toStartOf="parent"

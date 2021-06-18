@@ -20,12 +20,10 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="@dimen/dp_10"
-
             android:background="@drawable/invite_bg"
             android:drawableStart="@drawable/ic_baseline_arrow_back_24"
             android:gravity="center_vertical"
-            android:padding="5dp"
-            />
+            android:padding="5dp" />
 
         <TextView
             android:id="@+id/support_otp"
@@ -138,8 +136,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/rect_round_mon_vaccine"
-        android:padding="15dp"
-        android:text="   Book Vaccine    "
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:text="@string/book_vaccine"
         android:textColor="@color/Black"
         android:textStyle="normal" />
 

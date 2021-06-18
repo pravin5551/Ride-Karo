@@ -27,9 +27,10 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="@dimen/dp_10"
-        android:text="Payment &amp; Wallets"
+        android:text="@string/Payment_amp_Wallets"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_14"
+        android:fontFamily="@font/productsansregular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivIcon" />
