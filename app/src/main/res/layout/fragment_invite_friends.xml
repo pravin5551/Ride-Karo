@@ -27,7 +27,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="@dimen/dp_20"
                 android:fontFamily="@font/productsansregular"
-                android:text="Invite Friends"
+                android:text="@string/invite_friends"
                 android:textColor="@color/white" />
 
             <TextView
@@ -36,7 +36,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="@dimen/dp_20"
                 android:fontFamily="@font/productsansregular"
-                android:text="Invite friends and get rewards"
+                android:text="@string/Invite_friends_and_get_rewards"
                 android:textColor="@color/white"
                 android:textSize="@dimen/dp_20"
 
@@ -101,7 +101,7 @@
                     android:background="@drawable/invite_bg"
                     android:fontFamily="@font/productsansregular"
                     android:padding="@dimen/dp_10"
-                    android:text="Invite"
+                    android:text="@string/Invite"
                     android:textAllCaps="false" />
 
 
@@ -115,7 +115,7 @@
                     android:drawableEnd="@drawable/ic__02_whatsapp"
                     android:fontFamily="@font/productsansregular"
                     android:padding="@dimen/dp_10"
-                    android:text="Share via"
+                    android:text="@string/Share_via"
                     android:textAllCaps="false"
                     android:textColor="@color/white" />
             </LinearLayout>

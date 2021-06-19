@@ -45,6 +45,10 @@ class PreferenceHelper {
         fun getBooleanFromPreference(key: String?): Boolean {
             return sharedPreferences!!.getBoolean(key, true)
         }
+
+        fun getLoginBooleanFromPreference(key: String?): Boolean {
+            return sharedPreferences!!.getBoolean(key, false)
+        }
     }
 
 }
