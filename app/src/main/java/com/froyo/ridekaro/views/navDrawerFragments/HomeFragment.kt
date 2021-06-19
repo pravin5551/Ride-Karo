@@ -173,7 +173,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
             val bottomSheetFragment = BottomSheetFragment()
             bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
 
-//            getArea("Thane")
         }
     }
 
@@ -478,7 +477,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         if (address.getAddressLine(0) != null) {
             val allAddress = address.getAddressLine(0)
             var array: List<String> = allAddress.split(",")
-            tvEnterDestination.text = array[0] + "," + array[1]
+            tvCurrentAddress.text = array[0] + "," + array[1]
         }
 //        if (address.getAddressLine(1) != null) {
 //            tvEnterDestination.getText().toString() + (address.getAddressLine(1))
@@ -490,7 +489,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         if (address.getAddressLine(0) != null) {
             val allAddress = address.getAddressLine(0)
             var array: List<String> = allAddress.split(",")
-            tvCurrentAddress.text = array[0] + "," + array[1]
+            tvEnterDestination.text = array[0] + "," + array[1]
         }
 //        if (address.getAddressLine(1) != null) {
 //            tvCurrentAddress.getText().toString() + (address.getAddressLine(1))
