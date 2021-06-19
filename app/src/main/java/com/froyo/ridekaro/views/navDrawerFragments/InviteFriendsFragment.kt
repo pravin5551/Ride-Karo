@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.views.InvitefriendsActivity
 import com.froyo.ridekaro.views.OTPSecondActivity
@@ -37,6 +39,12 @@ class InviteFriendsFragment : Fragment() {
         }
 
         btn_share_contacts.setOnClickListener {
+//            val fragment = ContactFragment()
+//                val fragmentManager: FragmentManager = parentFragmentManager
+//                val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+////                fragment.arguments = (bundle)
+//                fragmentTransaction.replace(R.id.fragmentContainerView, fragment,"ContactFragment").addToBackStack("ContactFragment").commit()
+
             val i = Intent(context, InvitefriendsActivity::class.java)
             startActivity(i)
 
