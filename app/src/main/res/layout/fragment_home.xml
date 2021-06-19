@@ -51,12 +51,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/dp_40"
-                android:layout_marginTop="@dimen/dp_5"
+
                 android:layout_marginEnd="@dimen/dp_10"
                 android:fontFamily="@font/productsansregular"
                 android:hint="@string/current_location"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_20" />
+                android:textSize="@dimen/sp_15" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -78,12 +78,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/dp_40"
-                android:layout_marginTop="@dimen/dp_5"
                 android:layout_marginEnd="@dimen/dp_10"
                 android:fontFamily="@font/productsansregular"
                 android:hint="@string/enter_destination"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_20" />
+                android:textSize="@dimen/sp_15" />
         </androidx.cardview.widget.CardView>
 
 

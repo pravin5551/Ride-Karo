@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/mapFragment"
         android:name="com.froyo.ridekaro.views.navDrawerFragments.HomeFragment"
-        android:label="@string/home"
+        android:label="@string/Ride_Karo"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_mapFragment_to_covid19Fragment"

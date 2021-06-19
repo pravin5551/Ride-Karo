@@ -17,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
+        <activity android:name=".views.navDrawerFragments.RiderArrived"></activity>
         <activity android:name=".views.navDrawerFragments.GetVaccinated" />
         <activity android:name=".views.RiderComing" />
         <!--
@@ -31,8 +32,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".views.MainActivity">
+        <activity android:name=".views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

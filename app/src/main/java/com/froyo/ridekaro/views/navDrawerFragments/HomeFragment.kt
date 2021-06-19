@@ -3,6 +3,10 @@ package com.froyo.ridekaro.views.navDrawerFragments
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
@@ -11,6 +15,7 @@ import android.location.Geocoder
 import android.location.Location
 import android.location.LocationListener
 import android.os.AsyncTask
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -19,18 +24,25 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
+import androidx.core.app.NotificationChannelCompat
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.fragments.BottomSheetFragment
+import com.froyo.ridekaro.viewModel.AfterClickingRideNow
 import com.froyo.ridekaro.viewModel.DistanceViewModel
+import com.froyo.ridekaro.viewModel.LatLongViewModel
+import com.froyo.ridekaro.viewModel.RidesViewModel
 import com.froyo.ridekaro.views.DataParser
 import com.froyo.ridekaro.views.LocationSearchFragment
 import com.froyo.ridekaro.views.LocationViewModel
+import com.froyo.ridekaro.views.RiderComing
 import com.github.florent37.runtimepermission.kotlin.askPermission
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
@@ -38,7 +50,12 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.*
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
+import kotlinx.android.synthetic.main.activity_first_screen.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.IOException
@@ -48,6 +65,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.util.*
 import java.util.concurrent.Flow
+import kotlin.concurrent.thread
 
 
 class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
@@ -56,16 +74,31 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 
 
     private var mMap: GoogleMap? = null
+    private var toastCount = 0
+
+    private lateinit var pendingIntent2: PendingIntent
+
+    private var bottomCount = 0
+
+
+    private lateinit var locationRequest: LocationRequest
+
+    private lateinit var locationCallback: LocationCallback
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     lateinit var areaIntent: Intent
 
     private lateinit var mapView: MapView
+
+    private var riderCount = 0
 
     private var totalDistance = ""
 
     private var resumeCount = 0
 
     private lateinit var distanceViewModel: DistanceViewModel
+    private lateinit var afterClickingRideNow: AfterClickingRideNow
+//    private lateinit var ridesViewModel: RidesViewModel
 
     private val LOCATION_REQUEST_CODE = 1
     private var count = 0
@@ -76,8 +109,11 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     var end_latitude = 0.0
     var end_longitude = 0.0
     var latitude = 0.0
+    var rider_latitude = 0.0
+    var rider_longitudee = 0.0
     var longitude = 0.0
 
+    private var allMarker = arrayListOf<Marker>()
 
     var origin: MarkerOptions? = null
     var destination: MarkerOptions? = null
@@ -128,13 +164,10 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                 "LocationSearchFragment"
             ).addToBackStack("LocationSearchFragment")
             ft.commit()
-//            areaIntent = Intent(context, LocationSearch::class.java)
-//            areaIntent.putExtra("area", "null")
-//            startActivity(areaIntent)
-//            getArea("Dahisar station")
         }
 
         distanceViewModel = ViewModelProviders.of(this).get(DistanceViewModel::class.java)
+        afterClickingRideNow = ViewModelProviders.of(this).get(AfterClickingRideNow::class.java)
 
         bottomLinearLayout.setOnClickListener {
             val bottomSheetFragment = BottomSheetFragment()
@@ -143,6 +176,111 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 //            getArea("Thane")
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        afterClickingRideNow = ViewModelProviders.of(this).get(AfterClickingRideNow::class.java)
+
+        afterClickingRideNow.getMapRider().observe(viewLifecycleOwner, androidx.lifecycle.Observer {
+            CoroutineScope(Dispatchers.IO).launch {
+                if (riderCount == 0) {
+                    startTheLoop()
+                    riderCount++
+                }
+            }
+        })
+        setMaker()
+//        ridesViewModel = ViewModelProviders.of(this).get(RidesViewModel::class.java)
+//        ridesViewModel.setRiderFragment().observe(viewLifecycleOwner, androidx.lifecycle.Observer {
+//            if (it == 1) {
+//                val ft: FragmentTransaction = requireFragmentManager().beginTransaction()
+//                ft.add(
+//                    R.id.fragmentContainerView,
+//                    MyRidesFragment(),
+//                    "MyRides"
+//                ).addToBackStack(null)
+//                ft.commit()
+//            }
+//        })
+    }
+
+    private fun removeMarker() {
+        for (maker in allMarker) {
+            maker.remove()
+        }
+    }
+
+    private fun setMaker() {
+        if (userLocationMarker != null) {
+            val markerOptions3 = MarkerOptions()
+            markerOptions3.position(LatLng(rider_latitude, rider_longitudee))
+            userLocationMarker!!.isVisible = true
+            markerOptions3.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+            userLocationMarker = mMap!!.addMarker(markerOptions3)
+//            userLocationMarker2 = null
+//            userLocationMarker3 = null
+//            removeMarker()
+        }
+    }
+
+    private suspend fun startTheLoop() {
+
+        for (i in 0..9) {
+            requireActivity().runOnUiThread {
+                getRiderClose()
+            }
+            delay(3000)
+        }
+    }
+
+    private fun getRiderClose() {
+        if (rider_longitudee >= longitude) {
+            removeMarker()
+            val markerOptions2 = MarkerOptions()
+            rider_longitudee -= 0.001
+            markerOptions2.position(LatLng(rider_latitude, rider_longitudee))
+//            Toast.makeText(context, "Rider came closer", Toast.LENGTH_SHORT).show()
+            markerOptions2.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+            userLocationMarker = mMap!!.addMarker(markerOptions2)
+            allMarker.add(userLocationMarker!!)
+
+        } else {
+            if (toastCount == 0) {
+                Toast.makeText(context, "Rider Arrived", Toast.LENGTH_SHORT).show()
+                toastCount++
+            }
+            showNotification()
+        }
+    }
+
+    private fun showNotification() {
+        NotificationManagerCompat.from(requireContext()).cancelAll()
+
+        val intent = Intent(context, RiderArrived::class.java)
+
+        pendingIntent2 =
+            PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+
+        val notificationManager =
+            requireActivity().applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val notificationChannel = NotificationChannel(
+                "workExample",
+                "workExample",
+                NotificationManager.IMPORTANCE_HIGH
+            )
+            notificationChannel.enableLights(true)
+            notificationManager.createNotificationChannel(notificationChannel)
+        }
+        val builder =
+            NotificationCompat.Builder(requireActivity().applicationContext, "workExample")
+                .setContentTitle("Rider Arrived")
+                .setContentText("Your rider has arrived at your location!")
+                .setSmallIcon(R.mipmap.motorbike)
+                .setContentIntent(pendingIntent2)
+        notificationManager.notify(1, builder.build())
+    }
+
 
     override fun onMapReady(p0: GoogleMap) {
 
@@ -189,6 +327,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         mapView.onSaveInstanceState(mapViewBundle)
     }
 
+
     private fun askForPermission() {
         askPermission(
             Manifest.permission.ACCESS_FINE_LOCATION,
@@ -219,6 +358,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         }
     }
 
+
     private fun getCurrentLocation() {
 
         fusedLocationProviderClient =
@@ -241,38 +381,44 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                                 currentLocation.longitude,
                                 10
                             )
+
                             setCurrentAddress(address4!![0])
                             latitude = currentLocation.latitude
                             longitude = currentLocation.longitude
                             if (userLocationMarker == null && userLocationMarker2 == null && userLocationMarker3 == null) {
                                 val latitude1 = currentLocation.latitude
+                                rider_latitude = currentLocation.latitude
                                 val longitude1 = currentLocation.longitude + 0.009
+                                rider_longitudee = currentLocation.longitude + 0.009
                                 val latitude2 = currentLocation.latitude + 0.009
                                 val bearing = currentLocation.bearing
                                 val longitude2 = currentLocation.longitude
-                                val latitude3 = currentLocation.latitude
-                                val longitude3 = currentLocation.longitude - 0.006
+//                                val latitude3 = currentLocation.latitude
+//                                val longitude3 = currentLocation.longitude - 0.006
                                 val latLng = LatLng(latitude1, longitude1)
                                 val latLng2 = LatLng(latitude2, longitude2)
-                                val latLng3 = LatLng(latitude3, longitude3)
+//                                val latLng3 = LatLng(latitude3, longitude3)
                                 val markerOptions = MarkerOptions()
                                 val markerOptions2 = MarkerOptions()
                                 val markerOptions3 = MarkerOptions()
                                 markerOptions.position(latLng)
                                 markerOptions2.position(latLng)
-                                markerOptions3.position(latLng)
+//                                markerOptions3.position(latLng)
                                 markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
                                 markerOptions2.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
-                                markerOptions3.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+//                                markerOptions3.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
                                 markerOptions.rotation(bearing)
                                 markerOptions2.rotation(bearing)
-                                markerOptions3.rotation(bearing)
+//                                markerOptions3.rotation(bearing)
                                 userLocationMarker = mMap!!.addMarker(markerOptions)
                                 userLocationMarker2 = mMap!!.addMarker(markerOptions2)
-                                userLocationMarker3 = mMap!!.addMarker(markerOptions3)
+//                                userLocationMarker3 = mMap!!.addMarker(markerOptions3)
                                 userLocationMarker!!.position = latLng
                                 userLocationMarker2!!.position = latLng2
-                                userLocationMarker3!!.position = latLng3
+//                                userLocationMarker3!!.position = latLng3
+                                allMarker.add(userLocationMarker!!)
+                                allMarker.add(userLocationMarker2!!)
+//                                allMarker.add(userLocationMarker3!!)
                                 count++
                             } else {
                                 val latitude1 = currentLocation.latitude
@@ -280,14 +426,19 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                                 val latitude2 = currentLocation.latitude + 0.009
 //                                val bearing = currentLocation.bearing
                                 val longitude2 = currentLocation.longitude
-                                val latitude3 = currentLocation.latitude
-                                val longitude3 = currentLocation.longitude - 0.006
+//                                val latitude3 = currentLocation.latitude
+//                                val longitude3 = currentLocation.longitude - 0.006
+                                val markerOptions5 = MarkerOptions()
                                 val latLng = LatLng(latitude1, longitude1)
                                 val latLng2 = LatLng(latitude2, longitude2)
-                                val latLng3 = LatLng(latitude3, longitude3)
+                                markerOptions5.position(latLng2)
+                                markerOptions5.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+//                                val latLng3 = LatLng(latitude3, longitude3)
+                                removeMarker()
                                 userLocationMarker!!.position = latLng
                                 userLocationMarker2!!.position = latLng2
-                                userLocationMarker3!!.position = latLng3
+                                userLocationMarker = mMap!!.addMarker(markerOptions5)
+//                                userLocationMarker3!!.position = latLng3
                             }
                         } else {
                             askForPermission()
@@ -300,6 +451,10 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         } catch (e: Exception) {
             Toast.makeText(context, e.localizedMessage, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
     }
 
     private fun moveCamera(latLng: LatLng, zoom: Float) {
@@ -321,7 +476,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     private fun setAddress(address: Address) {
 
         if (address.getAddressLine(0) != null) {
-            tvEnterDestination.text = address.getAddressLine(0)
+            val allAddress = address.getAddressLine(0)
+            var array: List<String> = allAddress.split(",")
+            tvEnterDestination.text = array[0] + "," + array[1]
         }
 //        if (address.getAddressLine(1) != null) {
 //            tvEnterDestination.getText().toString() + (address.getAddressLine(1))
@@ -331,7 +488,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     private fun setCurrentAddress(address: Address) {
 
         if (address.getAddressLine(0) != null) {
-            tvCurrentAddress.text = address.getAddressLine(0)
+            val allAddress = address.getAddressLine(0)
+            var array: List<String> = allAddress.split(",")
+            tvCurrentAddress.text = array[0] + "," + array[1]
         }
 //        if (address.getAddressLine(1) != null) {
 //            tvCurrentAddress.getText().toString() + (address.getAddressLine(1))
@@ -447,9 +606,11 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                     val origin_latlong = LatLng(latitude, longitude)
                     val destination_latlong = LatLng(end_latitude, end_longitude)
 
-
-                    val bottomSheetFragment = BottomSheetFragment()
-                    bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
+                    if (bottomCount == 0) {
+                        val bottomSheetFragment = BottomSheetFragment()
+                        bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
+                        bottomCount++
+                    }
 
                     val url: String? =
                         getDirectionsUrl(origin_latlong, destination_latlong)
@@ -556,4 +717,81 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                 mMap!!.addPolyline(lineOptions)
         }
     }
+//    private fun getLatestLocation() {
+//        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
+//        locationRequest = LocationRequest()
+//        locationRequest.interval = 50000
+//        locationRequest.fastestInterval = 50000
+//        locationRequest.smallestDisplacement = 170f
+//        locationRequest.priority =
+//            LocationRequest.PRIORITY_HIGH_ACCURACY
+//        locationCallback = object : LocationCallback() {
+//            override fun onLocationResult(locationResult: LocationResult?) {
+//                locationResult ?: return
+//                if (locationResult.locations.isNotEmpty()) {
+//                    val currentLocation =
+//                        locationResult.lastLocation
+//                    moveCamera(
+//                        LatLng(currentLocation.latitude, currentLocation.longitude),
+//                        DEFAULT_ZOOM
+//                    )
+//                    val geocoder3 = Geocoder(context, Locale.getDefault())
+//                    val address4 = geocoder3.getFromLocation(
+//                        currentLocation.latitude,
+//                        currentLocation.longitude,
+//                        10
+//                    )
+//                    setCurrentAddress(address4!![0])
+//                    latitude = currentLocation.latitude
+//                    longitude = currentLocation.longitude
+//                    if (userLocationMarker == null && userLocationMarker2 == null && userLocationMarker3 == null) {
+//                        val latitude1 = currentLocation.latitude
+//                        val longitude1 = currentLocation.longitude + 0.009
+//                        val latitude2 = currentLocation.latitude + 0.009
+//                        val bearing = currentLocation.bearing
+//                        val longitude2 = currentLocation.longitude
+//                        val latitude3 = currentLocation.latitude
+//                        val longitude3 = currentLocation.longitude - 0.006
+//                        val latLng = LatLng(latitude1, longitude1)
+//                        val latLng2 = LatLng(latitude2, longitude2)
+//                        val latLng3 = LatLng(latitude3, longitude3)
+//                        val markerOptions = MarkerOptions()
+//                        val markerOptions2 = MarkerOptions()
+//                        val markerOptions3 = MarkerOptions()
+//                        markerOptions.position(latLng)
+//                        markerOptions2.position(latLng)
+//                        markerOptions3.position(latLng)
+//                        markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+//                        markerOptions2.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+//                        markerOptions3.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
+//                        markerOptions.rotation(bearing)
+//                        markerOptions2.rotation(bearing)
+//                        markerOptions3.rotation(bearing)
+//                        userLocationMarker = mMap!!.addMarker(markerOptions)
+//                        userLocationMarker2 = mMap!!.addMarker(markerOptions2)
+//                        userLocationMarker3 = mMap!!.addMarker(markerOptions3)
+//                        userLocationMarker!!.position = latLng
+//                        userLocationMarker2!!.position = latLng2
+//                        userLocationMarker3!!.position = latLng3
+//                        count++
+//                    } else {
+//                        val latitude1 = currentLocation.latitude
+//                        val longitude1 = currentLocation.longitude + 0.009
+//                        val latitude2 = currentLocation.latitude + 0.009
+////                                val bearing = currentLocation.bearing
+//                        val longitude2 = currentLocation.longitude
+//                        val latitude3 = currentLocation.latitude
+//                        val longitude3 = currentLocation.longitude - 0.006
+//                        val latLng = LatLng(latitude1, longitude1)
+//                        val latLng2 = LatLng(latitude2, longitude2)
+//                        val latLng3 = LatLng(latitude3, longitude3)
+//                        userLocationMarker!!.position = latLng
+//                        userLocationMarker2!!.position = latLng2
+//                        userLocationMarker3!!.position = latLng3
+//                    }
+//                }
+//
+//            }
+//        }
+//    }
 }

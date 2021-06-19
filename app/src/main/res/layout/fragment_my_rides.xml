@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".views.navDrawerFragments.MyRidesFragment">
 
     <LinearLayout
@@ -24,6 +25,7 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/linearLayout1"
@@ -145,6 +147,166 @@
                 android:fontFamily="@font/productsansregular"
                 android:text="@string/Bandra_East"
                 android:textColor="@color/black" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView1"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_bg"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tvBikeRide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansregular"
+                android:text="@string/bike_taxi" />
+
+            <TextView
+                android:id="@+id/tvToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tvBikeRide2"
+                android:fontFamily="@font/productsansregular"
+                android:text="@string/today" />
+
+            <TextView
+                android:id="@+id/tvRideStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBikeRide2"
+                android:fontFamily="@font/productsansregular"
+                android:text="@string/active"
+                android:textColor="@color/Green"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvIndianRupeee3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_7"
+                android:layout_toStartOf="@id/tvTotalRupeee2"
+                android:fontFamily="@font/indianrupee"
+                android:text="`"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalRupeee2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:fontFamily="@font/opensansregular"
+                android:text="13"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCashh2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvIndianRupeee3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/productsansregular"
+                android:text="Cash"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvCashh2"
+                android:layout_marginTop="10dp"
+                android:background="@color/lighter_gray" />
+
+            <ImageView
+                android:id="@+id/imgGreenDot2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_below="@id/view10"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/green_circle" />
+
+            <TextView
+                android:id="@+id/tvSource2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view10"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/imgGreenDot2"
+                android:fontFamily="@font/productsansregular"
+                android:text="@string/gorai_naka"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imgRedDot2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_below="@id/imgGreenDot2"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/red_circle" />
+
+            <TextView
+                android:id="@+id/tvDestination2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSource2"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/imgGreenDot2"
+                android:fontFamily="@font/productsansregular"
+                android:text="@string/santosh_bhuvan"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view10"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/red_curve"
+                android:fontFamily="@font/productsansregular"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnCallRider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view10"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/btnCancel"
+                android:layout_toEndOf="@id/tvDestination2"
+                android:background="@drawable/green_bg"
+                android:fontFamily="@font/productsansregular"
+                android:text="Call Rider"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
