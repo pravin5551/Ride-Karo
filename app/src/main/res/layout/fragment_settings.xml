@@ -16,9 +16,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_15"
             android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/productsansregular"
             android:text="@string/general"
             android:textColor="@color/black"
-            android:fontFamily="@font/productsansregular"
             android:textSize="@dimen/sp_14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -63,9 +63,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
                     android:text="@string/Enter_Mobile_Number"
                     android:textSize="@dimen/sp_14"
-                    android:fontFamily="@font/productsansregular"
                     app:layout_constraintStart_toEndOf="@id/ibProfile"
                     app:layout_constraintTop_toBottomOf="@id/tvProfile" />
 
@@ -97,8 +97,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
-                    android:text="@string/Manage_favorite_locations"
                     android:fontFamily="@font/productsansregular"
+                    android:text="@string/Manage_favorite_locations"
                     android:textSize="@dimen/sp_14"
                     app:layout_constraintStart_toEndOf="@id/ibFavorites"
                     app:layout_constraintTop_toBottomOf="@id/tvFavorites" />
@@ -119,8 +119,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_15"
-                    android:text="@string/Preferences"
                     android:fontFamily="@font/productsansregular"
+                    android:text="@string/Preferences"
                     android:textColor="@color/black"
                     android:textSize="@dimen/sp_14"
                     app:layout_constraintStart_toEndOf="@id/ibProfile"
@@ -130,45 +130,56 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
-                    android:text="@string/Manage_preferences"
                     android:fontFamily="@font/productsansregular"
+                    android:text="@string/Manage_preferences"
                     android:textSize="@dimen/sp_14"
                     app:layout_constraintStart_toEndOf="@id/ibProfile"
                     app:layout_constraintTop_toBottomOf="@id/tvPreferences" />
 
-                <ImageButton
-                    android:id="@+id/ibLanguage"
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAppLanguage"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:padding="@dimen/dp_15"
-                    android:src="@drawable/ic_lang"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/ibPreferences" />
+                    app:layout_constraintTop_toBottomOf="@id/ibPreferences">
 
-                <TextView
-                    android:id="@+id/tvLanguage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp_15"
-                    android:layout_marginTop="@dimen/dp_15"
-                    android:text="@string/app_language"
-                    android:fontFamily="@font/productsansregular"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/sp_14"
-                    app:layout_constraintStart_toEndOf="@id/ibProfile"
-                    app:layout_constraintTop_toBottomOf="@+id/ibPreferences" />
+                    <ImageButton
+                        android:id="@+id/ibLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/dp_15"
+                        android:src="@drawable/ic_lang"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tvLanguageChange"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp_15"
-                    android:text="@string/english"
-                    android:textSize="@dimen/sp_14"
-                    android:fontFamily="@font/productsansregular"
-                    app:layout_constraintStart_toEndOf="@id/ibProfile"
-                    app:layout_constraintTop_toBottomOf="@id/tvLanguage" />
+                    <TextView
+                        android:id="@+id/tvLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:fontFamily="@font/productsansregular"
+                        android:text="@string/app_language"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintStart_toEndOf="@id/ibLanguage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvLanguageChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:fontFamily="@font/productsansregular"
+                        android:text="@string/english"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintStart_toEndOf="@id/ibLanguage"
+                        app:layout_constraintTop_toBottomOf="@id/tvLanguage" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <ImageButton
                     android:id="@+id/ibAppShortcuts"
@@ -179,7 +190,7 @@
                     android:padding="@dimen/dp_15"
                     android:src="@drawable/redo"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/ibLanguage" />
+                    app:layout_constraintTop_toBottomOf="@id/clAppLanguage" />
 
                 <TextView
                     android:id="@+id/tvAppShortcuts"
@@ -192,16 +203,16 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/sp_14"
                     app:layout_constraintStart_toEndOf="@id/ibAppShortcuts"
-                    app:layout_constraintTop_toBottomOf="@+id/ibLanguage" />
+                    app:layout_constraintTop_toBottomOf="@+id/clAppLanguage" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
                     android:text="@string/create_shortcuts_on_home_launcher"
                     android:textSize="@dimen/sp_14"
-                    android:fontFamily="@font/productsansregular"
-                    app:layout_constraintStart_toEndOf="@id/ibProfile"
+                    app:layout_constraintStart_toEndOf="@id/ibAppShortcuts"
                     app:layout_constraintTop_toBottomOf="@id/tvAppShortcuts" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -214,8 +225,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_15"
             android:layout_marginTop="@dimen/dp_10"
-            android:text="@string/others"
             android:fontFamily="@font/productsansregular"
+            android:text="@string/others"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_14"
             app:layout_constraintStart_toStartOf="parent"
@@ -250,8 +261,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_15"
-                    android:text="@string/about"
                     android:fontFamily="@font/productsansregular"
+                    android:text="@string/about"
                     android:textColor="@color/black"
                     android:textSize="@dimen/sp_14"
                     app:layout_constraintStart_toEndOf="@id/ibAbout"
@@ -284,10 +295,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
                     android:text="@string/subscribe_to_beta"
                     android:textColor="@color/black"
                     android:textSize="@dimen/sp_14"
-                    android:fontFamily="@font/productsansregular"
                     app:layout_constraintStart_toEndOf="@id/ibAbout"
                     app:layout_constraintTop_toBottomOf="@+id/ibAbout" />
 
@@ -295,9 +306,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
                     android:text="@string/get_early_access_to_latest_features"
                     android:textSize="@dimen/sp_14"
-                    android:fontFamily="@font/productsansregular"
                     app:layout_constraintStart_toEndOf="@id/ibAbout"
                     app:layout_constraintTop_toBottomOf="@id/tvSubscribeToBeta" />
 
@@ -318,9 +329,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp_15"
                     android:layout_marginTop="@dimen/dp_20"
+                    android:fontFamily="@font/productsansregular"
                     android:text="@string/logout"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/productsansregular"
                     android:textSize="@dimen/sp_14"
                     app:layout_constraintStart_toEndOf="@id/ibAbout"
                     app:layout_constraintTop_toBottomOf="@+id/ibSubscribeToBeta" />

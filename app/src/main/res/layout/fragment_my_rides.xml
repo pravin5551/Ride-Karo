@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".views.navDrawerFragments.MyRidesFragment">
 
@@ -30,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/linearLayout1"
         android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
         android:background="@drawable/edittext_bg"
         android:elevation="15dp">
 
@@ -158,6 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/cardView1"
         android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
         android:background="@drawable/edittext_bg"
         android:visibility="gone">
 

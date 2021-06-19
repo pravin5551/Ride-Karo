@@ -86,7 +86,7 @@
             android:background="@drawable/ic_rectangle_next"
             android:fontFamily="@font/productsansregular"
             android:paddingHorizontal="@dimen/_20sdp"
-            android:text="@string/Continue"
+            android:text="@string/save"
             android:textAllCaps="false"
             android:textColor="@color/yellow"
             android:textSize="18sp"
