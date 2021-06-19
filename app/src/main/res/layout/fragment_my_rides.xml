@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:fontFamily="@font/productsansregular"
-            android:text="Previous Rides"
+            android:text="@string/Previous_Rides"
             android:textColor="@color/black"
             android:textSize="@dimen/_25sdp" />
 
@@ -92,7 +92,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="10dp"
                 android:fontFamily="@font/productsansregular"
-                android:text="Cash"
+                android:text="@string/cash"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
@@ -122,7 +122,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_toEndOf="@id/imgGreenDot"
                 android:fontFamily="@font/productsansregular"
-                android:text="Bandra West"
+                android:text="@string/Bandra_West"
                 android:textColor="@color/black" />
 
             <ImageView
@@ -143,7 +143,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_toEndOf="@id/imgGreenDot"
                 android:fontFamily="@font/productsansregular"
-                android:text="Bandra East"
+                android:text="@string/Bandra_East"
                 android:textColor="@color/black" />
         </RelativeLayout>
 
