@@ -23,9 +23,6 @@ import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_otpvalidation.*
 import java.util.*
 
-
-const val RC_SIGN_IN = 123
-
 class OTPValidation : AppCompatActivity() {
 
     //googleAuth
@@ -41,16 +38,12 @@ class OTPValidation : AppCompatActivity() {
         PreferenceHelper.getSharedPreferences(this)
         initializeSignin()
 
-        mAuth = FirebaseAuth.getInstance();
-
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestEmail()
-            .build()
-
+        mAuth = FirebaseAuth.getInstance()
 
         button.setOnClickListener {
 
             if (mobileNumber.text.count() == 10) {
+                PreferenceHelper.writeBooleanToPreference(USER_PHONE_LOGIN, true)
                 val i = Intent(this, OTPSecondActivity::class.java).apply {
                     putExtra("mobileNumber", mobileNumber.text.toString())
                 }
@@ -92,11 +85,14 @@ class OTPValidation : AppCompatActivity() {
                 val account = task.getResult(ApiException::class.java)
                 PreferenceHelper.writeBooleanToPreference(KEY_LOGIN_WITH_OAUTH, true)
                 updatePreference(account!!)
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("UserName",account.displayName)
+                intent.putExtra("UserEmail",account.email)
+                intent.putExtra("UserPhoto",account.photoUrl.toString())
                 Toast.makeText(this, "Welcome ${account.displayName}", Toast.LENGTH_SHORT)
                     .show()
                 saveUser(account)
-
-                startActivity(Intent(this, HomeActivity::class.java))
+                startActivity(intent)
                 finish()
             } else {
                 Toast.makeText(
