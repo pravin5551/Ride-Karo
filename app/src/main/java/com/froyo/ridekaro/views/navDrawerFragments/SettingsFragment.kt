@@ -23,7 +23,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
 
 
-        ibLanguage.setOnClickListener {
+        clAppLanguage.setOnClickListener {
 
             val ft: FragmentTransaction = requireFragmentManager().beginTransaction()
             ft.add(
@@ -32,9 +32,6 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
                 "LanguageFragment"
             ).addToBackStack("LanguageFragment")
             ft.commit()
-
-        //    val intent = Intent(context, language2Activity::class.java)
-          //  startActivity(intent)
         }
 
 
