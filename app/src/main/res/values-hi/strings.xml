@@ -32,7 +32,7 @@
     <string name="Install_Mobikwik_on_your_device">अपने डिवाइस पर मोबिक्विक इंस्टॉल करें</string>
     <string name="Install_PayTm_on_your_device">अपने डिवाइस पर पेटीएम इंस्टॉल करें</string>
     <string name="home">घर</string>
-    <string name="COVID_19">कोविड 19</string>
+    <string name="COVID_19">कोविड १९</string>
     <string name="my_rides">मेरी सवारी</string>
     <string name="invite_friends">मित्रों को आमंत्रित करें</string>
     <string name="insurance">बीमा</string>
@@ -125,9 +125,9 @@
     <string name="Payment_amp_Wallets">भुगतान &amp; पर्स</string>
     <string name="OPD_Treatment">ओपीडी उपचार</string>
     <string name="Medical_Expense_for_Hospitalization">अस्पताल में भर्ती होने के लिए चिकित्सा व्यय</string>
-    <string name="Continue_with_Google">Google के साथ जारी रखें</string>
+    <string name="Continue_with_Google">गूगल के साथ जारी रखें</string>
     <string name="Continue_with_Facebook">फेसबुक के साथ जारी रखें</string>
-    <string name="Continue_with_Apple">Apple के साथ जारी रखें</string>
+    <string name="Continue_with_Apple">एप्प्ल के साथ जारी रखें</string>
     <string name="Enter_Mobile_Number">मोबाइल नंबर दर्ज करें</string>
     <string name="Login_or_Register">भाग लें या पंजीकरण करें</string>
     <string name="enter_verification_pin">सत्यापन पिन दर्ज करें</string>
@@ -148,6 +148,11 @@
     <string name="Preferences">पसंद</string>
     <string name="Manage_preferences">प्राथमिकताएं प्रबंधित करें</string>
     <string name="abc">abc</string>
+    <string name="today">आज</string>
+    <string name="active">सक्रिय</string>
+    <string name="gorai_naka">भीतर देखो</string>
+    <string name="santosh_bhuvan">संतोष भुवन</string>
+    <string name="let_s_ride">चलो सवारी करें</string>
 
 
 

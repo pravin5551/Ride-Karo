@@ -173,7 +173,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
             val bottomSheetFragment = BottomSheetFragment()
             bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
 
-//            getArea("Thane")
         }
     }
 
@@ -478,7 +477,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         if (address.getAddressLine(0) != null) {
             val allAddress = address.getAddressLine(0)
             var array: List<String> = allAddress.split(",")
-            tvEnterDestination.text = array[0] + "," + array[1]
+            tvCurrentAddress.text = array[0] + "," + array[1] + "," + array[2]
         }
 //        if (address.getAddressLine(1) != null) {
 //            tvEnterDestination.getText().toString() + (address.getAddressLine(1))
@@ -490,11 +489,20 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         if (address.getAddressLine(0) != null) {
             val allAddress = address.getAddressLine(0)
             var array: List<String> = allAddress.split(",")
-            tvCurrentAddress.text = array[0] + "," + array[1]
+//            tvEnterDestination.text = array[0] + "," + array[1]
         }
 //        if (address.getAddressLine(1) != null) {
 //            tvCurrentAddress.getText().toString() + (address.getAddressLine(1))
 //        }
+    }
+
+
+    private fun setFinalDestinationText(address: Address?) {
+        if (address!!.getAddressLine(0) != null) {
+            val allAddress = address.getAddressLine(0)
+            var array: List<String> = allAddress.split(",")
+            tvEnterDestination.text = array[0] + "," + array[1] + "," + array[2] + "," + array[3]
+        }
     }
 
 
@@ -606,6 +614,13 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                     val origin_latlong = LatLng(latitude, longitude)
                     val destination_latlong = LatLng(end_latitude, end_longitude)
 
+                    val geocoder4 = Geocoder(context, Locale.getDefault())
+                    val address6 = geocoder4.getFromLocation(
+                        destination_latlong.latitude,
+                        destination_latlong.longitude,
+                        10
+                    )
+                    setFinalDestinationText(address6!![0])
                     if (bottomCount == 0) {
                         val bottomSheetFragment = BottomSheetFragment()
                         bottomSheetFragment.show(parentFragmentManager, bottomSheetFragment.tag)
@@ -620,6 +635,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
             }
         }
     }
+
 
     private fun getDirectionsUrl(origin: LatLng, dest: LatLng): String? {
         val str_origin = "origin=" + origin.latitude + "," + origin.longitude

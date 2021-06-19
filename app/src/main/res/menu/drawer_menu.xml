@@ -15,7 +15,7 @@
             android:id="@+id/nav_covid_19"
             android:fontFamily="@font/productsansregular"
             android:icon="@drawable/ic__05_covid"
-            android:title="@string/covid_19" />
+            android:title="@string/COVID_19" />
 
         <item
             android:id="@+id/nav_payment"
