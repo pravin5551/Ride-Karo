@@ -89,7 +89,7 @@ class FirstScreenActivity : AppCompatActivity() {
                 intent.setData(uri)
                 startActivity(intent)
             } else {
-                Toast.makeText(applicationContext, "$name permission granted", Toast.LENGTH_SHORT)
+                Toast.makeText(applicationContext, "Location permission granted", Toast.LENGTH_SHORT)
                     .show()
                 val intent = Intent(this, SecondScreenActivity::class.java)
                 startActivity(intent)
