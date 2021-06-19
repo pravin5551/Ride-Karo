@@ -149,5 +149,11 @@
     <string name="Manage_preferences">ಆದ್ಯತೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ</string>
     <string name="abc">abc</string>
 
+    <string name="today">ಇಂದು</string>
+    <string name="active">ಸಕ್ರಿಯ</string>
+    <string name="gorai_naka">ಒಳಗೆ ನೋಡು</string>
+    <string name="santosh_bhuvan">ಸಂತೋಷ್ ಭುವನ್</string>
+    <string name="let_s_ride">ಸವಾರಿ ಮಾಡೋಣ</string>
+
 
 </resources>

@@ -151,4 +151,10 @@
     <string name="Manage_preferences">விருப்பங்களை நிர்வகிக்கவும்</string>
     <string name="abc">abc</string>
 
+    <string name="today">இன்று</string>
+    <string name="active">செயலில்</string>
+    <string name="gorai_naka">உள்ளே பாருங்கள்</string>
+    <string name="santosh_bhuvan">சந்தோஷ் புவன்</string>
+    <string name="let_s_ride">சவாரி செய்வோம்</string>
+
 </resources>
