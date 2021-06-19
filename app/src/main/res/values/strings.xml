@@ -154,5 +154,10 @@
 
     <string name="or">OR</string>
     <string name="Ride_Karo">Ride Karo</string>
+    <string name="today">Today</string>
+    <string name="active">Active</string>
+    <string name="gorai_naka">Gorai Naka</string>
+    <string name="santosh_bhuvan">Santosh Bhuvan</string>
+    <string name="let_s_ride">Let\'s Ride</string>
 
 </resources>

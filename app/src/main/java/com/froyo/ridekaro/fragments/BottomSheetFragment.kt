@@ -15,7 +15,9 @@ import androidx.core.app.NotificationCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.froyo.ridekaro.R
+import com.froyo.ridekaro.viewModel.AfterClickingRideNow
 import com.froyo.ridekaro.viewModel.DistanceViewModel
+import com.froyo.ridekaro.views.LocationViewModel
 import com.froyo.ridekaro.views.RiderComing
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_bottom_sheet.*
@@ -44,6 +46,8 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
     override fun onResume() {
         super.onResume()
         val distanceViewModel = ViewModelProviders.of(this).get(DistanceViewModel::class.java)
+        val afterClickingRideNow = ViewModelProviders.of(this).get(AfterClickingRideNow::class.java)
+
 
         distanceViewModel.getDistance().observe(viewLifecycleOwner, Observer {
             val distance = it.toString()
@@ -59,6 +63,7 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
             pendingIntent =
                 PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
             dislayNotification("Ride Booked", "The Rider is on his way to your location")
+            afterClickingRideNow.setMapRider(1)
         }
     }
 

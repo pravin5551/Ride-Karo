@@ -14,6 +14,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.bumptech.glide.Glide
 import com.froyo.ridekaro.R
+import com.froyo.ridekaro.views.navDrawerFragments.Run
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.nav_header.*
 
@@ -38,7 +39,6 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         navigationView.itemIconTintList = null
 
-//        tv_user_name
 
         NavigationUI.setupActionBarWithNavController(this, navController, drawer)
         NavigationUI.setupWithNavController(navigationView, navController)
