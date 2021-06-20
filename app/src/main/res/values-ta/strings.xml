@@ -158,5 +158,8 @@
     <string name="let_s_ride">சவாரி செய்வோம்</string>
     <string name="tulinj_road">துலின்ஜ் சாலை</string>
     <string name="save">சேமி</string>
+    <string name="ok">சரி</string>
+    <string name="your_ride_is_complete_don_t_forget_to_rate_us_on_playstore">உங்கள் சவாரி முடிந்தது! பிளேஸ்டோரில் எங்களை மதிப்பிட மறக்க வேண்டாம்</string>
+
 
 </resources>
