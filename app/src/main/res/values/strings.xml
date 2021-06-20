@@ -36,7 +36,6 @@
     <string name="let_s_go">Let\'s Go</string>
     <string name="navigation_drawer_open">"Open navigation drawer"</string>
     <string name="navigation_drawer_close">"Close navigation drawer"</string>
-
     <string name="india_beloved">India\'s Beloved Bike Taxi Service </string>
     <string name="to_have_comfortable">To have a comfortable ride experience with RideKaro,</string>
     <string name="please_allow">please allow us the following permissions</string>
@@ -67,8 +66,6 @@
     <string name="Install_GooglePay_on_your_device">Install GooglePay on your device</string>
     <string name="Install_Mobikwik_on_your_device">Install Mobikwik on your device</string>
     <string name="Install_PayTm_on_your_device">Install PayTm on your device</string>
-
-
     <string-array name="language">
         <item>English</item>
         <item>हिंदी (Hindi)</item>
@@ -76,14 +73,12 @@
         <item>తెలుగు (Telugu)</item>
         <item>தமிழ் (Tamil)</item>
     </string-array>
-
     <string name="support">Support ?</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
     <string name="by_continuing_you_will_agree_to_our_terms_and_privacy_policy_of_rapido">By continuing you will agree to our terms and privacy policy of Rapido</string>
-
     <string name="policy_coverage">Policy Coverage</string>
     <string name="personal_accident_accidental_death">Personal Accident/Accidental Death</string>
     <string name="please_provide_">Please provide your correct email-id, date of birth and phone number to avoid cancellations of your Insurance claim.</string>
@@ -106,13 +101,10 @@
     <string name="having_an_issue">Having an issue?</string>
     <string name="get_help">Get Help</string>
     <string name="view_all_tickets">View all tickets</string>
-
     <string name="enter_phone_number">Enter Phone Number</string>
     <string name="with_you_and">With you and</string>
-
     <string name="home">Home</string>
     <string name="covid_19">Covid 19</string>
-
     <string name="settings">Settings</string>
     <string name="getvaccine">#GetVaccine</string>
     <string name="your_safety_matters">Your Safety Matters</string>
@@ -123,7 +115,54 @@
     <string name="title_activity_maps2">Map</string>
     <string name="hold_tight_rider_is_on_it_s_way_to_your_location">Hold Tight! Rider is on it\'s way to your location</string>
     <string name="hurray">Hurray</string>
+    <string name="rahul_yadav">Rahul Yadav</string>
+    <string name="share">Share</string>
+    <string name="Claim_Procedure">Claim Procedure</string>
+    <string name="legal">Legal</string>
+    <string name="view">View</string>
+    <string name="Invite">Invite</string>
+    <string name="Share_via">Share via</string>
+    <string name="Invite_Friends">Invite Friends</string>
+    <string name="Invite_friends_and_get_rewards">Invite friends and get rewards</string>
+    <string name="Terms_and_Conditions">Terms and Conditions</string>
+    <string name="Waiting_for_OTP">Waiting for OTP</string>
+    <string name="Continue">Continue</string>
+    <string name="Book_Vaccine">Book Vaccine</string>
+    <string name="Payment_amp_Wallets">Payment &amp; Wallets</string>
+    <string name="OPD_Treatment">OPD Treatment</string>
+    <string name="Medical_Expense_for_Hospitalization">Medical Expense for Hospitalization</string>
+    <string name="Continue_with_Google">Continue with Google</string>
+    <string name="Continue_with_Facebook">Continue with Facebook</string>
+    <string name="Continue_with_Apple">Continue with Apple</string>
+    <string name="Enter_Mobile_Number">Enter Mobile Number</string>
+    <string name="Login_or_Register">Login or Register</string>
+    <string name="enter_verification_pin">Enter verification pin</string>
+    <string name="Seat_back_and_relax_while_we_verify_your_phone_number">Seat back and relax while we verify your phone number</string>
+    <string name="bike_taxi">Bike Taxi. </string>
+    <string name="_9_days_ago">9 days ago</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="bandra_station">Bandra Station</string>
+    <string name="or">OR</string>
+    <string name="Ride_Karo">Ride Karo</string>
+    <string name="Select_Language">Select Language</string>
+    <string name="Previous_Rides">Previous Rides</string>
+    <string name="Bandra_West">Bandra West</string>
+    <string name="Bandra_East">Bandra East</string>
+    <string name="pay">Pay</string>
+    <string name="Manage_favorite_locations">Manage favorite locations</string>
+    <string name="Preferences">Preferences</string>
+    <string name="Manage_preferences">Manage preferences</string>
+    <string name="abc">abc</string>
     <string name="share">Share</string>
 
+    <string name="today">Today</string>
+    <string name="active">Active</string>
+    <string name="gorai_naka">Gorai Naka</string>
+    <string name="santosh_bhuvan">Santosh Bhuvan</string>
+    <string name="let_s_ride">Let\'s Ride</string>
+    <string name="tulinj_road">Tulinj Road</string>
+    <string name="save">Save</string>
+    <string name="ok">OK</string>
+    <string name="your_ride_is_complete_don_t_forget_to_rate_us_on_playstore">Your ride is complete! Don\'t forget to rate us on playstore</string>
 
 </resources>

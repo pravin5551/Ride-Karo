@@ -2,6 +2,8 @@ package com.froyo.ridekaro.views
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -14,8 +16,11 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.bumptech.glide.Glide
 import com.froyo.ridekaro.R
+import com.froyo.ridekaro.views.navDrawerFragments.Run
 import com.google.android.material.navigation.NavigationView
+import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.nav_header.*
+
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -25,6 +30,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+
         val toolbar = findViewById<Toolbar>(R.id.my_toolbar)
         setSupportActionBar(toolbar)
 
@@ -32,28 +38,35 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
 
+        val hView = navigationView.getHeaderView(0)
+
+        val nav_user = hView.findViewById<TextView>(R.id.tv_user_name)
+
+        val nav_user_id = hView.findViewById<TextView>(R.id.tv_user_email_id)
+
+        val nav_profile = hView.findViewById<CircleImageView>(R.id.ivProfile)
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
 
         navigationView.itemIconTintList = null
 
-//        tv_user_name
 
         NavigationUI.setupActionBarWithNavController(this, navController, drawer)
         NavigationUI.setupWithNavController(navigationView, navController)
 
         navigationView.setNavigationItemSelectedListener(this)
-//        if (intent != null && intent.extras != null) {
-//            val User_Name: String = intent.getStringExtra("UserName").toString()
-//            tv_user_name?.text = "User_Name"
-//
-//            val User_Email: String = intent.getStringExtra("UserEmail").toString()
-//            tv_user_email_id?.text = "User_Email"
-//
-//            val User_Photo = intent.getStringArrayExtra("UserPhoto")
-//            Glide.with(ivProfile).load(User_Photo).into(ivProfile)
-//        }
+        if (intent != null && intent.extras != null) {
+            val User_Name: String = intent.getStringExtra("UserName").toString()
+            nav_user.text = User_Name
+
+            val User_Email: String = intent.getStringExtra("UserEmail").toString()
+            nav_user_id.text = User_Email
+
+            val User_Photo = intent.getStringExtra("UserPhoto")
+            Glide.with(nav_profile).load(User_Photo).into(nav_profile)
+        }
 
 
     }

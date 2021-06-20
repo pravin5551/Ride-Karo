@@ -3,10 +3,8 @@
     <string name="app_name">Ride karo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="navigation_drawer_open">"Open navigation drawer"</string>
     <string name="navigation_drawer_close">"Close navigation drawer"</string>
-
     <string name="india_beloved">ಭಾರತದ ಪ್ರೀತಿಯ ಬೈಕ್ ಟ್ಯಾಕ್ಸಿ ಸೇವೆ </string>
     <string name="to_have_comfortable">ರೈಡ್‌ಕಾರೊದೊಂದಿಗೆ ಆರಾಮದಾಯಕ ಸವಾರಿ ಅನುಭವವನ್ನು ಹೊಂದಲು,</string>
     <string name="please_allow">ದಯವಿಟ್ಟು ಈ ಕೆಳಗಿನ ಅನುಮತಿಗಳನ್ನು ನಮಗೆ ಅನುಮತಿಸಿ</string>
@@ -40,7 +38,6 @@
     <string name="Install_GooglePay_on_your_device">ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ GooglePay ಅನ್ನು ಸ್ಥಾಪಿಸಿ</string>
     <string name="Install_Mobikwik_on_your_device">ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಮೊಬಿಕ್ವಿಕ್ ಅನ್ನು ಸ್ಥಾಪಿಸಿ</string>
     <string name="Install_PayTm_on_your_device">ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ PayTm ಅನ್ನು ಸ್ಥಾಪಿಸಿ</string>
-
     <string name="mobile_number">ಮೊಬೈಲ್ ನಂಬರ</string>
     <string name="start">ಪ್ರಾರಂಭಿಸಿ</string>
     <string name="stop">ನಿಲ್ಲಿಸು</string>
@@ -68,7 +65,6 @@
     <string name="having_an_issue">ಸಮಸ್ಯೆ ಇದೆಯೇ?</string>
     <string name="get_help">ಸಹಾಯ ಪಡೆ</string>
     <string name="view_all_tickets">ಎಲ್ಲಾ ಟಿಕೆಟ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ</string>
-
     <string name="title_activity_home_screen">ನಕ್ಷೆ</string>
     <string name="im_a_rider">ಇಮ್ ಎ ರೈಡರ್</string>
     <string name="im_a_customer">ನಾನು ಗ್ರಾಹಕ</string>
@@ -101,16 +97,65 @@
     <string name="google_pay">Google Pay</string>
     <string name="phone_pay">Phone Pay</string>
     <string name="let_s_go">ಹೋಗೋಣ</string>
-
-
     <string name="enter_phone_number">ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ</string>
     <string name="with_you_and">ನಿಮ್ಮೊಂದಿಗೆ ಮತ್ತು</string>
-
     <string name="covid_19">COVID 19</string>
     <string name="settings">ಸಂಯೋಜನೆಗಳು</string>
     <string name="getvaccine"># ಗೆಟ್‌ವಾಕ್ಸಿನ್</string>
     <string name="your_safety_matters">ನಿಮ್ಮ ಸುರಕ್ಷತೆಯ ವಿಷಯಗಳು</string>
     <string name="book_vaccine">ಲಸಿಕೆ ಪುಸ್ತಕ</string>
+    <string name="payment_menu">ಪಾವತಿ</string>
+    <string name="support_menu">ಬೆಂಬಲ</string>
+    <string name="title_activity_maps">ನಕ್ಷೆ</string>
+    <string name="title_activity_maps2">ನಕ್ಷೆ</string>
+    <string name="hold_tight_rider_is_on_it_s_way_to_your_location">ಗಟ್ಟಿಯಾಗಿ ಹಿಡಿದುಕೋ! ರೈಡರ್ ನಿಮ್ಮ ಸ್ಥಳಕ್ಕೆ ಹೋಗುವ ಮಾರ್ಗದಲ್ಲಿದೆ</string>
+    <string name="hurray">ಹರ್ರೆ</string>
+    <string name="share">ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="Claim_Procedure">ಹಕ್ಕು ಪಡೆಯುವ ವಿಧಾನ</string>
+    <string name="legal">ಕಾನೂನು</string>
+    <string name="view">ನೋಟ</string>
+    <string name="Invite">ಆಹ್ವಾನಿಸಿ</string>
+    <string name="Share_via">ಮೂಲಕ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="Invite_Friends">ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿ</string>
+    <string name="Invite_friends_and_get_rewards">ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿ ಮತ್ತು ಪ್ರತಿಫಲವನ್ನು ಪಡೆಯಿರಿ</string>
+    <string name="Terms_and_Conditions">ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು</string>
+    <string name="Waiting_for_OTP">ಒಟಿಪಿಗಾಗಿ ಕಾಯಲಾಗುತ್ತಿದೆ..</string>
+    <string name="Continue">ಮುಂದುವರಿಸಿ</string>
+    <string name="Book_Vaccine">ಲಸಿಕೆ ಪುಸ್ತಕ</string>
+    <string name="Payment_amp_Wallets">ಪಾವತಿ amp; ತೊಗಲಿನ ಚೀಲಗಳು</string>
+    <string name="OPD_Treatment">ಒಪಿಡಿ ಚಿಕಿತ್ಸೆ</string>
+    <string name="Medical_Expense_for_Hospitalization">ಆಸ್ಪತ್ರೆಗೆ ವೈದ್ಯಕೀಯ ವೆಚ್ಚ</string>
+    <string name="Continue_with_Google">Google ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ</string>
+    <string name="Continue_with_Facebook">ಫೇಸ್‌ಬುಕ್‌ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ</string>
+    <string name="Continue_with_Apple">ಆಪಲ್ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ</string>
+    <string name="Enter_Mobile_Number">ಮೊಬೈಲ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="Login_or_Register">ಲಾಗಿನ್ ಅಥವಾ ನೋಂದಾಯಿಸಿ</string>
+    <string name="enter_verification_pin">ಪರಿಶೀಲನೆ ಪಿನ್ ನಮೂದಿಸಿ</string>
+    <string name="Seat_back_and_relax_while_we_verify_your_phone_number">ನಿಮ್ಮ ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಾವು ಪರಿಶೀಲಿಸುವಾಗ ಕುಳಿತುಕೊಳ್ಳಿ ಮತ್ತು ವಿಶ್ರಾಂತಿ ಪಡೆಯಿರಿ</string>
+    <string name="or">ಅಥವಾ</string>
+    <string name="Ride_Karo">ರೈಡ್ ಕರೋ</string>
+    <string name="bike_taxi">ಬೈಕ್ ಟ್ಯಾಕ್ಸಿ.</string>
+    <string name="_9_days_ago">9 ದಿನಗಳ ಹಿಂದೆ</string>
+    <string name="cancelled">ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ</string>
+    <string name="bandra_station">ಬಾಂದ್ರಾ ನಿಲ್ದಾಣ</string>
+    <string name="rahul_yadav">ರಾಹುಲ್ ಯಾದವ್</string>
+    <string name="Select_Language">ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="Previous_Rides">ಹಿಂದಿನ ಸವಾರಿಗಳು</string>
+    <string name="Bandra_East">ಬಾಂದ್ರಾ ಪೂರ್ವ</string>
+    <string name="Bandra_West">ಬಾಂದ್ರಾ ವೆಸ್ಟ್</string>
+    <string name="pay">ಪಾವತಿ</string>
+    <string name="Manage_favorite_locations">ನೆಚ್ಚಿನ ಸ್ಥಳಗಳನ್ನು ನಿರ್ವಹಿಸಿ</string>
+    <string name="Preferences">ಆದ್ಯತೆಗಳು</string>
+    <string name="Manage_preferences">ಆದ್ಯತೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ</string>
+    <string name="abc">abc</string>
+
+    <string name="today">ಇಂದು</string>
+    <string name="active">ಸಕ್ರಿಯ</string>
+    <string name="gorai_naka">ಒಳಗೆ ನೋಡು</string>
+    <string name="santosh_bhuvan">ಸಂತೋಷ್ ಭುವನ್</string>
+    <string name="let_s_ride">ಸವಾರಿ ಮಾಡೋಣ</string>
+    <string name="tulinj_road">ತುಲಿನ್ಜ್ ರಸ್ತೆ</string>
+    <string name="save">ಉಳಿಸಿ</string>
 
 
 </resources>

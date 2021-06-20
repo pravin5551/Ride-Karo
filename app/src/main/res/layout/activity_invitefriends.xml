@@ -7,44 +7,10 @@
     android:orientation="vertical"
     tools:context=".views.InvitefriendsActivity">
 
-
-    <RelativeLayout
-        android:id="@+id/invite_frnd_rl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#f9d915"
-        app:layout_constraintTop_toTopOf="@+id/rvContactAddTemp"
-        tools:layout_editor_absoluteX="64dp">
-
-        <Button
-            android:id="@+id/back_otp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="@dimen/dp_10"
-            android:padding="5dp"
-            android:drawableStart="@drawable/ic_baseline_arrow_back_24"
-            android:background="@drawable/invite_bg"
-
-            />
-
-        <Button
-            android:id="@+id/support_otp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="@dimen/dp_10"
-            android:background="@drawable/invite_bg"
-
-            android:text="@string/support"
-            android:textAllCaps="false" />
-
-    </RelativeLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="match_parent">
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvContactAddTemp"
@@ -53,11 +19,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/shareAllUsers"
+            android:id="@+id/addAllUsers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_18"
-            android:text="@string/share"
+            android:fontFamily="@font/productsansregular"
+            android:text="Share"
             android:textColor="@color/Black"
             android:textSize="@dimen/sp_16"
             app:layout_constraintEnd_toEndOf="@+id/rvContactAddTemp"
@@ -69,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:fontFamily="@font/productsansregular"
             android:text="@string/with_you_and"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/etNameEmailPhone"
@@ -80,6 +48,7 @@
             android:id="@+id/etNameEmailPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/productsansregular"
             android:hint="@string/enter_phone_number"
             android:textSize="@dimen/sp_15"
             app:layout_constraintStart_toEndOf="@id/tvWithYou"
@@ -90,6 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
+            android:fontFamily="@font/productsansregular"
             android:padding="@dimen/dp_10"
             android:src="@drawable/ic_baseline_close_24"
             android:visibility="gone"
@@ -101,6 +71,7 @@
             android:id="@+id/lvContacts"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:fontFamily="@font/productsansregular"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etNameEmailPhone" />

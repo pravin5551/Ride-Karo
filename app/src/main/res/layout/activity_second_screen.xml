@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivSplashScreenImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_centerInParent="true"
         android:src="@drawable/splash_rapido_icon" />
 
@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ivSplashScreenImage"
         android:layout_centerInParent="true"
-        android:text="Ride Karo"
+        android:text="@string/Ride_Karo"
+        android:fontFamily="@font/productsansregular"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="@dimen/_15sdp"
@@ -42,8 +43,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginBottom="@dimen/_15sdp"
+        android:fontFamily="@font/productsansregular"
         android:text="@string/Made_in_india"
-        android:textSize="@dimen/_15sdp" />
+        android:textSize="12dp" />
 
 
 </RelativeLayout>

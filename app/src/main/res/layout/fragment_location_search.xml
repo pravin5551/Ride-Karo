@@ -13,26 +13,21 @@
         android:id="@+id/etSearchLocation"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
-        android:drawableStart="@drawable/back"
         android:drawablePadding="@dimen/dp_10"
-        android:fontFamily="@font/opensansregular"
+        android:fontFamily="@font/productsansregular"
         android:hint="@string/search_drop_location"
         android:textColor="@color/black" />
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv1"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="@dimen/dp_32"-->
-    <!--        android:fontFamily="@font/opensansregular"-->
-    <!--        android:padding="@dimen/dp_12"-->
-    <!--        android:textColor="@color/black" />-->
 
     <Button
         android:id="@+id/btnSearchLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/yellow"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@drawable/requst_bg"
+        android:fontFamily="@font/productsansregular"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:text="@string/let_s_go" />
 
 

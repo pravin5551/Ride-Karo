@@ -3,7 +3,6 @@
     <string name="app_name">Ride karo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="navigation_drawer_open">"Open navigation drawer"</string>
     <string name="navigation_drawer_close">"Close navigation drawer"</string>
     <string name="india_beloved">भारत की प्यारी बाइक टैक्सी सेवा </string>
@@ -32,15 +31,13 @@
     <string name="Install_GooglePay_on_your_device">अपने डिवाइस पर GooglePay इंस्टॉल करें</string>
     <string name="Install_Mobikwik_on_your_device">अपने डिवाइस पर मोबिक्विक इंस्टॉल करें</string>
     <string name="Install_PayTm_on_your_device">अपने डिवाइस पर पेटीएम इंस्टॉल करें</string>
-
     <string name="home">घर</string>
-    <string name="COVID_19">कोविड 19</string>
+    <string name="COVID_19">कोविड १९</string>
     <string name="my_rides">मेरी सवारी</string>
     <string name="invite_friends">मित्रों को आमंत्रित करें</string>
     <string name="insurance">बीमा</string>
     <string name="setting">समायोजन</string>
     <string name="support">सहयोग</string>
-
     <string name="mobile_number">मोबाइल नंबर</string>
     <string name="start">शुरू</string>
     <string name="stop">रुकें</string>
@@ -68,7 +65,6 @@
     <string name="having_an_issue">कोई समस्या है?</string>
     <string name="get_help">मदद लें</string>
     <string name="view_all_tickets">सभी टिकट देखें</string>
-
     <string name="title_activity_home_screen">Map</string>
     <string name="im_a_rider">मैं एक सवार हूँ</string>
     <string name="im_a_customer">मैं एक ग्राहक हूँ</string>
@@ -101,8 +97,6 @@
     <string name="google_pay">Google Pay</string>
     <string name="phone_pay">Phone Pay</string>
     <string name="let_s_go">चलो चलते हैं</string>
-
-
     <string name="enter_phone_number">फोन नंबर दर्ज</string>
     <string name="with_you_and">आपके साथ और</string>
     <string name="covid_19">COVID 19</string>
@@ -110,7 +104,57 @@
     <string name="getvaccine">#वैक्सीन प्राप्त करें</string>
     <string name="your_safety_matters">आपकी सुरक्षा के मामले</string>
     <string name="book_vaccine">बुक वैक्सीन</string>
-
+    <string name="payment_menu">भुगतान</string>
+    <string name="support_menu">सहयोग</string>
+    <string name="title_activity_maps">नक्शा</string>
+    <string name="title_activity_maps2">नक्शा</string>
+    <string name="hold_tight_rider_is_on_it_s_way_to_your_location">कसी पकड़! राइडर आपके स्थान के रास्ते में है</string>
+    <string name="hurray">हुर्रे</string>
+    <string name="share">शेयर</string>
+    <string name="Claim_Procedure">दावा प्रक्रिया</string>
+    <string name="legal">कानूनी</string>
+    <string name="view">राय</string>
+    <string name="Invite">आमंत्रण</string>
+    <string name="Share_via">के माध्यम से बाँटे</string>
+    <string name="Invite_Friends">मित्रों को आमंत्रित करें</string>
+    <string name="Invite_friends_and_get_rewards">मित्रों को आमंत्रित करें और पुरस्कार प्राप्त करें</string>
+    <string name="Terms_and_Conditions">नियम और शर्तें</string>
+    <string name="Waiting_for_OTP">ओटीपी की प्रतीक्षा की जा रही है...</string>
+    <string name="Continue">जारी रखें</string>
+    <string name="Book_Vaccine">बुक वैक्सीन</string>
+    <string name="Payment_amp_Wallets">भुगतान &amp; पर्स</string>
+    <string name="OPD_Treatment">ओपीडी उपचार</string>
+    <string name="Medical_Expense_for_Hospitalization">अस्पताल में भर्ती होने के लिए चिकित्सा व्यय</string>
+    <string name="Continue_with_Google">गूगल के साथ जारी रखें</string>
+    <string name="Continue_with_Facebook">फेसबुक के साथ जारी रखें</string>
+    <string name="Continue_with_Apple">एप्प्ल के साथ जारी रखें</string>
+    <string name="Enter_Mobile_Number">मोबाइल नंबर दर्ज करें</string>
+    <string name="Login_or_Register">भाग लें या पंजीकरण करें</string>
+    <string name="enter_verification_pin">सत्यापन पिन दर्ज करें</string>
+    <string name="Seat_back_and_relax_while_we_verify_your_phone_number">जब तक हम आपका फ़ोन नंबर सत्यापित करते हैं, तब तक बैठें और आराम करें</string>
+    <string name="Ride_Karo">सवारी करो</string>
+    <string name="or">या</string>
+    <string name="bike_taxi">बाइक टैक्सी।</string>
+    <string name="_9_days_ago">9 दिन पहले</string>
+    <string name="cancelled">रद्द</string>
+    <string name="bandra_station">बांद्रा स्टेशन</string>
+    <string name="rahul_yadav">राहुल यादव</string>
+    <string name="Select_Language">भाषा का चयन करें</string>
+    <string name="Previous_Rides">पिछली सवारी</string>
+    <string name="Bandra_East">बांद्रा पूर्व</string>
+    <string name="Bandra_West">बांद्रा पश्चिम </string>
+    <string name="pay">भुगतान करते हैं</string>
+    <string name="Manage_favorite_locations">पसंदीदा स्थान प्रबंधित करें</string>
+    <string name="Preferences">पसंद</string>
+    <string name="Manage_preferences">प्राथमिकताएं प्रबंधित करें</string>
+    <string name="abc">abc</string>
+    <string name="today">आज</string>
+    <string name="active">सक्रिय</string>
+    <string name="gorai_naka">भीतर देखो</string>
+    <string name="santosh_bhuvan">संतोष भुवन</string>
+    <string name="let_s_ride">चलो सवारी करें</string>
+    <string name="tulinj_road">तुलिंज रोड</string>
+    <string name="save">जमा करो</string>
 
 
 

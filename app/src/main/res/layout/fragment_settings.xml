@@ -1,304 +1,347 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.navDrawerFragments.SettingsFragment">
 
-    <TextView
-        android:id="@+id/tvGeneral"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_10"
-        android:text="@string/general"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sp_14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvGeneral"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvGeneral">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/tvGeneral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/productsansregular"
+            android:text="@string/general"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvGeneral"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGeneral">
 
-            <ImageButton
-                android:id="@+id/ibProfile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:padding="@dimen/dp_15"
-                android:src="@drawable/ic_profile"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tvProfile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:layout_marginTop="@dimen/dp_15"
-                android:text="@string/profile"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibProfile"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageButton
+                    android:id="@+id/ibProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/productsansregular"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:text="Insert mobile number"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibProfile"
-                app:layout_constraintTop_toBottomOf="@id/tvProfile" />
+                <TextView
+                    android:id="@+id/tvProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/profile"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibProfile"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/ibFavorites"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:padding="@dimen/dp_15"
-                android:src="@drawable/ic_favorite"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ibProfile" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/Enter_Mobile_Number"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibProfile"
+                    app:layout_constraintTop_toBottomOf="@id/tvProfile" />
 
-            <TextView
-                android:id="@+id/tvFavorites"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:layout_marginTop="@dimen/dp_15"
-                android:text="@string/favorites"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibProfile"
-                app:layout_constraintTop_toBottomOf="@+id/ibProfile" />
+                <ImageButton
+                    android:id="@+id/ibFavorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/productsansregular"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/ic_favorite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ibProfile" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:text="Manage favorite locations"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibFavorites"
-                app:layout_constraintTop_toBottomOf="@id/tvFavorites" />
+                <TextView
+                    android:id="@+id/tvFavorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/favorites"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibProfile"
+                    app:layout_constraintTop_toBottomOf="@+id/ibProfile" />
 
-            <ImageButton
-                android:id="@+id/ibPreferences"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:padding="@dimen/dp_15"
-                android:src="@drawable/ic_pref"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ibFavorites" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/Manage_favorite_locations"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibFavorites"
+                    app:layout_constraintTop_toBottomOf="@id/tvFavorites" />
 
-            <TextView
-                android:id="@+id/tvPreferences"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:layout_marginTop="@dimen/dp_15"
-                android:text="Preferences"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibProfile"
-                app:layout_constraintTop_toBottomOf="@+id/ibFavorites" />
+                <ImageButton
+                    android:id="@+id/ibPreferences"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/ic_pref"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ibFavorites" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:text="Manage preferences"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibProfile"
-                app:layout_constraintTop_toBottomOf="@id/tvPreferences" />
+                <TextView
+                    android:id="@+id/tvPreferences"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/Preferences"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibProfile"
+                    app:layout_constraintTop_toBottomOf="@+id/ibFavorites" />
 
-            <ImageButton
-                android:id="@+id/ibLanguage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:padding="@dimen/dp_15"
-                android:src="@drawable/ic_lang"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ibPreferences" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/Manage_preferences"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibProfile"
+                    app:layout_constraintTop_toBottomOf="@id/tvPreferences" />
 
-            <TextView
-                android:id="@+id/tvLanguage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:layout_marginTop="@dimen/dp_15"
-                android:text="@string/app_language"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibProfile"
-                app:layout_constraintTop_toBottomOf="@+id/ibPreferences" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAppLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ibPreferences">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:text="@string/english"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibProfile"
-                app:layout_constraintTop_toBottomOf="@id/tvLanguage" />
+                    <ImageButton
+                        android:id="@+id/ibLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/dp_15"
+                        android:src="@drawable/ic_lang"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/ibAppShortcuts"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:padding="@dimen/dp_15"
-                android:src="@drawable/redo"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ibLanguage" />
+                    <TextView
+                        android:id="@+id/tvLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:fontFamily="@font/productsansregular"
+                        android:text="@string/app_language"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintStart_toEndOf="@id/ibLanguage"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tvAppShortcuts"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:layout_marginTop="@dimen/dp_15"
-                android:text="@string/app_shortcuts"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibAppShortcuts"
-                app:layout_constraintTop_toBottomOf="@+id/ibLanguage" />
+                    <TextView
+                        android:id="@+id/tvLanguageChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:fontFamily="@font/productsansregular"
+                        android:text="@string/english"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintStart_toEndOf="@id/ibLanguage"
+                        app:layout_constraintTop_toBottomOf="@id/tvLanguage" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:text="@string/create_shortcuts_on_home_launcher"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibProfile"
-                app:layout_constraintTop_toBottomOf="@id/tvAppShortcuts" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/tvOthers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_10"
-        android:text="@string/others"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sp_14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cvGeneral" />
+                <ImageButton
+                    android:id="@+id/ibAppShortcuts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/productsansregular"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/redo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clAppLanguage" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvOthers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvOthers">
+                <TextView
+                    android:id="@+id/tvAppShortcuts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/app_shortcuts"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibAppShortcuts"
+                    app:layout_constraintTop_toBottomOf="@+id/clAppLanguage" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/create_shortcuts_on_home_launcher"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibAppShortcuts"
+                    app:layout_constraintTop_toBottomOf="@id/tvAppShortcuts" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:fontFamily="@font/productsansregular"
+            android:text="@string/others"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvGeneral" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvOthers"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOthers">
 
-            <ImageButton
-                android:id="@+id/ibAbout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:padding="@dimen/dp_15"
-                android:src="@drawable/ic_about"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tvAbout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:layout_marginTop="@dimen/dp_15"
-                android:text="@string/about"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibAbout"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageButton
+                    android:id="@+id/ibAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/productsansregular"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/ic_about"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:text="@string/_5_5_27"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibAbout"
-                app:layout_constraintTop_toBottomOf="@id/tvAbout" />
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/about"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibAbout"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/ibSubscribeToBeta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:padding="@dimen/dp_15"
-                android:src="@drawable/beta"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ibAbout" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/_5_5_27"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibAbout"
+                    app:layout_constraintTop_toBottomOf="@id/tvAbout" />
 
-            <TextView
-                android:id="@+id/tvSubscribeToBeta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:layout_marginTop="@dimen/dp_15"
-                android:text="@string/subscribe_to_beta"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibAbout"
-                app:layout_constraintTop_toBottomOf="@+id/ibAbout" />
+                <ImageButton
+                    android:id="@+id/ibSubscribeToBeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/productsansregular"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/beta"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ibAbout" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:text="@string/get_early_access_to_latest_features"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibAbout"
-                app:layout_constraintTop_toBottomOf="@id/tvSubscribeToBeta" />
+                <TextView
+                    android:id="@+id/tvSubscribeToBeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/subscribe_to_beta"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibAbout"
+                    app:layout_constraintTop_toBottomOf="@+id/ibAbout" />
 
-            <ImageButton
-                android:id="@+id/ibLogout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:padding="@dimen/dp_15"
-                android:src="@drawable/exit"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ibSubscribeToBeta" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/get_early_access_to_latest_features"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibAbout"
+                    app:layout_constraintTop_toBottomOf="@id/tvSubscribeToBeta" />
 
-            <TextView
-                android:id="@+id/tvOPDTreatment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_15"
-                android:layout_marginTop="@dimen/dp_20"
-                android:text="@string/logout"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sp_14"
-                app:layout_constraintStart_toEndOf="@id/ibAbout"
-                app:layout_constraintTop_toBottomOf="@+id/ibSubscribeToBeta" />
+                <ImageButton
+                    android:id="@+id/ibLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/productsansregular"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/exit"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ibSubscribeToBeta" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tvOPDTreatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:fontFamily="@font/productsansregular"
+                    android:text="@string/logout"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toEndOf="@id/ibAbout"
+                    app:layout_constraintTop_toBottomOf="@+id/ibSubscribeToBeta" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

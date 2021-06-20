@@ -44,11 +44,11 @@ class OTPSecondActivity : AppCompatActivity() {
         ) // OnVerificationStateChangedCallbacks
 
         verifyButton.setOnClickListener {
-//            if (!otpTextField.text.isNullOrEmpty()) {
-//                verifyVerificationCode(otpTextField.text.toString())
-//            }
-            startActivity(Intent(this, HomeActivity::class.java))
-            finish()
+            if (!otpTextField.text.isNullOrEmpty()) {
+                verifyVerificationCode(otpTextField.text.toString())
+            }
+//            startActivity(Intent(this, HomeActivity::class.java))
+//            finish()
         }
     }
 
@@ -94,7 +94,6 @@ class OTPSecondActivity : AppCompatActivity() {
             ?.addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val i = Intent(this, HomeActivity::class.java)
-                    Toast.makeText(this, "Signed in succesfully", Toast.LENGTH_LONG).show()
                     startActivity(i)
                 } else {
                     Toast.makeText(this, "Failed", Toast.LENGTH_LONG).show()

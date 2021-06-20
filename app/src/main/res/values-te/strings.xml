@@ -3,10 +3,8 @@
     <string name="app_name">Ride karo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="navigation_drawer_open">"Open navigation drawer"</string>
     <string name="navigation_drawer_close">"Close navigation drawer"</string>
-
     <string name="india_beloved">భారతదేశం యొక్క ప్రియమైన బైక్ టాక్సీ సేవ</string>
     <string name="to_have_comfortable">రైడ్‌కారోతో సౌకర్యవంతమైన రైడ్ అనుభవాన్ని పొందడానికి,</string>
     <string name="please_allow">దయచేసి మాకు ఈ క్రింది అనుమతులను అనుమతించండి</string>
@@ -40,8 +38,6 @@
     <string name="Install_GooglePay_on_your_device">మీ పరికరంలో GooglePay ని ఇన్‌స్టాల్ చేయండి</string>
     <string name="Install_Mobikwik_on_your_device">మీ పరికరంలో మొబిక్విక్‌ను ఇన్‌స్టాల్ చేయండి</string>
     <string name="Install_PayTm_on_your_device">మీ పరికరంలో PayTm ని ఇన్‌స్టాల్ చేయండి</string>
-
-
     <string name="mobile_number">మొబైల్ సంఖ్య</string>
     <string name="start">ప్రారంభించండి</string>
     <string name="stop">ఆపు</string>
@@ -69,7 +65,6 @@
     <string name="having_an_issue">సమస్య ఉందా?</string>
     <string name="get_help">సహాయం పొందు</string>
     <string name="view_all_tickets">అన్ని టిక్కెట్లను చూడండి</string>
-
     <string name="title_activity_home_screen">మ్యాప్</string>
     <string name="im_a_rider">ఇమ్ ఎ రైడర్</string>
     <string name="im_a_customer">నేను కస్టమర్</string>
@@ -102,8 +97,6 @@
     <string name="google_pay">Google Pay</string>
     <string name="phone_pay">Phone Pay</string>
     <string name="let_s_go">వెళ్దాం</string>
-
-
     <string name="enter_phone_number">ఫోన్ నంబర్‌ను నమోదు చేయండి</string>
     <string name="with_you_and">మీతో మరియు</string>
     <string name="covid_19">COVID 19</string>
@@ -111,6 +104,61 @@
     <string name="getvaccine"># గెట్‌వాక్సిన్</string>
     <string name="your_safety_matters">మీ భద్రతా అంశాలు</string>
     <string name="book_vaccine">టీకా బుక్ చేయండి</string>
+    <string name="payment_menu">చెల్లింపు</string>
+    <string name="support_menu">మద్దతు</string>
+    <string name="title_activity_maps">మ్యాప్</string>
+    <string name="title_activity_maps2">మ్యాప్</string>
+    <string name="hold_tight_rider_is_on_it_s_way_to_your_location">గట్టిగా పట్టుకో! రైడర్ మీ స్థానానికి వెళ్తున్నాడు</string>
+    <string name="hurray">హుర్రే</string>
+    <string name="share">భాగస్వామ్యం చేయండి</string>
+    <string name="Claim_Procedure">దావా విధానం</string>
+    <string name="legal">చట్టపరమైన</string>
+    <string name="view">చూడండి</string>
+    <string name="Invite">ఆహ్వానించండి</string>
+    <string name="Share_via">ద్వారా భాగస్వామ్యం చేయండి</string>
+    <string name="Invite_Friends">స్నేహితులను ఆహ్వానించండి</string>
+    <string name="Invite_friends_and_get_rewards">స్నేహితులను ఆహ్వానించండి మరియు బహుమతులు పొందండి</string>
+    <string name="Terms_and_Conditions">నిబంధనలు మరియు షరతులు</string>
+    <string name="Waiting_for_OTP">OTP కోసం వేచి ఉంది..</string>
+    <string name="Continue">కొనసాగించండి</string>
+    <string name="Book_Vaccine">టీకా బుక్ చేయండి</string>
+    <string name="Payment_amp_Wallets">చెల్లింపు  amp; పర్సులు</string>
+    <string name="OPD_Treatment">OPD చికిత్స</string>
+    <string name="Medical_Expense_for_Hospitalization">హాస్పిటలైజేషన్ కోసం వైద్య ఖర్చు</string>
+    <string name="Continue_with_Google">Google తో కొనసాగించండి</string>
+    <string name="Continue_with_Facebook">ఫేస్‌బుక్‌తో కొనసాగండి</string>
+    <string name="Continue_with_Apple">ఆపిల్‌తో కొనసాగించండి</string>
+    <string name="Enter_Mobile_Number">మొబైల్ నంబర్‌ను నమోదు చేయండి</string>
+    <string name="Login_or_Register">లాగిన్ లేదా నమోదు</string>
+    <string name="enter_verification_pin">ధృవీకరణ పిన్ను నమోదు చేయండి</string>
+    <string name="Seat_back_and_relax_while_we_verify_your_phone_number">మేము మీ ఫోన్ నంబర్‌ను ధృవీకరించేటప్పుడు తిరిగి కూర్చుని విశ్రాంతి తీసుకోండి</string>
+    <string name="or">లేదా</string>
+    <string name="Ride_Karo">రైడ్ కారో</string>
+    <string name="bike_taxi">బైక్ టాక్సీ.</string>
+    <string name="_9_days_ago">9 రోజుల క్రితం</string>
+    <string name="cancelled">రద్దు</string>
+    <string name="bandra_station">బాంద్రా స్టేషన్</string>
+    <string name="rahul_yadav">రాహుల్ యాదవ్</string>
+    <string name="Select_Language">భాషను ఎంచుకోండి</string>
+    <string name="Previous_Rides">మునుపటి సవారీలు</string>
+    <string name="Bandra_East">బాంద్రా ఈస్ట్</string>
+    <string name="Bandra_West">బాంద్రా వెస్ట్</string>
+    <string name="pay">చెల్లించండి</string>
+    <string name="Manage_favorite_locations">ఇష్టమైన స్థానాలను నిర్వహించండి</string>
+    <string name="Preferences">ప్రాధాన్యతలు</string>
+    <string name="Manage_preferences">ప్రాధాన్యతలను నిర్వహించండి</string>
+    <string name="abc">abc</string>
+
+    <string name="today">ఈ రోజు</string>
+    <string name="active">యాక్టివ్</string>
+    <string name="gorai_naka">లోపల చూడు</string>
+    <string name="santosh_bhuvan">సంతోష్ భువన్</string>
+    <string name="let_s_ride">రైడ్ చేద్దాం</string>
+    <string name="tulinj_road">తులిన్జ్ రోడ్</string>
+    <string name="save">సేవ్ చేయండి</string>
+
+
+
 
 
 </resources>

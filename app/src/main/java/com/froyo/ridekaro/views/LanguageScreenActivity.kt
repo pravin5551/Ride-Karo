@@ -7,7 +7,9 @@ import android.widget.ArrayAdapter
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.froyo.ridekaro.R
+import com.froyo.ridekaro.helper.KEY_LOGIN_WITH_OAUTH
 import com.froyo.ridekaro.helper.PreferenceHelper
+import com.froyo.ridekaro.helper.USER_PHONE_LOGIN
 import kotlinx.android.synthetic.main.activity_language_screen.*
 import java.util.*
 
@@ -23,6 +25,8 @@ class LanguageScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_language_screen)
 
         PreferenceHelper.getSharedPreferences(this)
+
+        setLocal("en", 0)
 
         val languages = resources.getStringArray(R.array.language)
         val arrayAdapter = ArrayAdapter(this, R.layout.item_layout_language, languages)
@@ -41,18 +45,23 @@ class LanguageScreenActivity : AppCompatActivity() {
 
         btnNext.setOnClickListener {
 
+            if (PreferenceHelper.getLoginBooleanFromPreference(KEY_LOGIN_WITH_OAUTH) ||
+                PreferenceHelper.getLoginBooleanFromPreference(USER_PHONE_LOGIN)
+            ) {
+//                val intent = Intent(this, HomeActivity::class.java)
+                val intent = Intent(this, OTPValidation::class.java)
+                startActivity(intent)
+            } else {
+                val intent = Intent(this, OTPValidation::class.java)
+                startActivity(intent)
+            }
 
-           // val intent = Intent(this, HomeActivity::class.java)
-
-            val intent = Intent(this, OTPValidation::class.java)
-
-            startActivity(intent)
         }
 
 
     }
 
-    fun setLocal(localeName: String, position: Int) {
+    private fun setLocal(localeName: String, position: Int) {
 
         locale = Locale(localeName)
         val res = resources

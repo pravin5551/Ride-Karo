@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,61 +8,44 @@
     android:weightSum="5"
     tools:context=".views.OTPSecondActivity">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/rlWelcomeScreen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.5"
-        android:background="#f9d915"
-        android:orientation="vertical">
+        android:layout_height="@dimen/_175sdp"
+        android:background="@drawable/ic_rectangle_button"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#f9d915">
-
-            <Button
-                android:id="@+id/back_otp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="@dimen/dp_10"
-                android:background="@drawable/invite_bg"
-                android:drawableStart="@drawable/ic_baseline_arrow_back_24"
-                android:padding="5dp"
-
-                />
-
-            <Button
-                android:id="@+id/support_otp_val"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_margin="@dimen/dp_10"
-                android:background="@drawable/invite_bg"
-                android:padding="5dp"
-
-                android:text="@string/support"
-                android:textAllCaps="false" />
-
-        </RelativeLayout>
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tvWelcomeChoose"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_25"
-            android:text="Enter verification pin"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:fontFamily="@font/productsansregular"
+            android:text="@string/hold_tight_rider_is_on_it_s_way_to_your_location"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvWelcomeChoose"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:fontFamily="@font/productsansregular"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/enter_verification_pin"
             android:textColor="@color/black"
-            android:textSize="25dp" />
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_25"
-            android:layout_marginTop="@dimen/dp_10"
-            android:layout_marginEnd="@dimen/dp_25"
-            android:text="Seat back and relax while we verify your phone number" />
 
-    </LinearLayout>
+    </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,32 +61,18 @@
             android:layout_marginStart="@dimen/dp_60"
             android:layout_marginTop="@dimen/dp_50"
             android:layout_marginEnd="@dimen/dp_60"
+            android:fontFamily="@font/productsansregular"
             android:inputType="number" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/waiting_tv"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_20"
-                android:gravity="center_horizontal"
-                android:text="Waiting for OTP..."
-                android:textColor="@color/Gray" />
-
-            <TextView
-                android:id="@+id/time_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_toEndOf="@+id/waiting_tv"
-                android:textAppearance="@android:style/TextAppearance.Large"
-                android:textSize="56sp" />
-
-        </RelativeLayout>
-
+        <TextView
+            android:id="@+id/waiting_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_20"
+            android:fontFamily="@font/productsansregular"
+            android:text="@string/Waiting_for_OTP"
+            android:textColor="@color/Gray" />
 
     </LinearLayout>
 
@@ -112,15 +82,14 @@
 
         <Button
             android:id="@+id/verifyButton"
-            android:layout_width="120dp"
-
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="@dimen/dp_50"
             android:layout_marginBottom="@dimen/dp_100"
             android:background="@drawable/rect_round_mob"
-            android:text="Continue"
+            android:fontFamily="@font/productsansregular"
+            android:text="@string/Continue"
             android:textColor="#f9d915" />
     </RelativeLayout>
 </LinearLayout>

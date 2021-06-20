@@ -1,6 +1,5 @@
 package com.froyo.ridekaro.views
 
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -30,15 +29,9 @@ class FirstScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_screen)
 
-        buttonTaps()
-
         PreferenceHelper.getSharedPreferences(this)
 
-        val lang = PreferenceHelper.getStringFromPreference("languagePreferenceString")
-        val position = PreferenceHelper.getIntFromPreference("languagePreference")
-        if (lang != null) {
-            setLocal(lang,position)
-        }
+        buttonTaps()
 
     }
 
@@ -49,6 +42,7 @@ class FirstScreenActivity : AppCompatActivity() {
                 "location",
                 FINE_LOCATION_RO
             )
+            PreferenceHelper.writeBooleanToPreference("loginCheck", false)
         }
 
 
@@ -61,11 +55,11 @@ class FirstScreenActivity : AppCompatActivity() {
                     applicationContext,
                     permission
                 ) == PackageManager.PERMISSION_GRANTED -> {
-                    Toast.makeText(
-                        applicationContext,
-                        "$name permission granted",
-                        Toast.LENGTH_SHORT
-                    ).show()
+//                    Toast.makeText(
+//                        applicationContext,
+//                        "$name permission granted",
+//                        Toast.LENGTH_SHORT
+//                    ).show()
                     val intent = Intent(this, SecondScreenActivity::class.java)
                     startActivity(intent)
 
@@ -95,7 +89,7 @@ class FirstScreenActivity : AppCompatActivity() {
                 intent.setData(uri)
                 startActivity(intent)
             } else {
-                Toast.makeText(applicationContext, "$name permission granted", Toast.LENGTH_SHORT)
+                Toast.makeText(applicationContext, "Location permission granted", Toast.LENGTH_SHORT)
                     .show()
                 val intent = Intent(this, SecondScreenActivity::class.java)
                 startActivity(intent)

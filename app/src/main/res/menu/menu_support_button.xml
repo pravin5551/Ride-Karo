@@ -2,10 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/supportButton"
-        android:title="Support"
-        app:showAsAction="always"
+    <item
+        android:id="@+id/supportButton"
         android:icon="@drawable/ic_baseline_help_24"
-        />
+        android:title="Support"
+        android:fontFamily="@font/productsansregular"
+        app:showAsAction="always" />
 
 </menu>

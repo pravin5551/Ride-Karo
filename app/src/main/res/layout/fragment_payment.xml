@@ -12,45 +12,47 @@
         app:layout_constraintBottom_toTopOf="@+id/btnPayment"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_180sdp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_180sdp"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
 
-            <com.google.android.material.appbar.CollapsingToolbarLayout
-                android:id="@+id/collapsing_notification_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/yellow"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+<!--            <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--                android:id="@+id/collapsing_notification_toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@color/yellow"-->
+<!--                app:layout_scrollFlags="scroll|exitUntilCollapsed">-->
 
-                <ImageView
-                    android:id="@+id/notification"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_actionbar_payment"
-                    app:layout_collapseMode="parallax" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/notification"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fontFamily="@font/productsansregular"-->
+<!--                    android:scaleType="centerInside"-->
+<!--                    android:src="@drawable/ic_actionbar_payment"-->
+<!--                    app:layout_collapseMode="parallax" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:padding="@dimen/_25sdp"
-                    android:text="@string/small_Payment"
-                    android:textColor="@color/black"
-                    android:textSize="35sp" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="bottom"-->
+<!--                    android:fontFamily="@font/productsansregular"-->
+<!--                    android:padding="@dimen/_25sdp"-->
+<!--                    android:text="@string/small_Payment"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="35sp" />-->
 
-                <android.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:layout_collapseMode="pin" />
+<!--                <android.widget.Toolbar-->
+<!--                    android:id="@+id/toolbar"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="?attr/actionBarSize"-->
+<!--                    app:layout_collapseMode="pin" />-->
 
 
-            </com.google.android.material.appbar.CollapsingToolbarLayout>
+<!--            </com.google.android.material.appbar.CollapsingToolbarLayout>-->
 
-        </com.google.android.material.appbar.AppBarLayout>
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -68,6 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_20sdp"
+                    android:fontFamily="@font/productsansregular"
                     android:text="@string/Personal_Wallet"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
@@ -84,8 +87,8 @@
                         android:layout_margin="@dimen/_10sdp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
-                        android:padding="4dp"
                         android:background="@android:color/transparent"
+                        android:padding="4dp"
                         android:src="@drawable/ic_paytm"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -96,6 +99,7 @@
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_weight="3"
+                        android:fontFamily="@font/productsansregular"
                         android:text="Paytm"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp" />
@@ -107,9 +111,10 @@
                         android:layout_gravity="center|right"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:background="@drawable/ic_blue_circle"
+                        android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
-                        android:text="LINK"
+                        android:text="@string/link"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
 
@@ -139,6 +144,7 @@
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_weight="3"
+                        android:fontFamily="@font/productsansregular"
                         android:text="Mobikwik"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp" />
@@ -150,9 +156,10 @@
                         android:layout_gravity="center|right"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:background="@drawable/ic_blue_circle"
+                        android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
-                        android:text="LINK"
+                        android:text="@string/link"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
 
@@ -182,6 +189,7 @@
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_weight="3"
+                        android:fontFamily="@font/productsansregular"
                         android:text="Google Pay"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp" />
@@ -193,13 +201,12 @@
                         android:layout_gravity="center|right"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:background="@drawable/ic_blue_circle"
+                        android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
-                        android:text="LINK"
+                        android:text="@string/link"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
-
-
 
 
                 </LinearLayout>
@@ -228,6 +235,7 @@
                         android:layout_marginStart="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_weight="3"
+                        android:fontFamily="@font/productsansregular"
                         android:text="@string/cash"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_16sdp" />
@@ -239,13 +247,12 @@
                         android:layout_gravity="center|right"
                         android:layout_marginRight="@dimen/_10sdp"
                         android:background="@drawable/ic_blue_circle"
+                        android:fontFamily="@font/productsansregular"
                         android:paddingHorizontal="@dimen/_12sdp"
                         android:paddingVertical="@dimen/_5sdp"
-                        android:text="Pay"
+                        android:text="@string/pay"
                         android:textColor="@color/Blue"
                         android:textSize="@dimen/_12sdp" />
-
-
 
 
                 </LinearLayout>
@@ -266,6 +273,7 @@
         android:layout_gravity="center_horizontal|bottom"
         android:layout_margin="@dimen/_20sdp"
         android:background="@drawable/ic_rectangle_next"
+        android:fontFamily="@font/productsansregular"
         android:text="@string/payment"
         android:textAllCaps="false"
         android:textColor="@color/yellow"
