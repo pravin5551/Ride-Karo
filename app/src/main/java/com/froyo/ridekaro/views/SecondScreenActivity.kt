@@ -1,10 +1,13 @@
 package com.froyo.ridekaro.views
 
+import android.content.Context
 import android.content.Intent
+import android.location.LocationManager
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.provider.Settings
 import android.util.Log
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.froyo.ridekaro.R
@@ -22,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.messaging.FirebaseMessaging
 import java.util.*
+
 
 class SecondScreenActivity : AppCompatActivity() {
 
@@ -201,5 +205,20 @@ class SecondScreenActivity : AppCompatActivity() {
         })
 
     }
+
+//    private fun isLocationEnabled(context: Context): Boolean? {
+//        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+//            // This is a new method provided in API 28
+//            val lm = context.getSystemService(LOCATION_SERVICE) as LocationManager
+//            lm.isLocationEnabled
+//        } else {
+//            // This was deprecated in API 28
+//            val mode = Settings.Secure.getInt(
+//                context.contentResolver, Settings.Secure.LOCATION_MODE,
+//                Settings.Secure.LOCATION_MODE_OFF
+//            )
+//            mode != Settings.Secure.LOCATION_MODE_OFF
+//        }
+//    }
 
 }

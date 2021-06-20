@@ -41,7 +41,7 @@ class MyRidesFragment : Fragment(R.layout.fragment_my_rides) {
         cardView2.visibility = View.VISIBLE
         btnCallRider.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:9640024533")
+            intent.data = Uri.parse("tel:9584730428")
             startActivity(intent)
         }
 
