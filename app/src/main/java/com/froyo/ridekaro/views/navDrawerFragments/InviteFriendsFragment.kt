@@ -1,21 +1,21 @@
 package com.froyo.ridekaro.views.navDrawerFragments
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.fragment.app.Fragment
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.views.InvitefriendsActivity
-import com.froyo.ridekaro.views.OTPSecondActivity
-import kotlinx.android.synthetic.main.activity_otpvalidation.*
-import kotlinx.android.synthetic.main.activity_temp.*
-import kotlinx.android.synthetic.main.activity_temp.btnShare
 import kotlinx.android.synthetic.main.fragment_invite_friends.*
+
 
 class InviteFriendsFragment : Fragment() {
 
@@ -38,6 +38,24 @@ class InviteFriendsFragment : Fragment() {
             startActivity(Intent.createChooser(intent, "Please select app: "))
         }
 
+        unique_code_button.setOnClickListener(View.OnClickListener {
+            Toast.makeText(
+                context,
+                "Code Coppied ",
+                Toast.LENGTH_SHORT
+            ).show()
+            var clipboard = getSystemService(
+                requireContext(),
+                ClipboardManager::class.java
+            )
+
+            var unieque_code_name =unique_code_text.text.toString()
+            var clip = ClipData.newPlainText("Code Copied",unieque_code_name)
+
+            
+
+        })
+
         btn_share_contacts.setOnClickListener {
 //            val fragment = ContactFragment()
 //                val fragmentManager: FragmentManager = parentFragmentManager
@@ -52,5 +70,8 @@ class InviteFriendsFragment : Fragment() {
 
 
     }
+
+
+
 
 }

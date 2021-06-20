@@ -72,17 +72,25 @@
 
                 />
 
-            <Button
-                android:id="@+id/unique_code"
+            <TextView
+                android:id="@+id/unique_code_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="@dimen/dp_5"
                 android:layout_marginTop="@dimen/dp_10"
                 android:background="@drawable/rect_bg_code"
-                android:drawableEnd="@drawable/ic_baseline_content_copy_24"
                 android:text="  CB1C9JB   "
+                android:padding="3dp"
                 android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/unique_code_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_baseline_content_copy_24"
+                 />
 
             <ImageView
                 android:layout_width="wrap_content"
