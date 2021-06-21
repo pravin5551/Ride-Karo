@@ -555,7 +555,14 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     }
 
     private fun showJouneyCompleteNotification() {
+
         NotificationManagerCompat.from(requireContext()).cancelAll()
+
+//        val intent = Intent(context, LetsCelebrate::class.java)
+//
+//        pendingIntent2 =
+//            PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+//        NotificationManagerCompat.from(requireContext()).cancelAll()
 
         val notificationManager =
             requireActivity().applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager

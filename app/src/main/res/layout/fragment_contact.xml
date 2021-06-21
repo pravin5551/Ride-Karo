@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".views.navDrawerFragments.ContactFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvContactAddTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shareAllUsers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_18"
+            android:text="@string/share"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="@+id/rvContactAddTemp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvWithYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/with_you_and"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/etNameEmailPhone"
+            app:layout_constraintEnd_toStartOf="@id/etNameEmailPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etNameEmailPhone" />
+
+        <EditText
+            android:id="@+id/etNameEmailPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_phone_number"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintStart_toEndOf="@id/tvWithYou"
+            app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />
+
+        <ImageButton
+            android:id="@+id/ibClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_baseline_close_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/lvContacts"
+            app:layout_constraintStart_toEndOf="@+id/etNameEmailPhone"
+            app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />
+
+        <ListView
+            android:id="@+id/lvContacts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etNameEmailPhone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
