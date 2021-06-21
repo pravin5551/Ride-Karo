@@ -23,22 +23,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.annotation.MainThread
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
-import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.froyo.ridekaro.R
 import com.froyo.ridekaro.fragments.BottomSheetFragment
 import com.froyo.ridekaro.viewModel.AfterClickingRideNow
 import com.froyo.ridekaro.viewModel.DistanceViewModel
-import com.froyo.ridekaro.viewModel.LatLongViewModel
-import com.froyo.ridekaro.viewModel.RidesViewModel
 import com.froyo.ridekaro.views.*
 import com.github.florent37.runtimepermission.kotlin.askPermission
 import com.google.android.gms.location.*
@@ -49,10 +44,8 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.*
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
-import kotlinx.android.synthetic.main.activity_first_screen.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.*
-import okhttp3.internal.waitMillis
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.IOException
@@ -61,8 +54,6 @@ import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 import java.util.*
-import java.util.concurrent.Flow
-import kotlin.concurrent.thread
 
 
 class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
@@ -72,7 +63,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 
     private var mMap: GoogleMap? = null
     private var toastCount = 0
-    private var stepsRequiredtoCompleteJourney = 0
+    private var stepsRequiredToCompleteJourney = 0
 
     private lateinit var pendingIntent2: PendingIntent
 
@@ -82,12 +73,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     private var bothAreLow = false
     private var latIsLowLngIsHigh = false
     private var latIsHighLngIsLow = false
-
-    private lateinit var locationRequest: LocationRequest
-
-    private lateinit var locationCallback: LocationCallback
-    private lateinit var fusedLocationClient: FusedLocationProviderClient
-
     lateinit var areaIntent: Intent
 
     private lateinit var mapView: MapView
@@ -96,11 +81,9 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 
     private var totalDistance = ""
 
-    private var resumeCount = 0
 
     private lateinit var distanceViewModel: DistanceViewModel
     private lateinit var afterClickingRideNow: AfterClickingRideNow
-//    private lateinit var ridesViewModel: RidesViewModel
 
     private val LOCATION_REQUEST_CODE = 1
     private var count = 0
@@ -185,7 +168,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     override fun onResume() {
         super.onResume()
         afterClickingRideNow = ViewModelProviders.of(this).get(AfterClickingRideNow::class.java)
-        stepsRequiredtoCompleteJourney = 0
+        stepsRequiredToCompleteJourney = 0
 
         afterClickingRideNow.getMapRider().observe(viewLifecycleOwner, androidx.lifecycle.Observer {
             CoroutineScope(Dispatchers.IO).launch {
@@ -197,6 +180,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
         })
         setMaker()
     }
+
 
     private fun removeMarker() {
         for (maker in allMarker) {
@@ -211,6 +195,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
             userLocationMarker!!.isVisible = true
             markerOptions3.icon(BitmapDescriptorFactory.fromResource(R.drawable.bike_png))
             userLocationMarker = mMap!!.addMarker(markerOptions3)
+            allMarker.add(userLocationMarker!!)
 //            userLocationMarker2 = null
 //            userLocationMarker3 = null
 //            removeMarker()
@@ -280,7 +265,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
     private suspend fun letsGo() {
         if (bothAreHigh == true) {
             showJouneyNotification()
-            for (i in 0..stepsRequiredtoCompleteJourney) {
+            for (i in 0..stepsRequiredToCompleteJourney) {
                 requireActivity().runOnUiThread {
                     startTheJourneyFromBothHigh()
                 }
@@ -288,7 +273,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
             }
         } else if (bothAreLow == true) {
             showJouneyNotification()
-            for (i in 0..stepsRequiredtoCompleteJourney) {
+            for (i in 0..stepsRequiredToCompleteJourney) {
                 requireActivity().runOnUiThread {
                     startTheJourneyFromBothLow()
                 }
@@ -296,7 +281,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
             }
         } else if (latIsLowLngIsHigh == true) {
             showJouneyNotification()
-            for (i in 0..stepsRequiredtoCompleteJourney) {
+            for (i in 0..stepsRequiredToCompleteJourney) {
                 requireActivity().runOnUiThread {
                     startTheJourneyFromLatLowLngHigh()
                 }
@@ -304,14 +289,14 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
             }
         } else if (latIsHighLngIsLow == true) {
             showJouneyNotification()
-            for (i in 0..stepsRequiredtoCompleteJourney) {
+            for (i in 0..stepsRequiredToCompleteJourney) {
                 requireActivity().runOnUiThread {
                     startTheJourneyFromLatHighLngLow()
                 }
                 delay(1000)
             }
         }
-        stepsRequiredtoCompleteJourney = 0
+        stepsRequiredToCompleteJourney = 0
         bothAreHigh = false
         bothAreLow = false
         latIsLowLngIsHigh = false
@@ -455,18 +440,18 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                 source_latitude -= 0.002
                 source_longitude -= 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
             } else if (source_latitude <= end_latitude && source_longitude > end_longitude) {
                 source_longitude -= 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
 
             } else if (source_latitude > end_latitude && source_longitude <= end_longitude) {
                 source_latitude -= 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
             }
         }
@@ -478,19 +463,19 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                 source_latitude += 0.002
                 source_longitude -= 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
 
             } else if (source_latitude >= end_latitude && source_longitude > end_longitude) {
                 source_longitude -= 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
 
             } else if (source_latitude < end_latitude && source_longitude <= end_longitude) {
                 source_latitude += 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
 
             }
@@ -504,19 +489,19 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                 source_latitude += 0.002
                 source_longitude += 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
 
             } else if (source_latitude >= end_latitude && source_longitude < end_longitude) {
                 source_longitude += 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
 
             } else if (source_latitude < end_latitude && source_longitude >= end_longitude) {
                 source_latitude += 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
 
             }
@@ -529,19 +514,19 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                 source_latitude -= 0.002
                 source_longitude += 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
 
             } else if (source_latitude <= end_latitude && source_longitude < end_longitude) {
                 source_longitude += 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
 
             } else if (source_latitude > end_latitude && source_longitude >= end_longitude) {
                 source_latitude -= 0.002
                 val latLng = LatLng(source_latitude, source_longitude)
-                stepsRequiredtoCompleteJourney++
+                stepsRequiredToCompleteJourney++
 //                startCoroutineToSetMap(latLng)
             }
         }
@@ -797,6 +782,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
 
     override fun onPause() {
         super.onPause()
+        removeMarker()
     }
 
     private fun moveCamera(latLng: LatLng, zoom: Float) {
@@ -847,7 +833,6 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
             tvEnterDestination.text = array[0] + "," + array[1] + "," + array[2] + "," + array[3]
         }
     }
-
 
     override fun onProviderDisabled(provider: String) {
         super.onProviderDisabled(provider)
@@ -935,7 +920,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, LocationListener,
                         totalDistance = String.format("%.1f", results[0] / 1000)
                         origin =
                             MarkerOptions().position(LatLng(latitude, longitude))
-                                .title("HSR Layout")
+                                .title(address)
                                 .snippet("origin")
 
                         destination =
