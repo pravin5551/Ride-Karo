@@ -49,11 +49,7 @@ class ContactFragment : Fragment(R.layout.fragment_contact), ContactCommunicator
                 Manifest.permission.WRITE_CONTACTS
             ), REQ_CODE
         )
-        ibClose.setOnClickListener {
-            lvContacts.visibility = View.GONE
-            ibClose.visibility = View.GONE
 
-        }
 
 //        etNameEmailPhone.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
 //            if (hasFocus) {
