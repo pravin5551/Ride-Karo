@@ -18,9 +18,6 @@
         android:roundIcon="@mipmap/ic_rapido_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.RideKaro">
-        <activity android:name=".views.LetsCelebrate" />
-        <activity android:name=".views.navDrawerFragments.RiderArrived" />
-        <activity android:name=".views.navDrawerFragments.GetVaccinated" />
         <activity android:name=".views.RiderComing" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
