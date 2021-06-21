@@ -1,8 +1,10 @@
 package com.froyo.ridekaro.views
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.database.Cursor
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.ContactsContract
@@ -20,10 +22,12 @@ import com.exaple.splitwise_clone.vinod.recyclerviews.ContactTempModel
 import com.froyo.ridekaro.R
 import kotlinx.android.synthetic.main.activity_invitefriends.*
 
+
 class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
     private val REQ_CODE = 1
     private lateinit var cursor: Cursor
     private var contactList = mutableListOf<ContactTempModel>()
+    var PICK_CONTACT = 0
 //    private var usersList = mutableListOf<UserEntity>()
     private lateinit var contactAdapter: ContactTempAddAdapter
     private lateinit var to: IntArray
@@ -36,9 +40,13 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invitefriends)
 
-//        shareAllUsers.setOnClickListener {
-//
-//        }
+        share_user.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
+
+                startActivityForResult(intent, PICK_CONTACT)
+            }
+        })
 
         ActivityCompat.requestPermissions(
             this,
@@ -52,6 +60,8 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
             ibClose.visibility = View.GONE
 
         }
+
+
         etNameEmailPhone.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
                 lvContacts.visibility = View.VISIBLE
@@ -93,6 +103,19 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
 
     }
 
+    override fun onActivityResult(reqCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(reqCode, resultCode, data)
+        when (reqCode) {
+            PICK_CONTACT -> if (resultCode == RESULT_OK) {
+                val contactData: Uri? = data?.data
+                val c = managedQuery(contactData, null, null, null, null)
+                if (c.moveToFirst()) {
+                    val name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
+                    // TODO Fetch other Contact details as you want to use
+                }
+            }
+        }
+    }
 
     private fun fetchContacts() {
 

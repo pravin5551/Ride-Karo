@@ -8,15 +8,13 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ListView
 import android.widget.SimpleCursorAdapter
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.exaple.splitwise_clone.vinod.recyclerviews.ContactCommunicator
 import com.exaple.splitwise_clone.vinod.recyclerviews.ContactTempAddAdapter
@@ -30,7 +28,8 @@ class ContactFragment : Fragment(R.layout.fragment_contact), ContactCommunicator
     private val REQ_CODE = 1
     private lateinit var cursor: Cursor
     private var contactList = mutableListOf<ContactTempModel>()
-    //    private var usersList = mutableListOf<UserEntity>()
+
+    //    private var usersList = mutableListOf<UserEntity>()+66
     private lateinit var contactAdapter: ContactTempAddAdapter
     private lateinit var to: IntArray
 
@@ -39,9 +38,9 @@ class ContactFragment : Fragment(R.layout.fragment_contact), ContactCommunicator
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        shareAllUsers.setOnClickListener {
-
-        }
+//        shareAllUsers.setOnClickListener {
+//
+//        }
 
         ActivityCompat.requestPermissions(
             context as Activity,
@@ -98,16 +97,15 @@ class ContactFragment : Fragment(R.layout.fragment_contact), ContactCommunicator
 
 
     private fun fetchContacts() {
-
-        val cursor: Cursor? = activity?.contentResolver?.query(
+        val resolver = requireActivity().contentResolver
+        val cursor: Cursor? = resolver?.query(
             ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
             null,
             null,
             null,
             null
-
         )
-        Log.d("Inside contain resolver" , activity?.contentResolver.toString())
+        Log.d("Inside contain resolver", activity?.contentResolver.toString())
         this.cursor = cursor!!
         activity?.startManagingCursor(cursor)
 
@@ -150,7 +148,6 @@ class ContactFragment : Fragment(R.layout.fragment_contact), ContactCommunicator
             }
         }
     }
-
 
 
     override fun onContactDelete(tempModel: ContactTempModel) {

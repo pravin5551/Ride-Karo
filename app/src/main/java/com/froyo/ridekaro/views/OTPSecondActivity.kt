@@ -24,10 +24,10 @@ class OTPSecondActivity : AppCompatActivity() {
 
         lateinit var mobileNumber: String
 
-        support_otp_val.setOnClickListener {
-            val i = Intent(this, HomeActivity::class.java)
-            startActivity(i)
-        }
+//        support_otp_val.setOnClickListener {
+//            val i = Intent(this, HomeActivity::class.java)
+//            startActivity(i)
+//        }
 
         if (intent != null && intent.extras != null) {
             mobileNumber = intent.getStringExtra("mobileNumber").toString()
