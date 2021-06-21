@@ -58,12 +58,14 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         btnRequestRide.setOnClickListener {
 //            startActivity(Intent(context, RiderComing::class.java))
 
+
             val intent = Intent(context, RiderComing::class.java)
 
             pendingIntent =
                 PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
             dislayNotification("Ride Booked", "The Rider is on his way to your location")
             afterClickingRideNow.setMapRider(1)
+            dismiss()
         }
     }
 
