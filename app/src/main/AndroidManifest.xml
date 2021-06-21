@@ -49,7 +49,6 @@
         <activity android:name=".views.LanguageScreenActivity" />
         <activity android:name=".views.SecondScreenActivity" />
         <activity android:name=".views.FirstScreenActivity" />
-
         <service android:name=".NotificationService" />
     </application>
 
