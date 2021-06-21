@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#64EFFF"
     tools:context=".views.LetsCelebrate">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="400dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,12 +22,13 @@
         tools:ignore="MissingClass" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/productsansregular"
+        android:gravity="center_horizontal"
         android:text="@string/your_ride_is_complete_don_t_forget_to_rate_us_on_playstore"
         android:textColor="@color/black"
         android:textSize="15sp"

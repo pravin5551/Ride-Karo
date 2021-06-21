@@ -48,8 +48,8 @@ class LanguageScreenActivity : AppCompatActivity() {
             if (PreferenceHelper.getLoginBooleanFromPreference(KEY_LOGIN_WITH_OAUTH) ||
                 PreferenceHelper.getLoginBooleanFromPreference(USER_PHONE_LOGIN)
             ) {
-//                val intent = Intent(this, HomeActivity::class.java)
-                val intent = Intent(this, OTPValidation::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
+//                val intent = Intent(this, OTPValidation::class.java)
                 startActivity(intent)
             } else {
                 val intent = Intent(this, OTPValidation::class.java)

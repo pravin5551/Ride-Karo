@@ -92,14 +92,14 @@
     <string name="qr_pay">क्यूआर पे</string>
     <string name="go_cashless_after_ride_pay_by_scanning_qr_code">क्यूआर कोड स्कैन करके राइड पे के बाद कैशलेस हो जाएं</string>
     <string name="other_payment_methods">अन्य भुगतान के तरीके</string>
-    <string name="paytm">Paytm</string>
-    <string name="link">Link</string>
-    <string name="google_pay">Google Pay</string>
-    <string name="phone_pay">Phone Pay</string>
+    <string name="paytm">पेटीएम</string>
+    <string name="link">जुड़े</string>
+    <string name="google_pay">गूगल पे</string>
+    <string name="phone_pay">फोन पे</string>
     <string name="let_s_go">चलो चलते हैं</string>
     <string name="enter_phone_number">फोन नंबर दर्ज</string>
     <string name="with_you_and">आपके साथ और</string>
-    <string name="covid_19">COVID 19</string>
+    <string name="covid_19">कोविड 19</string>
     <string name="settings">समायोजन</string>
     <string name="getvaccine">#वैक्सीन प्राप्त करें</string>
     <string name="your_safety_matters">आपकी सुरक्षा के मामले</string>
@@ -150,13 +150,15 @@
     <string name="abc">abc</string>
     <string name="today">आज</string>
     <string name="active">सक्रिय</string>
-    <string name="gorai_naka">भीतर देखो</string>
+    <string name="gorai_naka">गौरै नका</string>
     <string name="santosh_bhuvan">संतोष भुवन</string>
     <string name="let_s_ride">चलो सवारी करें</string>
     <string name="tulinj_road">तुलिंज रोड</string>
     <string name="save">जमा करो</string>
-
-
+    <string name="vasai">वसई</string>
+    <string name="completed">पूर्ण</string>
+    <string name="ok">ठीक है</string>
+    <string name="your_ride_is_complete_don_t_forget_to_rate_us_on_playstore">आपकी सवारी पूरी हो गई है! प्लेस्टोर पर हमें रेट करना न भूलें</string>
 
 
 </resources>

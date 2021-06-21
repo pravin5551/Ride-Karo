@@ -56,15 +56,18 @@ class SecondScreenActivity : AppCompatActivity() {
                 val intent = Intent(this, LanguageScreenActivity::class.java)
                 startActivity(intent)
             } else {
-                if (PreferenceHelper.getLoginBooleanFromPreference(USER_PHONE_LOGIN)) {
-                    val intent = Intent(this, HomeActivity::class.java)
-//                    val intent = Intent(this, OTPValidation::class.java)
-                    startActivity(intent)
-                } else if (PreferenceHelper.getLoginBooleanFromPreference(KEY_LOGIN_WITH_OAUTH)) {
-                    initializeSignin()
-                } else {
-                    val intent = Intent(this, OTPValidation::class.java)
-                    startActivity(intent)
+                when {
+                    PreferenceHelper.getLoginBooleanFromPreference(USER_PHONE_LOGIN) -> {
+                        val intent = Intent(this, HomeActivity::class.java)
+                        startActivity(intent)
+                    }
+                    PreferenceHelper.getLoginBooleanFromPreference(KEY_LOGIN_WITH_OAUTH) -> {
+                        initializeSignin()
+                    }
+                    else -> {
+                        val intent = Intent(this, OTPValidation::class.java)
+                        startActivity(intent)
+                    }
                 }
             }
         }, 1000)
