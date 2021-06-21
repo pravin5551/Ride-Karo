@@ -156,6 +156,9 @@
     <string name="let_s_ride">ಸವಾರಿ ಮಾಡೋಣ</string>
     <string name="tulinj_road">ತುಲಿನ್ಜ್ ರಸ್ತೆ</string>
     <string name="save">ಉಳಿಸಿ</string>
+    <string name="ok">ಸರಿಸರಿ</string>
+    <string name="your_ride_is_complete_don_t_forget_to_rate_us_on_playstore">ನಿಮ್ಮ ಸವಾರಿ ಪೂರ್ಣಗೊಂಡಿದೆ! ಪ್ಲೇಸ್ಟೋರ್‌ನಲ್ಲಿ ನಮ್ಮನ್ನು ರೇಟ್ ಮಾಡಲು ಮರೆಯಬೇಡಿ</string>
+
 
 
 </resources>

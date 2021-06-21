@@ -157,5 +157,8 @@
     <string name="save">जमा करो</string>
     <string name="vasai">वसई</string>
     <string name="completed">पूर्ण</string>
+    <string name="ok">ठीक है</string>
+    <string name="your_ride_is_complete_don_t_forget_to_rate_us_on_playstore">आपकी सवारी पूरी हो गई है! प्लेस्टोर पर हमें रेट करना न भूलें</string>
+
 
 </resources>

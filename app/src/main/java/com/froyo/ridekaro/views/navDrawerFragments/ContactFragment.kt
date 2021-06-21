@@ -1,20 +1,20 @@
-package com.froyo.ridekaro.views
+package com.froyo.ridekaro.views.navDrawerFragments
 
 import android.Manifest
-import android.content.Intent
+import android.app.Activity
 import android.content.pm.PackageManager
 import android.database.Cursor
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.ContactsContract
+import android.util.Log
 import android.view.View
 import android.widget.ListView
 import android.widget.SimpleCursorAdapter
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.exaple.splitwise_clone.vinod.recyclerviews.ContactCommunicator
 import com.exaple.splitwise_clone.vinod.recyclerviews.ContactTempAddAdapter
@@ -23,39 +23,27 @@ import com.froyo.ridekaro.R
 import kotlinx.android.synthetic.main.activity_invitefriends.*
 
 
-class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
+class ContactFragment : Fragment(R.layout.fragment_contact), ContactCommunicator {
+
     private val REQ_CODE = 1
     private lateinit var cursor: Cursor
     private var contactList = mutableListOf<ContactTempModel>()
-    var PICK_CONTACT = 0
-//    private var usersList = mutableListOf<UserEntity>()
+
+    //    private var usersList = mutableListOf<UserEntity>()+66
     private lateinit var contactAdapter: ContactTempAddAdapter
     private lateinit var to: IntArray
-//    private val preferenceHelper = PreferenceHelper(this)
-//    private lateinit var friendTransactionViewModel: FriendTransactionViewModel
-//    private lateinit var userViewModel: UserViewModel
+
 
     @RequiresApi(Build.VERSION_CODES.O)
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_invitefriends)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        share_user.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-//                val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
-
-//                startActivityForResult(intent, PICK_CONTACT)
-                val sendIntent = Intent(Intent.ACTION_VIEW)
-//                sendIntent.data = Uri.parse("sms:")
-                val x ="Please download Rapido from plays tore and reach to your destiny https://play.google.com/store/apps/details?id=com.rapido.passenger"
-                sendIntent.putExtra("sms_body", x);
-                sendIntent.data = Uri.parse("smsto:"+7373697723);
-                startActivity(sendIntent);
-            }
-        })
+//        shareAllUsers.setOnClickListener {
+//
+//        }
 
         ActivityCompat.requestPermissions(
-            this,
+            context as Activity,
             arrayOf(
                 Manifest.permission.READ_CONTACTS,
                 Manifest.permission.WRITE_CONTACTS
@@ -66,7 +54,6 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
             ibClose.visibility = View.GONE
 
         }
-
 
         etNameEmailPhone.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
@@ -89,7 +76,7 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
             var flag = true
             for (i in contactList) {
                 if (i.name == cTM.name && i.number == cTM.number) {
-                    Toast.makeText(this, "Already Added", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Already Added", Toast.LENGTH_SHORT).show()
                     flag = false
                     break;
                 }
@@ -102,38 +89,25 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
                         this
                     )
                 rvContactAddTemp.layoutManager =
-                    LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+                    LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
                 rvContactAddTemp.adapter = contactAdapter
             }
         }
-
     }
 
-    override fun onActivityResult(reqCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(reqCode, resultCode, data)
-        when (reqCode) {
-            PICK_CONTACT -> if (resultCode == RESULT_OK) {
-                val contactData: Uri? = data?.data
-                val c = managedQuery(contactData, null, null, null, null)
-                if (c.moveToFirst()) {
-                    val name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
-                    // TODO Fetch other Contact details as you want to use
-                }
-            }
-        }
-    }
 
     private fun fetchContacts() {
-
-        val cursor: Cursor? = contentResolver.query(
+        val resolver = requireActivity().contentResolver
+        val cursor: Cursor? = resolver?.query(
             ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
             null,
             null,
             null,
             null
         )
+        Log.d("Inside contain resolver", activity?.contentResolver.toString())
         this.cursor = cursor!!
-        startManagingCursor(cursor)
+        activity?.startManagingCursor(cursor)
 
         val from = arrayOf(
             ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME,
@@ -146,7 +120,7 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
         to[1] = android.R.id.text2
 
         val simpleCursorAdapter =
-            SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, cursor, from, to)
+            SimpleCursorAdapter(context, android.R.layout.simple_list_item_2, cursor, from, to)
 
         lvContacts.adapter = simpleCursorAdapter
         lvContacts.choiceMode = ListView.CHOICE_MODE_MULTIPLE
@@ -165,7 +139,7 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
                         fetchContacts()
                     } else {
                         Toast.makeText(
-                            this,
+                            context,
                             "Contact Permission Denied",
                             Toast.LENGTH_SHORT
                         ).show()
@@ -174,7 +148,6 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
             }
         }
     }
-
 
 
     override fun onContactDelete(tempModel: ContactTempModel) {
@@ -188,5 +161,6 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
         }
         contactAdapter.notifyDataSetChanged()
     }
+
 
 }
