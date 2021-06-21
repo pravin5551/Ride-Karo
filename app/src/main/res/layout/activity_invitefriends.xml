@@ -23,10 +23,9 @@
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:layout_margin="@dimen/dp_18"
-            android:background="@color/yellow"
+            android:background="@drawable/button_rectangle_home"
             android:fontFamily="@font/productsansregular"
             android:text="Share"
-
             android:textColor="@color/Black"
             android:textSize="@dimen/sp_16"
             app:layout_constraintEnd_toEndOf="@+id/rvContactAddTemp"
@@ -39,35 +38,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/productsansregular"
-            android:text="share with :"
+            android:text="Share with:"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@id/etNameEmailPhone"
-            app:layout_constraintEnd_toStartOf="@id/etNameEmailPhone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/etNameEmailPhone" />
-
-        <!--        <EditText-->
-        <!--            android:id="@+id/etNameEmailPhone"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:fontFamily="@font/productsansregular"-->
-        <!--            android:hint="@string/enter_phone_number"-->
-        <!--            android:textSize="@dimen/sp_15"-->
-        <!--            app:layout_constraintStart_toEndOf="@id/tvWithYou"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />-->
-
-        <ImageButton
-            android:id="@+id/ibClose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/productsansregular"
-            android:padding="@dimen/dp_10"
-            android:src="@drawable/ic_baseline_close_24"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@id/lvContacts"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />
+            app:layout_constraintTop_toBottomOf="@+id/rvContactAddTemp" />
 
         <ListView
             android:id="@+id/lvContacts"
