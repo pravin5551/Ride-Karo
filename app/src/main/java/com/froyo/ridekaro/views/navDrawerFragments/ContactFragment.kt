@@ -55,17 +55,17 @@ class ContactFragment : Fragment(R.layout.fragment_contact), ContactCommunicator
 
         }
 
-        etNameEmailPhone.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
-            if (hasFocus) {
-                lvContacts.visibility = View.VISIBLE
-                ibClose.visibility = View.VISIBLE
-
-            } else {
-                lvContacts.visibility = View.GONE
-                ibClose.visibility = View.GONE
-
-            }
-        }
+//        etNameEmailPhone.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+//            if (hasFocus) {
+//                lvContacts.visibility = View.VISIBLE
+//                ibClose.visibility = View.VISIBLE
+//
+//            } else {
+//                lvContacts.visibility = View.GONE
+//                ibClose.visibility = View.GONE
+//
+//            }
+//        }
 
         lvContacts.setOnItemClickListener { parent, view, position, id ->
             var cTM =

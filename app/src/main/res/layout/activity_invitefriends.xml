@@ -39,22 +39,22 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/productsansregular"
-            android:text="@string/with_you_and"
+            android:text="share with :"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/etNameEmailPhone"
             app:layout_constraintEnd_toStartOf="@id/etNameEmailPhone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/etNameEmailPhone" />
 
-        <EditText
-            android:id="@+id/etNameEmailPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/productsansregular"
-            android:hint="@string/enter_phone_number"
-            android:textSize="@dimen/sp_15"
-            app:layout_constraintStart_toEndOf="@id/tvWithYou"
-            app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />
+        <!--        <EditText-->
+        <!--            android:id="@+id/etNameEmailPhone"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/productsansregular"-->
+        <!--            android:hint="@string/enter_phone_number"-->
+        <!--            android:textSize="@dimen/sp_15"-->
+        <!--            app:layout_constraintStart_toEndOf="@id/tvWithYou"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />-->
 
         <ImageButton
             android:id="@+id/ibClose"
@@ -66,7 +66,7 @@
             android:src="@drawable/ic_baseline_close_24"
             android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@id/lvContacts"
-            app:layout_constraintStart_toEndOf="@+id/etNameEmailPhone"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvContactAddTemp" />
 
         <ListView
@@ -74,8 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:fontFamily="@font/productsansregular"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etNameEmailPhone" />
+            app:layout_constraintTop_toBottomOf="@id/tvWithYou" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

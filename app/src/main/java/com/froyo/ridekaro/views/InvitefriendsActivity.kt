@@ -49,7 +49,7 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
 //                sendIntent.data = Uri.parse("sms:")
                 val x ="Please download Rapido from plays tore and reach to your destiny https://play.google.com/store/apps/details?id=com.rapido.passenger"
                 sendIntent.putExtra("sms_body", x);
-                sendIntent.data = Uri.parse("smsto:"+7373697723);
+                sendIntent.data = Uri.parse("smsto:"+6370627661);
                 startActivity(sendIntent);
             }
         })
@@ -68,17 +68,17 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
         }
 
 
-        etNameEmailPhone.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
-            if (hasFocus) {
-                lvContacts.visibility = View.VISIBLE
-                ibClose.visibility = View.VISIBLE
-
-            } else {
-                lvContacts.visibility = View.GONE
-                ibClose.visibility = View.GONE
-
-            }
-        }
+//        etNameEmailPhone.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+//            if (hasFocus) {
+//                lvContacts.visibility = View.VISIBLE
+//                ibClose.visibility = View.VISIBLE
+//
+//            } else {
+//                lvContacts.visibility = View.GONE
+//                ibClose.visibility = View.GONE
+//
+//            }
+//        }
 
         lvContacts.setOnItemClickListener { parent, view, position, id ->
             var cTM =
