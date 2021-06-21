@@ -42,9 +42,15 @@ class InvitefriendsActivity : AppCompatActivity(), ContactCommunicator {
 
         share_user.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
+//                val intent = Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI)
 
-                startActivityForResult(intent, PICK_CONTACT)
+//                startActivityForResult(intent, PICK_CONTACT)
+                val sendIntent = Intent(Intent.ACTION_VIEW)
+//                sendIntent.data = Uri.parse("sms:")
+                val x ="Please download Rapido from plays tore and reach to your destiny https://play.google.com/store/apps/details?id=com.rapido.passenger"
+                sendIntent.putExtra("sms_body", x);
+                sendIntent.data = Uri.parse("smsto:"+7373697723);
+                startActivity(sendIntent);
             }
         })
 
