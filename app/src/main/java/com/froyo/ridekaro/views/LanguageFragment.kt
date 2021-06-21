@@ -123,8 +123,11 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
                 intent.putExtra("UserName", account.displayName)
                 intent.putExtra("UserEmail", account.email)
                 intent.putExtra("UserPhoto", account.photoUrl.toString())
-                Toast.makeText(requireContext().applicationContext, "Welcome ${account.displayName}", Toast.LENGTH_SHORT)
-                    .show()
+                Toast.makeText(
+                    requireContext().applicationContext,
+                    "Language changed successfully",
+                    Toast.LENGTH_SHORT
+                ).show()
                 saveUser(account)
                 startActivity(intent)
             } else {
@@ -172,7 +175,11 @@ class LanguageFragment : Fragment(R.layout.fragment_language) {
                             Log.d("TAG", "onComplete: " + task.exception!!.message)
                         }
                     }
-                    Toast.makeText(requireContext().applicationContext, "Welcomeback", Toast.LENGTH_SHORT)
+                    Toast.makeText(
+                        requireContext().applicationContext,
+                        "Welcomeback",
+                        Toast.LENGTH_SHORT
+                    )
                         .show()
                     return
                 }
