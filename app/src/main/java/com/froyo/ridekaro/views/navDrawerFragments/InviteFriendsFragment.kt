@@ -30,7 +30,7 @@ class InviteFriendsFragment : Fragment() {
         activity?.actionBar?.hide()
         super.onViewCreated(view, savedInstanceState)
 
-        unique_code_text.text = generateRandomString()
+//        unique_code_text.text = generateRandomString()
         btnShare_invite.setOnClickListener {
             val intent = Intent()
             intent.action = Intent.ACTION_SEND
